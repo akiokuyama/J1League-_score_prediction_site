@@ -1,0 +1,27 @@
+[project]
+name = "soccer-score-app"
+version = "0.1.0"
+description = "Soccer score analysis app managed with uv"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy",
+    "pandas",
+    "requests",
+    "python-dotenv",
+    "ipython",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "ipykernel",
+    "bs4",
+    "lxml",
+    "html5lib",
+    "geopy",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
