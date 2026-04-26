@@ -19,6 +19,7 @@ dependencies = [
     "lxml",
     "html5lib",
     "geopy",
+    "lightgbm>=4.6.0",
 ]
 
 [build-system]
