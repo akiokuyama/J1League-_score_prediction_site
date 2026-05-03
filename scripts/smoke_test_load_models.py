@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import os
 import sys
+import tempfile
 import warnings
 from pathlib import Path
 from typing import Iterable
@@ -11,9 +12,8 @@ from typing import Iterable
 import pandas as pd
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-os.environ.setdefault("MPLCONFIGDIR", str(PROJECT_ROOT / "logs" / "matplotlib"))
+os.environ.setdefault("MPLCONFIGDIR", str(Path(tempfile.gettempdir()) / "soccer_score_app_matplotlib"))
 os.environ.setdefault("LOKY_MAX_CPU_COUNT", "1")
-(PROJECT_ROOT / "logs" / "matplotlib").mkdir(parents=True, exist_ok=True)
 warnings.filterwarnings(
     "ignore",
     message="Could not find the number of physical cores.*",
