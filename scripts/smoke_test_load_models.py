@@ -7,7 +7,6 @@ import sys
 import tempfile
 import warnings
 from pathlib import Path
-from typing import Iterable
 
 import pandas as pd
 
@@ -24,71 +23,21 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.models.load_model import ModelBundle, load_models
-
-
-DATASET_CANDIDATES = (
-    Path("Data/ML_dataset.csv"),
-    Path("data/ML_dataset.csv"),
-    Path("Data/ml_dataset.csv"),
-    Path("data/ml_dataset.csv"),
-)
-
-DROP_COLS = [
-    "Season",
-    "Section",
-    "Date",
-    "Score",
-    "Home",
-    "Away",
-    "Stadium",
-    "Home_Goals",
-    "Away_Goals",
-    "Goal_Diff",
-    "Match_Result",
-]
-
-CAT_COLS = [
-    "Weather",
-    "Backline_Matchup",
-    "Home_Formation",
-    "Away_Formation",
-]
+from src.predict.feature_preprocess import prepare_features_for_model, resolve_dataset_path
 
 SAMPLE_CONTEXT_COLS = ["Season", "Section", "Date", "Home", "Away", "Score"]
 
 
-def find_dataset(candidates: Iterable[Path] = DATASET_CANDIDATES) -> Path:
-    for candidate in candidates:
-        path = PROJECT_ROOT / candidate
-        if path.is_file():
-            return path
-
-    csv_files = sorted(PROJECT_ROOT.glob("**/*.csv"))
-    discovered = "\n".join(f"  - {path.relative_to(PROJECT_ROOT)}" for path in csv_files[:30])
-    raise FileNotFoundError(
-        "ML_dataset.csv was not found. CSV files discovered:\n"
-        f"{discovered or '  (none)'}"
-    )
-
-
 def build_feature_frame(df: pd.DataFrame, feature_names: list[str]) -> pd.DataFrame:
-    drop_cols = [col for col in DROP_COLS if col in df.columns]
-    cat_cols = [col for col in CAT_COLS if col in df.columns and col not in drop_cols]
-
-    X = df.drop(columns=drop_cols, errors="ignore")
-    X = pd.get_dummies(X, columns=cat_cols, dummy_na=False)
-
-    missing_from_dataset = [col for col in feature_names if col not in X.columns]
-    extra_in_dataset = [col for col in X.columns if col not in feature_names]
-
-    if missing_from_dataset:
-        print(f"[WARN] 学習時特徴量にあるが現在データにない列: {len(missing_from_dataset)}")
-        print(f"       {missing_from_dataset[:20]}")
-    if extra_in_dataset:
-        print(f"[WARN] 現在データにあるが学習時特徴量にない列: {len(extra_in_dataset)}")
-        print(f"       {extra_in_dataset[:20]}")
-
-    X = X.reindex(columns=feature_names, fill_value=0)
+    X, diagnostics = prepare_features_for_model(df, feature_names)
+    if diagnostics["missing_columns"]:
+        print(f"[WARN] 学習時特徴量にあるが現在データにない列: {len(diagnostics['missing_columns'])}")
+        print(f"       {diagnostics['missing_columns'][:20]}")
+    if diagnostics["extra_columns"]:
+        print(f"[WARN] 現在データにあるが学習時特徴量にない列: {len(diagnostics['extra_columns'])}")
+        print(f"       {diagnostics['extra_columns'][:20]}")
+    if diagnostics["non_numeric_columns"]:
+        print(f"[WARN] 数値変換できない値を0で補完した列: {diagnostics['non_numeric_columns'][:20]}")
     return X
 
 
@@ -120,7 +69,7 @@ def main() -> int:
         print("[OK] モデル読み込み成功")
         print(f"[INFO] feature count: {len(bundle.feature_names)}")
 
-        dataset_path = find_dataset()
+        dataset_path = resolve_dataset_path()
         df = pd.read_csv(dataset_path)
         print(f"[OK] dataset: {dataset_path}")
         print(f"[OK] ML_dataset 読み込み成功: shape={df.shape}")
