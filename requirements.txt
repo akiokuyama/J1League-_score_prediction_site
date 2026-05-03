@@ -1,0 +1,17 @@
+pandas
+numpy
+scikit-learn
+lightgbm
+joblib
+scipy
+requests
+python-dotenv
+ipython
+matplotlib
+seaborn
+ipykernel
+beautifulsoup4
+lxml
+html5lib
+geopy
+optuna
