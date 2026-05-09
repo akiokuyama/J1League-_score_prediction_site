@@ -31,6 +31,7 @@ DROP_COLS = [
     "Home",
     "Away",
     "Stadium",
+    "Weather",
     "Home_Goals",
     "Away_Goals",
     "Goal_Diff",
@@ -38,7 +39,6 @@ DROP_COLS = [
 ]
 
 CAT_COLS = [
-    "Weather",
     "Backline_Matchup",
     "Home_Formation",
     "Away_Formation",
