@@ -1,0 +1,2484 @@
+{
+  "last_updated": "2026-05-09T17:47:17+09:00",
+  "season": 2026,
+  "league": "J1",
+  "competition": "明治安田J1百年構想リーグ",
+  "category": "100yj1",
+  "matchweek": 12,
+  "model_version": "weather_removed_v1",
+  "feature_policy": {
+    "exclude_weather": true
+  },
+  "matches": [
+    {
+      "match_id": "2026-100yj1-16-y-fm-vs-kasm",
+      "date": "2026-05-10",
+      "home_team": "y-fm",
+      "away_team": "kasm",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.5405265007941393,
+        "away": 0.9582007840848007
+      },
+      "result_probabilities": {
+        "home_win": 0.9024552930966081,
+        "draw": 0.06814911143218062,
+        "away_win": 0.029395595471211254
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.3735223498532759,
+          "poisson_probability": 0.126615158221825,
+          "combined_score": 0.04542731770067079
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.27568446434091004,
+          "poisson_probability": 0.09345045105208519,
+          "combined_score": 0.033528397301187444
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.18965161673155287,
+          "poisson_probability": 0.09752700332148219,
+          "combined_score": 0.023065190741850716
+        },
+        {
+          "score": "3-1",
+          "home_goals": 3,
+          "away_goals": 1,
+          "probability": 0.09331704763327373,
+          "poisson_probability": 0.047987632118967595,
+          "combined_score": 0.011349101791072317
+        },
+        {
+          "score": "3-2",
+          "home_goals": 3,
+          "away_goals": 2,
+          "probability": 0.0678245214409874,
+          "poisson_probability": 0.022990893361383862,
+          "combined_score": 0.008248732865934208
+        }
+      ],
+      "predicted_goal_diff": 1.0832338900991734,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-16-FCtk-vs-tk-v",
+      "date": "2026-05-10",
+      "home_team": "FCtk",
+      "away_team": "tk-v",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.3336480497015604,
+        "away": 0.9424672448388668
+      },
+      "result_probabilities": {
+        "home_win": 0.34928475203718806,
+        "draw": 0.5314478000711989,
+        "away_win": 0.11926744789161321
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.28268478856564705,
+          "poisson_probability": 0.12906342530547485,
+          "combined_score": 0.02098023477147903
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.24783194393238883,
+          "poisson_probability": 0.13694208049377968,
+          "combined_score": 0.018393534345998473
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.22490284016087572,
+          "poisson_probability": 0.10268232351438158,
+          "combined_score": 0.016691787383712825
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.15575241428749206,
+          "poisson_probability": 0.08606259272322478,
+          "combined_score": 0.011559596943849686
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.08882801305359629,
+          "poisson_probability": 0.04055558732377358,
+          "combined_score": 0.0065926170898851465
+        }
+      ],
+      "predicted_goal_diff": 0.7288817842554994,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-16-kasw-vs-ka-f",
+      "date": "2026-05-10",
+      "home_team": "kasw",
+      "away_team": "ka-f",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2463795085225593,
+        "away": 1.435539929777624
+      },
+      "result_probabilities": {
+        "home_win": 0.19616556089429077,
+        "draw": 0.43862078086783934,
+        "away_win": 0.3652136582378699
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.32544307881951734,
+          "poisson_probability": 0.12243984305680593,
+          "combined_score": 0.020297759278978197
+        },
+        {
+          "score": "0-1",
+          "home_goals": 0,
+          "away_goals": 1,
+          "probability": 0.18320025264789855,
+          "poisson_probability": 0.09823640570113704,
+          "combined_score": 0.011426129084027166
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.18189026791485344,
+          "poisson_probability": 0.06843167763111585,
+          "combined_score": 0.011344425841583248
+        },
+        {
+          "score": "1-2",
+          "home_goals": 1,
+          "away_goals": 2,
+          "probability": 0.16389346979838268,
+          "poisson_probability": 0.08788364185187524,
+          "combined_score": 0.010221972485729043
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.14557293081934805,
+          "poisson_probability": 0.05476818516925644,
+          "combined_score": 0.009079327537167057
+        }
+      ],
+      "predicted_goal_diff": -0.3287878809943401,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-16-chib-vs-mcd",
+      "date": "2026-05-10",
+      "home_team": "chib",
+      "away_team": "mcd",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2277238960487529,
+        "away": 0.9707514631054408
+      },
+      "result_probabilities": {
+        "home_win": 0.4301677953347957,
+        "draw": 0.46720913543926873,
+        "away_win": 0.10262306922593548
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.3071905378966496,
+          "poisson_probability": 0.13225833333533,
+          "combined_score": 0.02417647492028656
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.2577502360660492,
+          "poisson_probability": 0.11097222223150818,
+          "combined_score": 0.02028542988536088
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.2152572727576657,
+          "poisson_probability": 0.13624324903125526,
+          "combined_score": 0.01694115349993581
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.12827339833676898,
+          "poisson_probability": 0.08118835814368298,
+          "combined_score": 0.010095358467298178
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.09152855494286657,
+          "poisson_probability": 0.039406858727554395,
+          "combined_score": 0.007203469964334533
+        }
+      ],
+      "predicted_goal_diff": 0.19728255800434202,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-16-shim-vs-fuku",
+      "date": "2026-05-10",
+      "home_team": "shim",
+      "away_team": "fuku",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2252794985091557,
+        "away": 1.1314214724385094
+      },
+      "result_probabilities": {
+        "home_win": 0.10631519400777101,
+        "draw": 0.834374875036345,
+        "away_win": 0.05930993095588393
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.4574524915950582,
+          "poisson_probability": 0.1313280078504847,
+          "combined_score": 0.04365117162662233
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.3299790849141579,
+          "poisson_probability": 0.09473223263687748,
+          "combined_score": 0.03148736520935652
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.158542458926575,
+          "poisson_probability": 0.045515251688639666,
+          "combined_score": 0.015128487027319124
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.029605008417031706,
+          "poisson_probability": 0.11607346249796592,
+          "combined_score": 0.0028249781718609627
+        },
+        {
+          "score": "3-3",
+          "home_goals": 3,
+          "away_goals": 3,
+          "probability": 0.024420956147177233,
+          "poisson_probability": 0.007010904038209595,
+          "combined_score": 0.002330303949924244
+        }
+      ],
+      "predicted_goal_diff": -0.05398012160580026,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-16-kobe-vs-okay",
+      "date": "2026-05-10",
+      "home_team": "kobe",
+      "away_team": "okay",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.6632838460166584,
+        "away": 0.8602195779443842
+      },
+      "result_probabilities": {
+        "home_win": 0.5193498537350496,
+        "draw": 0.378886813842931,
+        "away_win": 0.1017633324220194
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.3282964283913586,
+          "poisson_probability": 0.1333591312074369,
+          "combined_score": 0.025054182777227103
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.23486151308507391,
+          "poisson_probability": 0.09540441086295398,
+          "combined_score": 0.017923628669986598
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.19450870077339252,
+          "poisson_probability": 0.11471813556229113,
+          "combined_score": 0.014844074194825523
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.13594503185334053,
+          "poisson_probability": 0.08017821583899473,
+          "combined_score": 0.010374744837763843
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.10638832589683449,
+          "poisson_probability": 0.1109070443280729,
+          "combined_score": 0.008119103139328138
+        }
+      ],
+      "predicted_goal_diff": 0.5575322183262456,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-16-g-os-vs-hiro",
+      "date": "2026-05-10",
+      "home_team": "g-os",
+      "away_team": "hiro",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.1973027753085044,
+        "away": 1.2221961189309314
+      },
+      "result_probabilities": {
+        "home_win": 0.2882380691753167,
+        "draw": 0.2878663196249382,
+        "away_win": 0.4238956111997452
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.2835049377068411,
+          "poisson_probability": 0.13018767489761943,
+          "combined_score": 0.014919721734327979
+        },
+        {
+          "score": "0-1",
+          "home_goals": 0,
+          "away_goals": 1,
+          "probability": 0.2256279305240836,
+          "poisson_probability": 0.10873412939686411,
+          "combined_score": 0.011873888215635063
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.19373841294014696,
+          "poisson_probability": 0.08896618776041858,
+          "combined_score": 0.010195671488819964
+        },
+        {
+          "score": "1-2",
+          "home_goals": 1,
+          "away_goals": 2,
+          "probability": 0.16508505313274008,
+          "poisson_probability": 0.07955743549625616,
+          "combined_score": 0.008687760697078672
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.13204366569618817,
+          "poisson_probability": 0.10651946351416666,
+          "combined_score": 0.006948925704443623
+        }
+      ],
+      "predicted_goal_diff": -0.06473809670272797,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-16-nago-vs-kyot",
+      "date": "2026-05-10",
+      "home_team": "nago",
+      "away_team": "kyot",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.3530058089356014,
+        "away": 1.027068661844198
+      },
+      "result_probabilities": {
+        "home_win": 0.6211617721775734,
+        "draw": 0.31603847844444743,
+        "away_win": 0.06279974937797916
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.3446326690888211,
+          "poisson_probability": 0.1252121439986197,
+          "combined_score": 0.026150350102570545
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.23945592482240732,
+          "poisson_probability": 0.08699926742133246,
+          "combined_score": 0.018169653749879746
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.19604500866237318,
+          "poisson_probability": 0.1286014691833054,
+          "combined_score": 0.014875680897974473
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.14107714112098763,
+          "poisson_probability": 0.09254368545329682,
+          "combined_score": 0.010704779211841833
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.07878925630541084,
+          "poisson_probability": 0.08470637908970674,
+          "combined_score": 0.005978442618789124
+        }
+      ],
+      "predicted_goal_diff": 0.41511606174487375,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 16
+    },
+    {
+      "match_id": "2026-100yj1-12-mcd-vs-tk-v",
+      "date": "2026-05-13",
+      "home_team": "mcd",
+      "away_team": "tk-v",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.4076339328800718,
+        "away": 0.8685275671256013
+      },
+      "result_probabilities": {
+        "home_win": 0.5551906151005174,
+        "draw": 0.255466772554087,
+        "away_win": 0.18934261234539568
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.39885411733257775,
+          "poisson_probability": 0.1445324445426828,
+          "combined_score": 0.031106887364429004
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.24381331478368473,
+          "poisson_probability": 0.08835043407200731,
+          "combined_score": 0.019015156146928117
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.1339956474672073,
+          "poisson_probability": 0.10172438667019373,
+          "combined_score": 0.010450406130847538
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.12285098141331668,
+          "poisson_probability": 0.12553041242937216,
+          "combined_score": 0.009581226507051701
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.10048593900321366,
+          "poisson_probability": 0.10267757913945993,
+          "combined_score": 0.007836962564624728
+        }
+      ],
+      "predicted_goal_diff": 0.76044853600121,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 12
+    },
+    {
+      "match_id": "2026-100yj1-12-kobe-vs-kyot",
+      "date": "2026-05-13",
+      "home_team": "kobe",
+      "away_team": "kyot",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.5277687727115177,
+        "away": 0.9781575132667127
+      },
+      "result_probabilities": {
+        "home_win": 0.40077701748700534,
+        "draw": 0.502646486308427,
+        "away_win": 0.09657649620456761
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.28745355022838287,
+          "poisson_probability": 0.12194288509214879,
+          "combined_score": 0.021489604099227837
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.23626377862969433,
+          "poisson_probability": 0.12466589832234802,
+          "combined_score": 0.017662732158659624
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.19235401370063673,
+          "poisson_probability": 0.08159997805236471,
+          "combined_score": 0.01438010279587767
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.17653611861506363,
+          "poisson_probability": 0.09315026594906689,
+          "combined_score": 0.013197580253358992
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.10739253882622248,
+          "poisson_probability": 0.04555781625043611,
+          "combined_score": 0.008028508052006668
+        }
+      ],
+      "predicted_goal_diff": 0.5082849447135693,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 12
+    },
+    {
+      "match_id": "2026-100yj1-17-mito-vs-tk-v",
+      "date": "2026-05-16",
+      "home_team": "mito",
+      "away_team": "tk-v",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.2999733601947314,
+        "away": 0.9403203377006851
+      },
+      "result_probabilities": {
+        "home_win": 0.5567434737494987,
+        "draw": 0.41021707905403204,
+        "away_win": 0.033039447196469195
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.320633923288725,
+          "poisson_probability": 0.13835257983005728,
+          "combined_score": 0.02700058039402206
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.22407663816238627,
+          "poisson_probability": 0.13009574458756046,
+          "combined_score": 0.018869492101987
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.19597007343436376,
+          "poisson_probability": 0.08456050111926325,
+          "combined_score": 0.016502638486640173
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.1833100594193978,
+          "poisson_probability": 0.10642724233159097,
+          "combined_score": 0.015436538796705852
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.0760093056951271,
+          "poisson_probability": 0.08992733404664469,
+          "combined_score": 0.006400743090639925
+        }
+      ],
+      "predicted_goal_diff": 0.4913591381502501,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-uraw-vs-FCtk",
+      "date": "2026-05-16",
+      "home_team": "uraw",
+      "away_team": "FCtk",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.5449884209961804,
+        "away": 0.950009191270771
+      },
+      "result_probabilities": {
+        "home_win": 0.5501750650834198,
+        "draw": 0.3746072832089178,
+        "away_win": 0.07521765170766238
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.32407590081122645,
+          "poisson_probability": 0.12745636650493547,
+          "combined_score": 0.024994774817236002
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.2378317202865259,
+          "poisson_probability": 0.09353724492151023,
+          "combined_score": 0.018343080365053936
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.20438257636588217,
+          "poisson_probability": 0.12108471966566473,
+          "combined_score": 0.015763271690502696
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.13924859868586045,
+          "poisson_probability": 0.08249664837148354,
+          "combined_score": 0.010739729054386317
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.09446120385050509,
+          "poisson_probability": 0.09845930521618534,
+          "combined_score": 0.00728544304990978
+        }
+      ],
+      "predicted_goal_diff": 0.5253422235588668,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-y-fm-vs-kasw",
+      "date": "2026-05-16",
+      "home_team": "y-fm",
+      "away_team": "kasw",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.6794762926718567,
+        "away": 0.9373381942535933
+      },
+      "result_probabilities": {
+        "home_win": 0.6920366729335315,
+        "draw": 0.25609296071949306,
+        "away_win": 0.051870366346975415
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.3208717561609657,
+          "poisson_probability": 0.1226607980437024,
+          "combined_score": 0.031638915341765474
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.2525641395962153,
+          "poisson_probability": 0.09654860025932545,
+          "combined_score": 0.0249035799431405
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.23630045975689162,
+          "poisson_probability": 0.1030029511773043,
+          "combined_score": 0.023299932443159827
+        },
+        {
+          "score": "3-1",
+          "home_goals": 3,
+          "away_goals": 1,
+          "probability": 0.1239976639862529,
+          "poisson_probability": 0.05405036174206299,
+          "combined_score": 0.012226540722610948
+        },
+        {
+          "score": "3-2",
+          "home_goals": 3,
+          "away_goals": 2,
+          "probability": 0.06626598049967446,
+          "poisson_probability": 0.025331734237029415,
+          "combined_score": 0.006534023973168047
+        }
+      ],
+      "predicted_goal_diff": 1.3687277663494337,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-chib-vs-kasm",
+      "date": "2026-05-17",
+      "home_team": "chib",
+      "away_team": "kasm",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.2009360882983808,
+        "away": 1.2062970376007576
+      },
+      "result_probabilities": {
+        "home_win": 0.5158517341680436,
+        "draw": 0.2595527644828359,
+        "away_win": 0.22459550134912046
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.281248105059264,
+          "poisson_probability": 0.10816128354936885,
+          "combined_score": 0.01519197246063585
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.24813759973085547,
+          "poisson_probability": 0.1304746359286992,
+          "combined_score": 0.013403466596744164
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.20372004633452204,
+          "poisson_probability": 0.0783458494471837,
+          "combined_score": 0.011004196216509141
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.17128464030402846,
+          "poisson_probability": 0.09006414629659747,
+          "combined_score": 0.009252156695883864
+        },
+        {
+          "score": "0-1",
+          "home_goals": 0,
+          "away_goals": 1,
+          "probability": 0.09560960857133001,
+          "poisson_probability": 0.10864411287162676,
+          "combined_score": 0.005164474050702498
+        }
+      ],
+      "predicted_goal_diff": 0.12594977978647656,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-ka-f-vs-mcd",
+      "date": "2026-05-17",
+      "home_team": "ka-f",
+      "away_team": "mcd",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.6605767326799328,
+        "away": 0.9728249134992343
+      },
+      "result_probabilities": {
+        "home_win": 0.8852233816482727,
+        "draw": 0.0813613867307539,
+        "away_win": 0.03341523162097334
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.35286553958382677,
+          "poisson_probability": 0.1192853598122256,
+          "combined_score": 0.04208722228927128
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.2850183914142833,
+          "poisson_probability": 0.09634979208525929,
+          "combined_score": 0.03399491038465032
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.18549255007511553,
+          "poisson_probability": 0.09904124652676788,
+          "combined_score": 0.022124195514310267
+        },
+        {
+          "score": "3-1",
+          "home_goals": 3,
+          "away_goals": 1,
+          "probability": 0.09988467241487477,
+          "poisson_probability": 0.05333207431177691,
+          "combined_score": 0.011913513618172982
+        },
+        {
+          "score": "3-2",
+          "home_goals": 3,
+          "away_goals": 2,
+          "probability": 0.07673884651189951,
+          "poisson_probability": 0.025941385289544556,
+          "combined_score": 0.009152848688987185
+        }
+      ],
+      "predicted_goal_diff": 1.0429098524517042,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-ngsk-vs-kobe",
+      "date": "2026-05-17",
+      "home_team": "ngsk",
+      "away_team": "kobe",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.2387258918293775,
+        "away": 1.1911039531713754
+      },
+      "result_probabilities": {
+        "home_win": 0.6542121753048165,
+        "draw": 0.23950124948807716,
+        "away_win": 0.10628657520710645
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.33157591353647076,
+          "poisson_probability": 0.10907206153210385,
+          "combined_score": 0.019680021668520207
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.2446120574411415,
+          "poisson_probability": 0.08046525785347819,
+          "combined_score": 0.014518456842895723
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.2070788457066116,
+          "poisson_probability": 0.12991616367144038,
+          "combined_score": 0.012290748526129042
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.14034949494623575,
+          "poisson_probability": 0.08805181376407967,
+          "combined_score": 0.008330162080376744
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.07638368836954049,
+          "poisson_probability": 0.047921243361115966,
+          "combined_score": 0.004533600243157312
+        }
+      ],
+      "predicted_goal_diff": 0.14076464246047635,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-okay-vs-shim",
+      "date": "2026-05-17",
+      "home_team": "okay",
+      "away_team": "shim",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.0796803577430512,
+        "away": 1.2135403322436944
+      },
+      "result_probabilities": {
+        "home_win": 0.21119978665412034,
+        "draw": 0.6145700662019062,
+        "away_win": 0.17423014714397342
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.4125111852878241,
+          "poisson_probability": 0.1322562863173746,
+          "combined_score": 0.0323015607522221
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.31483739747344175,
+          "poisson_probability": 0.10094083862140947,
+          "combined_score": 0.024653245013136014
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.13512171628365707,
+          "poisson_probability": 0.043321725649784204,
+          "combined_score": 0.010580664193228353
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.07735549804359775,
+          "poisson_probability": 0.10898384075364696,
+          "combined_score": 0.0060572983441169815
+        },
+        {
+          "score": "0-1",
+          "home_goals": 0,
+          "away_goals": 1,
+          "probability": 0.0601742029114792,
+          "poisson_probability": 0.12249577883758238,
+          "combined_score": 0.00471192234388864
+        }
+      ],
+      "predicted_goal_diff": 0.08780871755489927,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-kyot-vs-hiro",
+      "date": "2026-05-17",
+      "home_team": "kyot",
+      "away_team": "hiro",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.1983641628750832,
+        "away": 1.299377696535709
+      },
+      "result_probabilities": {
+        "home_win": 0.19180395655192903,
+        "draw": 0.47283788320600056,
+        "away_win": 0.3353581602420704
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.36798111891955193,
+          "poisson_probability": 0.12810577676686996,
+          "combined_score": 0.024102877963115842
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.23632045532080626,
+          "poisson_probability": 0.08227056753254447,
+          "combined_score": 0.01547906346801077
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.14324839516903592,
+          "poisson_probability": 0.04986926228067908,
+          "combined_score": 0.009382814524041641
+        },
+        {
+          "score": "0-1",
+          "home_goals": 0,
+          "away_goals": 1,
+          "probability": 0.14194038242387658,
+          "poisson_probability": 0.1069005405331231,
+          "combined_score": 0.009297139281617944
+        },
+        {
+          "score": "1-2",
+          "home_goals": 1,
+          "away_goals": 2,
+          "probability": 0.11050964816672945,
+          "poisson_probability": 0.08322889456412662,
+          "combined_score": 0.007238416393021146
+        }
+      ],
+      "predicted_goal_diff": -0.07188641932746029,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-17-c-os-vs-nago",
+      "date": "2026-05-17",
+      "home_team": "c-os",
+      "away_team": "nago",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.27918222871578,
+        "away": 1.028239958542529
+      },
+      "result_probabilities": {
+        "home_win": 0.7897281234903476,
+        "draw": 0.1523931452490132,
+        "away_win": 0.05787873126063923
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.4449493200070594,
+          "poisson_probability": 0.12730096444156072,
+          "combined_score": 0.03463829788793146
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.29262231784909065,
+          "poisson_probability": 0.08371987910605899,
+          "combined_score": 0.02277998540182723
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.10044144706984366,
+          "poisson_probability": 0.08142056570601196,
+          "combined_score": 0.007819139410854582
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.09202342197344805,
+          "poisson_probability": 0.13089593839981437,
+          "combined_score": 0.007163815202442694
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.0699634931005582,
+          "poisson_probability": 0.09951745856363488,
+          "combined_score": 0.00544649964912616
+        }
+      ],
+      "predicted_goal_diff": 0.4585407440533705,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 17
+    },
+    {
+      "match_id": "2026-100yj1-18-mcd-vs-uraw",
+      "date": "2026-05-22",
+      "home_team": "mcd",
+      "away_team": "uraw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2709337358151178,
+        "away": 1.0740104604626757
+      },
+      "result_probabilities": {
+        "home_win": 0.2841423787378118,
+        "draw": 0.5181007561624352,
+        "away_win": 0.197756865099753
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.3620632845951455,
+          "poisson_probability": 0.13083836073851868,
+          "combined_score": 0.026018295768773732
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.2652485801835533,
+          "poisson_probability": 0.09585255091038015,
+          "combined_score": 0.019061076626921584
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.14807410204816931,
+          "poisson_probability": 0.1218222406159382,
+          "combined_score": 0.010640780069961586
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.12355374528405627,
+          "poisson_probability": 0.04464846391190021,
+          "combined_score": 0.008878718237710565
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.10106028788907569,
+          "poisson_probability": 0.08314344330066578,
+          "combined_score": 0.007262311790922333
+        }
+      ],
+      "predicted_goal_diff": 0.2779878450593541,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-kasm-vs-FCtk",
+      "date": "2026-05-23",
+      "home_team": "kasm",
+      "away_team": "FCtk",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.3362098081814284,
+        "away": 0.866895519884596
+      },
+      "result_probabilities": {
+        "home_win": 0.5690028854078135,
+        "draw": 0.3259324861071615,
+        "away_win": 0.105064628485025
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.36357440156210474,
+          "poisson_probability": 0.1475972168195857,
+          "combined_score": 0.029562043049500122
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.21057398504405164,
+          "poisson_probability": 0.08548493511527397,
+          "combined_score": 0.017121659787463647
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.18060762052492524,
+          "poisson_probability": 0.12795136600833418,
+          "combined_score": 0.014685110475561373
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.1559174262104803,
+          "poisson_probability": 0.11045961189318346,
+          "combined_score": 0.012677563783362619
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.0893265666584381,
+          "poisson_probability": 0.09861042438730565,
+          "combined_score": 0.00726309607517766
+        }
+      ],
+      "predicted_goal_diff": 0.4996250612559673,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-kasw-vs-chib",
+      "date": "2026-05-23",
+      "home_team": "kasw",
+      "away_team": "chib",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2622280027941195,
+        "away": 1.0389682940134748
+      },
+      "result_probabilities": {
+        "home_win": 0.259437924305777,
+        "draw": 0.4134903009521213,
+        "away_win": 0.3270717747421018
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.3524191918663068,
+          "poisson_probability": 0.13132374279804784,
+          "combined_score": 0.021613989196148382
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.2687320379386495,
+          "poisson_probability": 0.10013897610104713,
+          "combined_score": 0.01648142751223481
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.1380730815404431,
+          "poisson_probability": 0.1263982198058728,
+          "combined_score": 0.008468069167544582
+        },
+        {
+          "score": "0-1",
+          "home_goals": 0,
+          "away_goals": 1,
+          "probability": 0.1252337460671159,
+          "poisson_probability": 0.10404122116396107,
+          "combined_score": 0.007680628345333363
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.1155419425874847,
+          "poisson_probability": 0.0430549774272844,
+          "combined_score": 0.007086226733461414
+        }
+      ],
+      "predicted_goal_diff": 0.06730656101801476,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-hiro-vs-nago",
+      "date": "2026-05-23",
+      "home_team": "hiro",
+      "away_team": "nago",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.4491192503247676,
+        "away": 0.9508747702428076
+      },
+      "result_probabilities": {
+        "home_win": 0.7744351401863477,
+        "draw": 0.15427872334627582,
+        "away_win": 0.07128613646737644
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.43213790839382477,
+          "poisson_probability": 0.13146191852705888,
+          "combined_score": 0.03760046210884419
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.2977280959096795,
+          "poisson_probability": 0.09057272210431692,
+          "combined_score": 0.025905419940127166
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.12822238424792043,
+          "poisson_probability": 0.09525199841109362,
+          "combined_score": 0.011156671994686054
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.07353681922582644,
+          "poisson_probability": 0.1250038215750958,
+          "combined_score": 0.006398462923983376
+        },
+        {
+          "score": "3-2",
+          "home_goals": 3,
+          "away_goals": 2,
+          "probability": 0.06837479222274898,
+          "poisson_probability": 0.0208004925971453,
+          "combined_score": 0.005949313249853981
+        }
+      ],
+      "predicted_goal_diff": 0.6072125859165303,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-fuku-vs-kobe",
+      "date": "2026-05-23",
+      "home_team": "fuku",
+      "away_team": "kobe",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.1416870556782839,
+        "away": 1.184310320981637
+      },
+      "result_probabilities": {
+        "home_win": 0.4384638711477663,
+        "draw": 0.36398610079286753,
+        "away_win": 0.19755002805936614
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.32566897751075635,
+          "poisson_probability": 0.1320823434012817,
+          "combined_score": 0.01916389735648525
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.24085951053249932,
+          "poisson_probability": 0.09768596574590054,
+          "combined_score": 0.014173308653648601
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.19294481862217125,
+          "poisson_probability": 0.11152680261352688,
+          "combined_score": 0.011353782382968388
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.130441479470254,
+          "poisson_probability": 0.07539835087244866,
+          "combined_score": 0.007675791359382587
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.11008521386431905,
+          "poisson_probability": 0.044647522561617886,
+          "combined_score": 0.006477932761934189
+        }
+      ],
+      "predicted_goal_diff": -0.04047836162601889,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-kyot-vs-ngsk",
+      "date": "2026-05-23",
+      "home_team": "kyot",
+      "away_team": "ngsk",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2534277332871395,
+        "away": 1.05789294856645
+      },
+      "result_probabilities": {
+        "home_win": 0.23648897998693108,
+        "draw": 0.5422581329319386,
+        "away_win": 0.22125288708113022
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.3869930007514545,
+          "poisson_probability": 0.13144594830672113,
+          "combined_score": 0.027973169857294124
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.29185160658208426,
+          "poisson_probability": 0.09913024555361541,
+          "combined_score": 0.021096026409242852
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.12828744064879227,
+          "poisson_probability": 0.043574080821045254,
+          "combined_score": 0.009273052383009326
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.11597618461391435,
+          "poisson_probability": 0.12425259898446571,
+          "combined_score": 0.008383152938958506
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.07689176740375449,
+          "poisson_probability": 0.08237899851793598,
+          "combined_score": 0.0055579983773251535
+        }
+      ],
+      "predicted_goal_diff": 0.1810979409998759,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-mito-vs-ka-f",
+      "date": "2026-05-24",
+      "home_team": "mito",
+      "away_team": "ka-f",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2616881337219867,
+        "away": 1.468679083527207
+      },
+      "result_probabilities": {
+        "home_win": 0.4636685239390448,
+        "draw": 0.39132472830263426,
+        "away_win": 0.14500674775832106
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.34149882260137926,
+          "poisson_probability": 0.1208079493046003,
+          "combined_score": 0.018856804079843397
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.18429361218022508,
+          "poisson_probability": 0.06519534441680497,
+          "combined_score": 0.010176282634232162
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.16403100414923744,
+          "poisson_probability": 0.0822561924246008,
+          "combined_score": 0.009057426566511557
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.15820060779437306,
+          "poisson_probability": 0.055964734697455394,
+          "combined_score": 0.008735485070684371
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.15197595327478522,
+          "poisson_probability": 0.07621097804845078,
+          "combined_score": 0.0083917735174601
+        }
+      ],
+      "predicted_goal_diff": -0.018557543836739205,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-tk-v-vs-y-fm",
+      "date": "2026-05-24",
+      "home_team": "tk-v",
+      "away_team": "y-fm",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      },
+      "expected_goals": {
+        "home": 1.2327062371290733,
+        "away": 1.7063617732286174
+      },
+      "result_probabilities": {
+        "home_win": 0.21243393186250653,
+        "draw": 0.1654325931122708,
+        "away_win": 0.6221334750252228
+      },
+      "score_candidates": [
+        {
+          "score": "1-2",
+          "home_goals": 1,
+          "away_goals": 2,
+          "probability": 0.33622329647245724,
+          "poisson_probability": 0.09496220831148966,
+          "combined_score": 0.023013862872205512
+        },
+        {
+          "score": "0-1",
+          "home_goals": 0,
+          "away_goals": 1,
+          "probability": 0.3196885566532667,
+          "poisson_probability": 0.09029217079903881,
+          "combined_score": 0.021882090508961134
+        },
+        {
+          "score": "0-2",
+          "home_goals": 0,
+          "away_goals": 2,
+          "probability": 0.13297909488595053,
+          "poisson_probability": 0.07703555433665452,
+          "combined_score": 0.00910217312923755
+        },
+        {
+          "score": "2-3",
+          "home_goals": 2,
+          "away_goals": 3,
+          "probability": 0.11787107872972277,
+          "poisson_probability": 0.03329126223455746,
+          "combined_score": 0.008068057362310099
+        },
+        {
+          "score": "1-3",
+          "home_goals": 1,
+          "away_goals": 3,
+          "probability": 0.09323797325860295,
+          "poisson_probability": 0.054013294054699616,
+          "combined_score": 0.006381966846344419
+        }
+      ],
+      "predicted_goal_diff": -0.7816283677841306,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-okay-vs-c-os",
+      "date": "2026-05-24",
+      "home_team": "okay",
+      "away_team": "c-os",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.176422819243009,
+        "away": 1.2233432177679617
+      },
+      "result_probabilities": {
+        "home_win": 0.28637720482873424,
+        "draw": 0.6259086519090009,
+        "away_win": 0.08771414326226484
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.4046443292021855,
+          "poisson_probability": 0.13058900439267068,
+          "combined_score": 0.03253745690200947
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.2811652861781979,
+          "poisson_probability": 0.09073918041600687,
+          "combined_score": 0.02260850510225033
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.14558788122559427,
+          "poisson_probability": 0.04698490770493184,
+          "combined_score": 0.011706723828732361
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.098048400306425,
+          "poisson_probability": 0.10674764244079883,
+          "combined_score": 0.007884073417194068
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.07055410308759726,
+          "poisson_probability": 0.07681394235488168,
+          "combined_score": 0.005673256543589368
+        }
+      ],
+      "predicted_goal_diff": 0.0659348060955846,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    },
+    {
+      "match_id": "2026-100yj1-18-shim-vs-g-os",
+      "date": "2026-05-24",
+      "home_team": "shim",
+      "away_team": "g-os",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.2560269922768894,
+        "away": 1.1143988366317292
+      },
+      "result_probabilities": {
+        "home_win": 0.1105579259945929,
+        "draw": 0.7956471912642497,
+        "away_win": 0.09379488274115752
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.4529361615182806,
+          "poisson_probability": 0.13079067024754887,
+          "combined_score": 0.041266330238811655
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.3235916992954194,
+          "poisson_probability": 0.09344092795664989,
+          "combined_score": 0.029481951454044072
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.15849538697810003,
+          "poisson_probability": 0.045767416371707996,
+          "combined_score": 0.014440275553274736
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.03822482287227633,
+          "poisson_probability": 0.11736432769695246,
+          "combined_score": 0.003482605934310617
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.026751929335923637,
+          "poisson_probability": 0.08213830608445363,
+          "combined_score": 0.002437327915706775
+        }
+      ],
+      "predicted_goal_diff": 0.10966528556112738,
+      "scorer_candidates": {
+        "home": [],
+        "away": []
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 18
+    }
+  ],
+  "skipped_matches": [],
+  "warnings": [],
+  "data_sources": {
+    "features": "data/features/upcoming_features_2026.csv"
+  }
+}

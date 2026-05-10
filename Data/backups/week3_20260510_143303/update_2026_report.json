@@ -1,0 +1,133 @@
+{
+  "updated_at": "2026-05-09T17:47:36+09:00",
+  "use_cache": true,
+  "sources": {
+    "matches": {
+      "url": "https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section=",
+      "warnings": [],
+      "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/ad943ca5b09cfc2f236e.html",
+      "from_cache": true,
+      "rows": 180,
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/matches/schedule_2026_100yj1.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/matches_2026_clean.csv"
+    },
+    "standings": {
+      "url": "https://www.jleague.jp/standings/j1/",
+      "warnings": [
+        "順位表はHTMLテーブルを保存しました。列名の正規化は今後調整が必要です。"
+      ],
+      "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/836fd36e66a723a2c84c.html",
+      "rows": 10,
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/standings/standings_2026.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/standings_2026_clean.csv"
+    },
+    "team_stats": {
+      "urls": [
+        "https://www.jleague.jp/stats/j1/club/2026/shoot/",
+        "https://www.jleague.jp/stats/j1/club/2026/shoot_on_target/",
+        "https://www.jleague.jp/stats/j1/club/2026/suffer_shoot/",
+        "https://www.jleague.jp/stats/j1/club/2026/score/",
+        "https://www.jleague.jp/stats/j1/club/2026/lost/",
+        "https://www.jleague.jp/stats/j1/club/2026/clean_sheet/",
+        "https://www.jleague.jp/stats/j1/club/2026/pass_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/dribble_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/through_pass_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/cross_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/clear_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/tackle_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/block_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/foul_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/intercept_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/air_battle_win_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/yellow_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/red_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/ball_rate/",
+        "https://www.jleague.jp/stats/j1/club/2026/chance_create/",
+        "https://www.jleague.jp/stats/j1/club/2026/one_on_one/",
+        "https://www.jleague.jp/stats/j1/club/2026/recovery_count/",
+        "https://www.jleague.jp/stats/j1/club/2026/expected_goals/",
+        "https://www.jleague.jp/stats/j1/club/2026/expected_goals_against/",
+        "https://www.jleague.jp/stats/j1/club/2026/distance_per_game/",
+        "https://www.jleague.jp/stats/j1/club/2026/sprint_per_game/"
+      ],
+      "warnings": [
+        "shoot: No tables found",
+        "shoot_on_target: No tables found",
+        "suffer_shoot: No tables found",
+        "score: No tables found",
+        "lost: No tables found",
+        "clean_sheet: No tables found",
+        "pass_count: No tables found",
+        "dribble_count: No tables found",
+        "through_pass_count: No tables found",
+        "cross_count: No tables found",
+        "clear_count: No tables found",
+        "tackle_count: No tables found",
+        "block_count: No tables found",
+        "foul_count: No tables found",
+        "intercept_count: No tables found",
+        "air_battle_win_count: No tables found",
+        "yellow_count: No tables found",
+        "red_count: No tables found",
+        "ball_rate: No tables found",
+        "chance_create: No tables found",
+        "one_on_one: No tables found",
+        "recovery_count: No tables found",
+        "expected_goals: No tables found",
+        "expected_goals_against: No tables found",
+        "distance_per_game: No tables found",
+        "sprint_per_game: No tables found"
+      ],
+      "rows": 0,
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/team_stats/team_stats_2026.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/team_stats_2026_clean.csv"
+    },
+    "market_values": {
+      "url": "https://www.transfermarkt.com/j1-league/startseite/wettbewerb/JAP1/plus/?saison_id=2025",
+      "manual_path": "/Users/akihirookuyama/Soccer_Score_App/data/manual/market_values_2026.csv",
+      "warnings": [
+        "Transfermarktから市場価値テーブルを特定できませんでした。フィルタ表などの非データ表は採用していません。"
+      ],
+      "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/14eae1c7b57f8cc90b50.html",
+      "from_cache": true,
+      "source": "empty",
+      "rows": 0,
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/market_values/market_values_2026.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/market_values_2026_clean.csv"
+    },
+    "football_lab": {
+      "urls": {
+        "expected": "https://www.football-lab.jp/summary/team_ranking/j1?year=2026&data=expected",
+        "kagi": "https://www.football-lab.jp/summary/team_ranking/j1?year=2026&data=kagi",
+        "goal_patterns": "https://www.football-lab.jp/summary/team_ranking/j1?year=2026&data=goal",
+        "team_styles": "https://www.football-lab.jp/summary/team_style/j1?year=2026&data=21"
+      },
+      "warnings": [
+        "expected: HTML取得に失敗しました: https://www.football-lab.jp/summary/team_ranking/j1?year=2026&data=expected: HTTPSConnectionPool(host='www.football-lab.jp', port=443): Max retries exceeded with url: /summary/team_ranking/j1?year=2026&data=expected (Caused by NameResolutionError(\"HTTPSConnection(host='www.football-lab.jp', port=443): Failed to resolve 'www.football-lab.jp' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "kagi: HTML取得に失敗しました: https://www.football-lab.jp/summary/team_ranking/j1?year=2026&data=kagi: HTTPSConnectionPool(host='www.football-lab.jp', port=443): Max retries exceeded with url: /summary/team_ranking/j1?year=2026&data=kagi (Caused by NameResolutionError(\"HTTPSConnection(host='www.football-lab.jp', port=443): Failed to resolve 'www.football-lab.jp' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "goal_patterns: HTML取得に失敗しました: https://www.football-lab.jp/summary/team_ranking/j1?year=2026&data=goal: HTTPSConnectionPool(host='www.football-lab.jp', port=443): Max retries exceeded with url: /summary/team_ranking/j1?year=2026&data=goal (Caused by NameResolutionError(\"HTTPSConnection(host='www.football-lab.jp', port=443): Failed to resolve 'www.football-lab.jp' ([Errno 8] nodename nor servname provided, or not known)\"))",
+        "team_styles: HTML取得に失敗しました: https://www.football-lab.jp/summary/team_style/j1?year=2026&data=21: HTTPSConnectionPool(host='www.football-lab.jp', port=443): Max retries exceeded with url: /summary/team_style/j1?year=2026&data=21 (Caused by NameResolutionError(\"HTTPSConnection(host='www.football-lab.jp', port=443): Failed to resolve 'www.football-lab.jp' ([Errno 8] nodename nor servname provided, or not known)\"))"
+      ],
+      "expected_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/expected_2026.csv",
+      "expected_rows": 0,
+      "kagi_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/kagi_2026.csv",
+      "kagi_rows": 0,
+      "goal_patterns_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/goal_patterns/goal_patterns_2026_asof_20260509.csv",
+      "goal_patterns_rows": 0,
+      "team_styles_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/team_styles/team_styles_2026_asof_20260509.csv",
+      "team_styles_rows": 0
+    },
+    "formations": {
+      "warnings": [],
+      "rows": 19,
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/formations/formations_2026.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/formations_2026_clean.csv"
+    },
+    "player_stats": {
+      "warnings": [],
+      "rows": 190,
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/player_stats/player_stats_2026.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/player_stats_2026_clean.csv"
+    }
+  }
+}

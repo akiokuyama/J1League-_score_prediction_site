@@ -36,6 +36,17 @@ DROP_COLS = [
     "Away_Goals",
     "Goal_Diff",
     "Match_Result",
+    "season",
+    "league",
+    "competition",
+    "category",
+    "section",
+    "match_date",
+    "kickoff_time",
+    "home_team",
+    "away_team",
+    "status",
+    "match_id",
 ]
 
 CAT_COLS = [
@@ -111,6 +122,8 @@ def prepare_features_for_model(
 
     X = df.drop(columns=drop_cols, errors="ignore")
     X = pd.get_dummies(X, columns=cat_cols, dummy_na=False)
+    if X.columns.duplicated().any():
+        X = X.loc[:, ~X.columns.duplicated(keep="last")]
 
     non_numeric_columns: list[str] = []
     for col in X.columns:

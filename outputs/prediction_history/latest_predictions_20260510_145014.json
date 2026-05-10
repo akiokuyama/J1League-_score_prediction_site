@@ -1,0 +1,373 @@
+{
+  "last_updated": "2026-05-10T14:50:14+09:00",
+  "season": 2026,
+  "league": "J1",
+  "competition": "明治安田J1百年構想リーグ",
+  "category": "100yj1",
+  "matchweek": 12,
+  "model_version": "weather_removed_v1",
+  "feature_policy": {
+    "exclude_weather": true
+  },
+  "matches": [
+    {
+      "match_id": "2026-100yj1-12-mcd-vs-tk-v",
+      "date": "2026-05-13",
+      "home_team": "mcd",
+      "away_team": "tk-v",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "expected_goals": {
+        "home": 1.828896482071052,
+        "away": 1.307979798535991
+      },
+      "result_probabilities": {
+        "home_win": 0.22111174229544434,
+        "draw": 0.26680269529936756,
+        "away_win": 0.5120855624051882
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.2740385442269923,
+          "poisson_probability": 0.10386329636463454,
+          "combined_score": 0.008890870752593042
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.24373788706291363,
+          "poisson_probability": 0.09497760866879161,
+          "combined_score": 0.007907800187376106
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.20378061877481982,
+          "poisson_probability": 0.07940741629258168,
+          "combined_score": 0.006611431791542484
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.16388598715928837,
+          "poisson_probability": 0.06211439672601811,
+          "combined_score": 0.005317095571736128
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.11455696277598591,
+          "poisson_probability": 0.04341821260581151,
+          "combined_score": 0.0037166711446519995
+        }
+      ],
+      "predicted_goal_diff": 0.6601002778726842,
+      "scorer_candidates": {
+        "home": [
+          {
+            "player": "相馬　勇紀",
+            "position": "FW",
+            "goals": 9,
+            "assists": 10,
+            "cbp_90": 2.33,
+            "played_games": 34,
+            "scorer_score": 39.33
+          },
+          {
+            "player": "西村　拓真",
+            "position": "FW",
+            "goals": 7,
+            "assists": 3,
+            "cbp_90": 0.95,
+            "played_games": 30,
+            "scorer_score": 24.95
+          },
+          {
+            "player": "岡村　大八",
+            "position": "DF",
+            "goals": 4,
+            "assists": 2,
+            "cbp_90": 0.91,
+            "played_games": 32,
+            "scorer_score": 14.91
+          },
+          {
+            "player": "林　幸多郎",
+            "position": "DF",
+            "goals": 4,
+            "assists": 1,
+            "cbp_90": 0.96,
+            "played_games": 33,
+            "scorer_score": 13.96
+          },
+          {
+            "player": "昌子　源",
+            "position": "DF",
+            "goals": 3,
+            "assists": 1,
+            "cbp_90": 1.09,
+            "played_games": 38,
+            "scorer_score": 11.09
+          }
+        ],
+        "away": [
+          {
+            "player": "谷口　栄斗",
+            "position": "DF",
+            "goals": 3,
+            "assists": 1,
+            "cbp_90": 1.18,
+            "played_games": 35,
+            "scorer_score": 11.18
+          },
+          {
+            "player": "綱島　悠斗",
+            "position": "MF",
+            "goals": 3,
+            "assists": 1,
+            "cbp_90": 1.09,
+            "played_games": 23,
+            "scorer_score": 11.09
+          },
+          {
+            "player": "新井　悠太",
+            "position": "MF",
+            "goals": 2,
+            "assists": 1,
+            "cbp_90": 1.22,
+            "played_games": 37,
+            "scorer_score": 8.22
+          },
+          {
+            "player": "齋藤　功佑",
+            "position": "MF",
+            "goals": 1,
+            "assists": 3,
+            "cbp_90": 1.49,
+            "played_games": 37,
+            "scorer_score": 7.49
+          },
+          {
+            "player": "福田　湧矢",
+            "position": "MF",
+            "goals": 1,
+            "assists": 2,
+            "cbp_90": 1.48,
+            "played_games": 29,
+            "scorer_score": 6.48
+          }
+        ]
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 12
+    },
+    {
+      "match_id": "2026-100yj1-12-kobe-vs-kyot",
+      "date": "2026-05-13",
+      "home_team": "kobe",
+      "away_team": "kyot",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "expected_goals": {
+        "home": 1.6755712850053326,
+        "away": 1.0707511741082478
+      },
+      "result_probabilities": {
+        "home_win": 0.4816205920933248,
+        "draw": 0.42109490753319656,
+        "away_win": 0.09728450037347862
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.29652579927699346,
+          "poisson_probability": 0.10751033609544904,
+          "combined_score": 0.020369264050318858
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.2660014217453631,
+          "poisson_probability": 0.09644321783615577,
+          "combined_score": 0.018272451201556936
+        },
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.19907149765868645,
+          "poisson_probability": 0.11511681860297439,
+          "combined_score": 0.013674830016778331
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.1274435379934007,
+          "poisson_probability": 0.09007061600140336,
+          "combined_score": 0.008754486399577956
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.1109577433255563,
+          "poisson_probability": 0.06416339135049505,
+          "combined_score": 0.007622026743495967
+        }
+      ],
+      "predicted_goal_diff": 0.8325322076155487,
+      "scorer_candidates": {
+        "home": [
+          {
+            "player": "宮代　大聖",
+            "position": "FW",
+            "goals": 11,
+            "assists": 4,
+            "cbp_90": 1.55,
+            "played_games": 34,
+            "scorer_score": 38.55
+          },
+          {
+            "player": "エリキ",
+            "position": "FW",
+            "goals": 9,
+            "assists": 4,
+            "cbp_90": 1.87,
+            "played_games": 29,
+            "scorer_score": 32.87
+          },
+          {
+            "player": "大迫　勇也",
+            "position": "FW",
+            "goals": 8,
+            "assists": 3,
+            "cbp_90": 1.75,
+            "played_games": 31,
+            "scorer_score": 28.75
+          },
+          {
+            "player": "佐々木　大樹",
+            "position": "MF",
+            "goals": 5,
+            "assists": 8,
+            "cbp_90": 1.86,
+            "played_games": 31,
+            "scorer_score": 24.86
+          },
+          {
+            "player": "扇原　貴宏",
+            "position": "MF",
+            "goals": 2,
+            "assists": 3,
+            "cbp_90": 1.36,
+            "played_games": 36,
+            "scorer_score": 10.36
+          }
+        ],
+        "away": [
+          {
+            "player": "ラファエル　エリアス",
+            "position": "FW",
+            "goals": 18,
+            "assists": 4,
+            "cbp_90": 1.22,
+            "played_games": 27,
+            "scorer_score": 59.22
+          },
+          {
+            "player": "原　大智",
+            "position": "FW",
+            "goals": 5,
+            "assists": 8,
+            "cbp_90": 1.57,
+            "played_games": 34,
+            "scorer_score": 24.57
+          },
+          {
+            "player": "福田　心之助",
+            "position": "DF",
+            "goals": 4,
+            "assists": 1,
+            "cbp_90": 1.26,
+            "played_games": 31,
+            "scorer_score": 14.26
+          },
+          {
+            "player": "川﨑　颯太",
+            "position": "MF",
+            "goals": 4,
+            "assists": 1,
+            "cbp_90": 1.16,
+            "played_games": 23,
+            "scorer_score": 14.16
+          },
+          {
+            "player": "須貝　英大",
+            "position": "DF",
+            "goals": 2,
+            "assists": 4,
+            "cbp_90": 0.96,
+            "played_games": 37,
+            "scorer_score": 10.96
+          }
+        ]
+      },
+      "feature_source": {
+        "type": "feature_row",
+        "dataset_path": null,
+        "row_index": null,
+        "warnings": [],
+        "diagnostics": {
+          "missing_columns": [],
+          "missing_dummy_columns": [],
+          "missing_non_dummy_columns": [],
+          "extra_columns": [],
+          "non_numeric_columns": []
+        }
+      },
+      "model_info": {
+        "feature_count": 158,
+        "max_goals": 5,
+        "top_n_scores": 5
+      },
+      "section": 12
+    }
+  ],
+  "skipped_matches": [],
+  "warnings": [],
+  "data_sources": {
+    "features": "data/features/upcoming_features_2026.csv"
+  }
+}
