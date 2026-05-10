@@ -23,10 +23,25 @@ from src.predict.predict_upcoming import (
 )
 
 
+def default_output_for_mode(mode: str) -> str:
+    if mode == "all_unplayed":
+        return "outputs/all_unplayed_predictions.json"
+    return "outputs/latest_predictions.json"
+
+
+def default_csv_for_output(output_path: str) -> str:
+    path = Path(output_path)
+    if path.name == "latest_predictions.json":
+        return str(path.with_name("latest_predictions.csv"))
+    return str(path.with_suffix(".csv"))
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="一括予測を実行します")
     parser.add_argument("--mode", default="next_section", choices=["next_section", "all_unplayed", "date_range"])
     parser.add_argument("--features", default="data/features/upcoming_features_2026.csv")
+    parser.add_argument("--output", help="予測JSONの保存先。未指定時はmodeごとのデフォルトを使います。")
+    parser.add_argument("--csv-output", help="確認用CSVの保存先。未指定時はJSON名に対応するCSVを使います。")
     parser.add_argument("--date-from")
     parser.add_argument("--date-to")
     return parser.parse_args()
@@ -43,7 +58,9 @@ def main() -> int:
             date_to=args.date_to,
         )
         predictions = predict_upcoming_matches(targets)
-        save_result = write_predictions_safely(predictions)
+        output_path = args.output or default_output_for_mode(args.mode)
+        csv_path = args.csv_output or default_csv_for_output(output_path)
+        save_result = write_predictions_safely(predictions, output_path=output_path, csv_path=csv_path)
         print(json.dumps({"prediction_count": len(predictions["matches"]), "save_result": save_result, "predictions": predictions}, ensure_ascii=False, indent=2))
         return 0
     except Exception as exc:

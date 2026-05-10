@@ -142,7 +142,12 @@ def predict_upcoming_matches(
     }
 
 
-def write_predictions_safely(data: dict[str, Any], output_dir: str | Path = OUTPUT_DIR) -> dict[str, Any]:
+def write_predictions_safely(
+    data: dict[str, Any],
+    output_dir: str | Path = OUTPUT_DIR,
+    output_path: str | Path | None = None,
+    csv_path: str | Path | None = None,
+) -> dict[str, Any]:
     errors = validate_latest_predictions(data)
     if errors:
         return {"updated": False, "errors": errors}
@@ -155,12 +160,18 @@ def write_predictions_safely(data: dict[str, Any], output_dir: str | Path = OUTP
     out.mkdir(parents=True, exist_ok=True)
     history_dir = out / "prediction_history"
     history_dir.mkdir(parents=True, exist_ok=True)
-    tmp_path = out / "latest_predictions.tmp.json"
-    latest_path = out / "latest_predictions.json"
-    csv_path = out / "latest_predictions.csv"
+    latest_path = Path(output_path) if output_path is not None else out / "latest_predictions.json"
+    if not latest_path.is_absolute():
+        latest_path = Path.cwd() / latest_path
+    latest_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = latest_path.with_suffix(latest_path.suffix + ".tmp")
+    csv_output_path = Path(csv_path) if csv_path is not None else out / "latest_predictions.csv"
+    if not csv_output_path.is_absolute():
+        csv_output_path = Path.cwd() / csv_output_path
+    csv_output_path.parent.mkdir(parents=True, exist_ok=True)
     updated_path = out / "last_updated.txt"
     timestamp = datetime.now(ZoneInfo("Asia/Tokyo")).strftime("%Y%m%d_%H%M%S")
-    history_path = history_dir / f"latest_predictions_{timestamp}.json"
+    history_path = history_dir / f"{latest_path.stem}_{timestamp}.json"
 
     tmp_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     json.loads(tmp_path.read_text(encoding="utf-8"))
@@ -168,7 +179,7 @@ def write_predictions_safely(data: dict[str, Any], output_dir: str | Path = OUTP
     shutil.copy2(latest_path, history_path)
     updated_path.write_text(str(data["last_updated"]) + "\n", encoding="utf-8")
 
-    with csv_path.open("w", newline="", encoding="utf-8") as f:
+    with csv_output_path.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(
             f,
             fieldnames=["match_id", "date", "home_team", "away_team", "predicted_home", "predicted_away"],
@@ -189,6 +200,6 @@ def write_predictions_safely(data: dict[str, Any], output_dir: str | Path = OUTP
     return {
         "updated": True,
         "latest_path": str(latest_path),
-        "csv_path": str(csv_path),
+        "csv_path": str(csv_output_path),
         "history_path": str(history_path),
     }
