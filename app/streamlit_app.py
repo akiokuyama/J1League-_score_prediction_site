@@ -64,6 +64,8 @@ def main() -> None:
         )
 
     if tab == "これからの試合":
+        if st.session_state.view != "detail":
+            render_prediction_logic_summary(latest)
         render_future_matches(latest, all_unplayed)
     else:
         render_past_predictions(past)
@@ -215,6 +217,27 @@ def inject_css() -> None:
         .summary-card {
             border-left: 5px solid #f59e0b;
         }
+        .logic-card {
+            border: 1px solid #dbe3ef;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+            padding: 16px;
+            background: #ffffff;
+            margin-bottom: 16px;
+            box-shadow: 0 7px 18px rgba(15, 23, 42, 0.055);
+        }
+        .logic-card-title {
+            font-weight: 850;
+            font-size: 1.02rem;
+            margin-bottom: 8px;
+        }
+        .logic-card ul {
+            margin: 8px 0 0 1.1rem;
+            padding: 0;
+            color: #475569;
+            font-size: .9rem;
+            line-height: 1.65;
+        }
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -246,6 +269,24 @@ def inject_css() -> None:
             .prob-line { text-align: left; }
         }
         </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_prediction_logic_summary(data: dict[str, Any]) -> None:
+    feature_count = resolve_feature_count(data)
+    feature_text = f"{feature_count}個" if feature_count is not None else "複数"
+    st.markdown(
+        f"""
+        <div class="logic-card">
+          <div class="logic-card-title">このアプリの予測について</div>
+          <ul>
+            <li>試合ごとのチーム状態・直近成績・戦術情報など、{feature_text}の特徴量を使って機械学習モデルが試合結果を予測しています。</li>
+            <li>予測スコアは、AIモデルが算出した期待得点と勝敗確率をもとに、最も有力なスコア候補として表示しています。</li>
+            <li>得点者候補は、チームのゴール期待値を選手の得点実績・アシスト・攻撃指標に応じて配分した参考予測です。</li>
+          </ul>
+        </div>
         """,
         unsafe_allow_html=True,
     )
@@ -587,6 +628,14 @@ def format_matchup(home: str, away: str) -> str:
 
 def match_section(match: dict[str, Any]) -> Any:
     return match.get("matchweek") or match.get("section")
+
+
+def resolve_feature_count(data: dict[str, Any]) -> int | None:
+    for match in safe_matches(data):
+        model_info = match.get("model_info")
+        if isinstance(model_info, dict) and _is_int_like(model_info.get("feature_count")):
+            return int(model_info["feature_count"])
+    return None
 
 
 def find_match(matches: list[dict[str, Any]], match_id: str | None) -> dict[str, Any] | None:
