@@ -11,6 +11,7 @@ import pandas as pd
 from src.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
 from src.data.scraping import empty_frame, fetch_html, safe_write_csv
 from src.data.team_master import FOOTBALL_LAB_CODES
+from src.predict.scorer_candidates import add_scorer_score
 
 
 PLAYER_COLUMN_MAP = {
@@ -50,11 +51,7 @@ def normalize_player_stats(df: pd.DataFrame) -> pd.DataFrame:
         if col not in normalized.columns:
             normalized[col] = ""
         normalized[col] = normalized[col].astype(str).str.strip()
-    normalized["scorer_score"] = (
-        normalized.get("goals", 0).astype(float) * 3
-        + normalized.get("assists", 0).astype(float)
-        + normalized.get("cbp_90", 0).astype(float)
-    )
+    normalized = add_scorer_score(normalized)
     columns = [
         "rank",
         "position",

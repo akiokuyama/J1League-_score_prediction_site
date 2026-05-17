@@ -15,6 +15,7 @@ import pandas as pd
 from src.config import CATEGORY, COMPETITION, LEAGUE, OUTPUT_DIR, SEASON
 from src.features.validation import validate_latest_predictions, validate_no_weather_columns
 from src.predict.predict_match import predict_match
+from src.predict.scorer_candidates import load_team_scorer_candidates
 
 
 def load_upcoming_features(path: str | Path = "data/features/upcoming_features_2026.csv") -> pd.DataFrame:
@@ -22,34 +23,7 @@ def load_upcoming_features(path: str | Path = "data/features/upcoming_features_2
 
 
 def load_scorer_candidates(path: str | Path = "data/processed/player_stats_2026_clean.csv", top_n: int = 5) -> dict[str, list[dict[str, Any]]]:
-    file = Path(path)
-    if not file.is_absolute():
-        file = Path.cwd() / file
-    if not file.exists():
-        return {}
-    df = pd.read_csv(file)
-    required = {"team", "player", "scorer_score"}
-    if df.empty or not required.issubset(df.columns):
-        return {}
-    for col in ["scorer_score", "goals", "assists", "cbp_90", "played_games"]:
-        if col in df.columns:
-            df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
-    candidates: dict[str, list[dict[str, Any]]] = {}
-    for team, team_df in df.groupby("team"):
-        ranked = team_df.sort_values(["scorer_score", "goals", "assists", "cbp_90"], ascending=False).head(top_n)
-        candidates[str(team)] = [
-            {
-                "player": str(row.get("player", "")),
-                "position": str(row.get("position", "")),
-                "goals": int(row.get("goals", 0)),
-                "assists": int(row.get("assists", 0)),
-                "cbp_90": float(row.get("cbp_90", 0)),
-                "played_games": int(row.get("played_games", 0)),
-                "scorer_score": float(row.get("scorer_score", 0)),
-            }
-            for _, row in ranked.iterrows()
-        ]
-    return candidates
+    return load_team_scorer_candidates(path, top_n=top_n)
 
 
 def select_prediction_targets(

@@ -37,3 +37,4 @@ def load_all_unplayed_predictions(path: str | Path = "outputs/all_unplayed_predi
 def load_past_prediction_results(path: str | Path = "outputs/past_prediction_results.json") -> dict[str, Any]:
     """過去予測結果を読み込む。存在しなければ空のmatchesを返す。"""
     return _with_matches(load_json_file(path))
+
