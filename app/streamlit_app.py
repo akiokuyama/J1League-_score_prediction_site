@@ -38,7 +38,7 @@ from src.data.team_master import to_display_name  # noqa: E402
 
 
 st.set_page_config(
-    page_title="J1 試合結果予測アプリ",
+    page_title="J1 AI試合結果予測",
     page_icon="",
     layout="centered",
     initial_sidebar_state="collapsed",
