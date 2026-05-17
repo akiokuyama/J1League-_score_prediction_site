@@ -1,13 +1,14 @@
 {
-  "updated_at": "2026-05-10T15:31:32+09:00",
-  "use_cache": true,
+  "updated_at": "2026-05-17T18:17:12+09:00",
+  "use_cache": false,
   "sources": {
     "matches": {
-      "url": "https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section=",
+      "url": "https://data.j-league.or.jp/SFMS01/search?competition_years=20261&competition_frame_ids=35&tv_relay_station_name=",
+      "fallback_url": "https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section=",
       "warnings": [],
-      "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/ad943ca5b09cfc2f236e.html",
-      "from_cache": true,
-      "rows": 180,
+      "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/a66c2e643f5f90a45722.html",
+      "from_cache": false,
+      "rows": 200,
       "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/matches/schedule_2026_100yj1.csv",
       "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/matches_2026_clean.csv"
     },
@@ -78,9 +79,9 @@
       "expected_rows": 40,
       "kagi_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/kagi_2026.csv",
       "kagi_rows": 40,
-      "goal_patterns_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/goal_patterns/goal_patterns_2026_asof_20260510.csv",
+      "goal_patterns_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/goal_patterns/goal_patterns_2026_asof_20260517.csv",
       "goal_patterns_rows": 20,
-      "team_styles_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/team_styles/team_styles_2026_asof_20260510.csv",
+      "team_styles_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/team_styles/team_styles_2026_asof_20260517.csv",
       "team_styles_rows": 60
     },
     "formations": {
