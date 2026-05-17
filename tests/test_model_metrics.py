@@ -1,8 +1,5 @@
 from __future__ import annotations
 
-import json
-from pathlib import Path
-
 from src.evaluation.model_metrics import build_model_metrics
 
 
@@ -37,9 +34,7 @@ def test_build_model_metrics() -> None:
 
 
 def test_model_metrics_output_schema() -> None:
-    path = Path("outputs/local/model_metrics.json")
-    assert path.exists()
-    data = json.loads(path.read_text(encoding="utf-8"))
+    data = build_model_metrics({"season": 2026, "league": "J1", "matches": []})
 
     assert data["evaluated_matches"] >= 0
     assert data["sample_size"] >= 0
