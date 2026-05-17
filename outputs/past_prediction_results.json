@@ -1,0 +1,150 @@
+{
+  "season": 2026,
+  "league": "J1",
+  "matches": [
+    {
+      "match_id": "dummy-2026-j1-011-001",
+      "matchweek": 11,
+      "date": "2026-05-06",
+      "kickoff": "19:00",
+      "venue": "豊田スタジアム",
+      "home_team": "nago",
+      "away_team": "uraw",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "actual_score": {
+        "home": 2,
+        "away": 1
+      },
+      "result_probabilities": {
+        "home_win": 0.46,
+        "draw": 0.31,
+        "away_win": 0.23
+      },
+      "score_candidates": [
+        {
+          "score": "1-0",
+          "probability": 0.128
+        },
+        {
+          "score": "1-1",
+          "probability": 0.116
+        },
+        {
+          "score": "2-1",
+          "probability": 0.094
+        }
+      ]
+    },
+    {
+      "match_id": "dummy-2026-j1-011-002",
+      "matchweek": 11,
+      "date": "2026-05-06",
+      "kickoff": "19:30",
+      "venue": "国立競技場",
+      "home_team": "FCtk",
+      "away_team": "ka-f",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "actual_score": {
+        "home": 0,
+        "away": 1
+      },
+      "result_probabilities": {
+        "home_win": 0.28,
+        "draw": 0.34,
+        "away_win": 0.38
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "probability": 0.121
+        },
+        {
+          "score": "0-1",
+          "probability": 0.101
+        },
+        {
+          "score": "1-2",
+          "probability": 0.086
+        }
+      ]
+    },
+    {
+      "match_id": "dummy-2026-j1-010-001",
+      "matchweek": 10,
+      "date": "2026-04-29",
+      "kickoff": "15:00",
+      "venue": "パナソニックスタジアム吹田",
+      "home_team": "g-os",
+      "away_team": "c-os",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "actual_score": {
+        "home": 1,
+        "away": 1
+      },
+      "result_probabilities": {
+        "home_win": 0.49,
+        "draw": 0.27,
+        "away_win": 0.24
+      },
+      "score_candidates": [
+        {
+          "score": "2-1",
+          "probability": 0.109
+        },
+        {
+          "score": "1-1",
+          "probability": 0.103
+        },
+        {
+          "score": "1-0",
+          "probability": 0.091
+        }
+      ]
+    },
+    {
+      "match_id": "dummy-2026-j1-010-002",
+      "matchweek": 10,
+      "date": "2026-04-29",
+      "kickoff": "16:00",
+      "venue": "ベスト電器スタジアム",
+      "home_team": "fuku",
+      "away_team": "kyot",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "actual_score": {
+        "home": 1,
+        "away": 1
+      },
+      "result_probabilities": {
+        "home_win": 0.24,
+        "draw": 0.51,
+        "away_win": 0.25
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "probability": 0.142
+        },
+        {
+          "score": "0-0",
+          "probability": 0.118
+        },
+        {
+          "score": "1-0",
+          "probability": 0.084
+        }
+      ]
+    }
+  ]
+}
