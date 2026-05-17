@@ -1,0 +1,108 @@
+"""Prediction evaluation and interpretation helpers."""
+
+from __future__ import annotations
+
+from typing import Literal
+
+Outcome = Literal["home", "draw", "away", "unknown"]
+
+
+def get_score_outcome(score: dict | None) -> Outcome:
+    if not isinstance(score, dict):
+        return "unknown"
+    try:
+        home = int(score.get("home"))
+        away = int(score.get("away"))
+    except (TypeError, ValueError):
+        return "unknown"
+    if home > away:
+        return "home"
+    if home < away:
+        return "away"
+    return "draw"
+
+
+def get_strongest_outcome(probabilities: dict | None) -> dict:
+    """
+    戻り値例:
+    {
+        "key": "away",
+        "label": "アウェイ勝利",
+        "value": 0.5121
+    }
+    """
+    if not isinstance(probabilities, dict):
+        return {"key": "unknown", "label": "-", "value": None}
+    candidates = [
+        ("home", "ホーム勝利", probabilities.get("home_win")),
+        ("draw", "引き分け", probabilities.get("draw")),
+        ("away", "アウェイ勝利", probabilities.get("away_win")),
+    ]
+    valid: list[tuple[str, str, float]] = []
+    for key, label, value in candidates:
+        try:
+            valid.append((key, label, float(value)))
+        except (TypeError, ValueError):
+            continue
+    if not valid:
+        return {"key": "unknown", "label": "-", "value": None}
+    key, label, value = max(valid, key=lambda item: item[2])
+    return {"key": key, "label": label, "value": value}
+
+
+def get_match_insight_label(probabilities: dict | None) -> str | None:
+    """
+    home_win が最大 -> 'ホーム優勢'
+    away_win が最大 -> 'アウェイ優勢'
+    draw が最大 -> None
+    """
+    strongest = get_strongest_outcome(probabilities)
+    if strongest["key"] == "home":
+        return "ホーム優勢"
+    if strongest["key"] == "away":
+        return "アウェイ優勢"
+    return None
+
+
+def evaluate_prediction(predicted_score: dict | None, actual_score: dict | None) -> dict:
+    """
+    戻り値例:
+    {
+        "result_hit": True,
+        "score_hit": False,
+        "result_label": "勝敗的中",
+        "score_label": "スコア外れ",
+        "predicted_outcome": "home",
+        "actual_outcome": "home",
+    }
+    """
+    predicted_outcome = get_score_outcome(predicted_score)
+    actual_outcome = get_score_outcome(actual_score)
+    result_hit = predicted_outcome != "unknown" and predicted_outcome == actual_outcome
+    score_hit = _score_values(predicted_score) == _score_values(actual_score) and _score_values(actual_score) is not None
+    return {
+        "result_hit": result_hit,
+        "score_hit": score_hit,
+        "result_label": "勝敗的中" if result_hit else "勝敗外れ",
+        "score_label": "スコア的中" if score_hit else "スコア外れ",
+        "predicted_outcome": predicted_outcome,
+        "actual_outcome": actual_outcome,
+    }
+
+
+def outcome_label(outcome: Outcome | str) -> str:
+    return {
+        "home": "ホーム勝利",
+        "draw": "引き分け",
+        "away": "アウェイ勝利",
+        "unknown": "-",
+    }.get(str(outcome), "-")
+
+
+def _score_values(score: dict | None) -> tuple[int, int] | None:
+    if not isinstance(score, dict):
+        return None
+    try:
+        return int(score.get("home")), int(score.get("away"))
+    except (TypeError, ValueError):
+        return None
