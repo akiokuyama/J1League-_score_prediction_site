@@ -176,6 +176,10 @@ def build_upcoming_features(
 
     if only_unplayed and "status" in matches.columns:
         matches = matches[matches["status"].astype(str).isin(["unplayed", "postponed_or_tbd"])]
+    if {"home_team", "away_team"}.issubset(matches.columns):
+        known_home = ~matches["home_team"].astype(str).isin(["tbd", "未定", "nan", ""])
+        known_away = ~matches["away_team"].astype(str).isin(["tbd", "未定", "nan", ""])
+        matches = matches[known_home & known_away]
 
     history_file = Path(history_path)
     if not history_file.is_absolute():

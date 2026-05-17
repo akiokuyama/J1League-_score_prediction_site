@@ -4,6 +4,7 @@ from __future__ import annotations
 
 
 TEAM_CODE_TO_NAME = {
+    "tbd": "未定",
     "kasm": "鹿島アントラーズ",
     "uraw": "浦和レッズ",
     "kasw": "柏レイソル",
@@ -69,6 +70,8 @@ TEAM_NAME_TO_CODE.update(
         "ＦＣ町田ゼルビア": "mcd",
         "岡山": "okay",
         "横浜ＦＣ": "y-fc",
+        "未定": "tbd",
+        "TBD": "tbd",
     }
 )
 

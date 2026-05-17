@@ -20,6 +20,7 @@ MATCH_COLUMNS = [
     "competition",
     "category",
     "section",
+    "section_label",
     "match_date",
     "kickoff_time",
     "home_team",
@@ -32,6 +33,57 @@ MATCH_COLUMNS = [
     "match_url",
     "match_id",
 ]
+
+
+DATA_SITE_URL = "https://data.j-league.or.jp/SFMS01/search?competition_years=20261&competition_frame_ids=35&tv_relay_station_name="
+MATCH_SEARCH_URL = "https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section="
+
+
+def _text(value: Any) -> str:
+    if pd.isna(value):
+        return ""
+    return str(value).strip()
+
+
+def _normalize_digits(value: str) -> str:
+    return value.translate(str.maketrans("０１２３４５６７８９", "0123456789"))
+
+
+def _parse_data_site_date(value: Any) -> str | None:
+    text = _normalize_digits(_text(value))
+    match = re.search(r"(\d{2})/(\d{1,2})/(\d{1,2})", text)
+    if not match:
+        return None
+    year = 2000 + int(match.group(1))
+    return f"{year:04d}-{int(match.group(2)):02d}-{int(match.group(3)):02d}"
+
+
+def _section_from_label(value: Any) -> int | None:
+    text = _normalize_digits(_text(value))
+    section_match = re.search(r"第(\d+)節", text)
+    if section_match:
+        return int(section_match.group(1))
+    playoff_match = re.search(r"第(\d+)戦第(\d+)日", text)
+    if playoff_match:
+        return int(playoff_match.group(1)) * 100 + int(playoff_match.group(2))
+    return None
+
+
+def _score_pair(value: Any) -> tuple[int | None, int | None]:
+    text = _normalize_digits(_text(value))
+    score_match = re.search(r"(\d+)\s*[-－]\s*(\d+)", text)
+    if not score_match:
+        return None, None
+    return int(score_match.group(1)), int(score_match.group(2))
+
+
+def _match_id_section(value: Any) -> str:
+    if pd.isna(value):
+        return "unknown"
+    try:
+        return str(int(float(value)))
+    except (TypeError, ValueError):
+        return str(value)
 
 
 def _status_from_scores(home_score: Any, away_score: Any, text: str) -> str:
@@ -127,6 +179,47 @@ def _parse_match_links(html: str, url: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def _parse_data_site_tables(html: str, url: str) -> pd.DataFrame:
+    try:
+        tables = pd.read_html(StringIO(html))
+    except ValueError:
+        tables = []
+
+    rows: list[dict[str, Any]] = []
+    for table in tables:
+        table.columns = [str(col) for col in table.columns]
+        required = {"シーズン", "大会", "節", "試合日", "K/O時刻", "ホーム", "スコア", "アウェイ", "スタジアム"}
+        if not required.issubset(set(table.columns)):
+            continue
+        for _, raw in table.iterrows():
+            home_score, away_score = _score_pair(raw.get("スコア"))
+            section_label = _text(raw.get("節")) or None
+            home_team = to_dataset_code(_text(raw.get("ホーム")))
+            away_team = to_dataset_code(_text(raw.get("アウェイ")))
+            row_text = " ".join(_text(value) for value in raw.to_list())
+            rows.append(
+                {
+                    "season": SEASON,
+                    "league": LEAGUE,
+                    "competition": _text(raw.get("大会")) or COMPETITION,
+                    "category": CATEGORY,
+                    "section": _section_from_label(section_label),
+                    "section_label": section_label,
+                    "match_date": _parse_data_site_date(raw.get("試合日")),
+                    "kickoff_time": _text(raw.get("K/O時刻")) or None,
+                    "home_team": home_team,
+                    "away_team": away_team,
+                    "home_score": home_score,
+                    "away_score": away_score,
+                    "stadium": _text(raw.get("スタジアム")) or None,
+                    "attendance": raw.get("入場者数") if pd.notna(raw.get("入場者数")) else None,
+                    "status": _status_from_scores(home_score, away_score, row_text),
+                    "match_url": url,
+                }
+            )
+    return pd.DataFrame(rows)
+
+
 def _parse_matchlist_sections(html: str) -> pd.DataFrame:
     soup = soup_from_html(html)
     rows: list[dict[str, Any]] = []
@@ -178,6 +271,7 @@ def _parse_matchlist_sections(html: str) -> pd.DataFrame:
                     "competition": COMPETITION,
                     "category": CATEGORY,
                     "section": section_value,
+                    "section_label": f"第{section_value}節" if section_value else None,
                     "match_date": date_value,
                     "kickoff_time": kickoff_match.group(1) if kickoff_match else None,
                     "home_team": to_dataset_code(home_text),
@@ -194,17 +288,22 @@ def _parse_matchlist_sections(html: str) -> pd.DataFrame:
 
 
 def scrape_matches_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
-    url = "https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section="
-    info: dict[str, Any] = {"url": url, "warnings": []}
+    info: dict[str, Any] = {"url": DATA_SITE_URL, "fallback_url": MATCH_SEARCH_URL, "warnings": []}
     try:
-        fetched = fetch_html(url, use_cache=use_cache)
+        fetched = fetch_html(DATA_SITE_URL, use_cache=use_cache)
         info["cache_path"] = str(fetched.cache_path)
         info["from_cache"] = fetched.from_cache
-        df = _parse_matchlist_sections(fetched.html)
+        df = _parse_data_site_tables(fetched.html, DATA_SITE_URL)
         if df.empty:
-            df = _parse_tables(fetched.html, url)
+            info["warnings"].append("J.League Data Siteから試合行を抽出できませんでした。jleague.jp側にフォールバックします。")
+            fetched = fetch_html(MATCH_SEARCH_URL, use_cache=use_cache)
+            info["fallback_cache_path"] = str(fetched.cache_path)
+            info["fallback_from_cache"] = fetched.from_cache
+            df = _parse_matchlist_sections(fetched.html)
         if df.empty:
-            df = _parse_match_links(fetched.html, url)
+            df = _parse_tables(fetched.html, MATCH_SEARCH_URL)
+        if df.empty:
+            df = _parse_match_links(fetched.html, MATCH_SEARCH_URL)
         if df.empty:
             info["warnings"].append("Jリーグ公式HTMLから試合行を抽出できませんでした。")
             df = empty_frame(MATCH_COLUMNS)
@@ -219,7 +318,7 @@ def scrape_matches_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[
             + "-"
             + df["category"].astype(str)
             + "-"
-            + df["section"].fillna("unknown").astype(str)
+            + df["section"].map(_match_id_section)
             + "-"
             + df["home_team"].astype(str)
             + "-vs-"
