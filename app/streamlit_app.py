@@ -84,24 +84,64 @@ def inject_css() -> None:
     st.markdown(
         """
         <style>
+        [data-testid="stAppViewContainer"] {
+            background: #f6f8fb;
+        }
+        html, body, [class*="css"] {
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Segoe UI", sans-serif;
+            color: #0f172a;
+        }
         .block-container { max-width: 760px; padding-top: 2rem; padding-bottom: 2rem; }
         div[data-testid="stRadio"] > div { gap: .45rem; }
         .app-header, .summary-card {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #dbe3ef;
             border-radius: 8px;
-            padding: 16px;
+            padding: 18px;
             background: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+        }
+        .app-header {
+            border-left: 6px solid #2563eb;
+        }
+        .app-title {
+            margin: 0 0 .45rem 0;
+            font-size: 1.9rem;
+            line-height: 1.2;
+            letter-spacing: 0;
+            font-weight: 850;
         }
         .muted { color: #64748b; font-size: .88rem; }
         .small { color: #64748b; font-size: .8rem; }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 18px 0 10px;
+            font-size: 1.08rem;
+            font-weight: 800;
+        }
+        .section-title::before {
+            content: "";
+            width: 4px;
+            height: 20px;
+            border-radius: 99px;
+            background: #2563eb;
+        }
         .header-meta {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 4px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 8px;
             margin-top: 12px;
+        }
+        .meta-chip {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 9px 10px;
+            background: #f8fafc;
             color: #334155;
-            font-size: .92rem;
+            font-size: .86rem;
+            font-weight: 700;
         }
         .match-card-link {
             text-decoration: none !important;
@@ -109,39 +149,101 @@ def inject_css() -> None:
             display: block;
         }
         .match-card {
-            border: 1px solid #e2e8f0;
+            border: 1px solid #dbe3ef;
+            border-left: 5px solid #0f766e;
             border-radius: 8px;
-            padding: 18px;
+            padding: 18px 18px 16px;
             background: #ffffff;
             margin-bottom: 14px;
-            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+            box-shadow: 0 7px 18px rgba(15, 23, 42, 0.055);
             cursor: pointer;
-            transition: border-color .12s ease, background .12s ease, box-shadow .12s ease;
+            transition: border-color .12s ease, background .12s ease, box-shadow .12s ease, transform .12s ease;
         }
         .match-card:hover {
             border-color: #94a3b8;
             background: #f8fafc;
-            box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.085);
+            transform: translateY(-1px);
         }
-        .teams { font-size: 1.05rem; font-weight: 700; margin: .35rem 0; }
-        .score { font-size: 1.6rem; font-weight: 800; }
+        .teams { font-size: 1.06rem; font-weight: 800; margin: .45rem 0 .65rem; }
+        .score-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            border-top: 1px solid #eef2f7;
+            padding-top: 12px;
+            margin-top: 10px;
+        }
+        .score, .score-pill {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+            letter-spacing: 0;
+        }
+        .score { font-size: 1.65rem; font-weight: 850; color: #0f172a; }
+        .score-pill {
+            display: inline-block;
+            border-radius: 8px;
+            padding: 7px 10px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-size: 1.35rem;
+            font-weight: 850;
+            line-height: 1;
+        }
+        .prob-line {
+            color: #475569;
+            font-size: .88rem;
+            font-weight: 650;
+            text-align: right;
+        }
         .label {
             display: inline-block;
             border-radius: 999px;
-            padding: 3px 9px;
+            padding: 4px 10px;
             font-size: .78rem;
             font-weight: 700;
-            background: #e0f2fe;
-            color: #075985;
+            background: #f1f5f9;
+            color: #334155;
             margin-right: 4px;
+            margin-top: 6px;
         }
+        .home-advantage { background: #dbeafe; color: #1d4ed8; }
+        .away-advantage { background: #fee2e2; color: #b91c1c; }
         .hit { background: #dcfce7; color: #166534; }
         .miss { background: #fee2e2; color: #991b1b; }
         .metric-line { display: flex; justify-content: space-between; gap: 10px; }
+        .summary-card {
+            border-left: 5px solid #f59e0b;
+        }
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+        .summary-item {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: #f8fafc;
+            padding: 10px;
+        }
+        .summary-label {
+            color: #64748b;
+            font-size: .78rem;
+            margin-bottom: 4px;
+        }
+        .summary-value {
+            color: #0f172a;
+            font-size: 1.05rem;
+            font-weight: 850;
+        }
         @media (max-width: 640px) {
             .block-container { padding-left: 1rem; padding-right: 1rem; }
             .score { font-size: 1.45rem; }
             .app-header { padding: 18px 16px; }
+            .app-title { font-size: 1.55rem; }
+            .header-meta, .summary-grid { grid-template-columns: 1fr; }
+            .score-row { align-items: flex-start; flex-direction: column; }
+            .prob-line { text-align: left; }
         }
         </style>
         """,
@@ -157,12 +259,12 @@ def render_header(data: dict[str, Any]) -> None:
     st.markdown(
         f"""
         <div class="app-header">
-          <h1 style="margin:0 0 .45rem 0;">J1 試合結果予測アプリ</h1>
+          <h1 class="app-title">J1 試合結果予測アプリ</h1>
           <div class="muted">次節の試合予測と過去の予測結果を確認できます。</div>
           <div class="header-meta">
-            <div>シーズン：{escape(str(season))}</div>
-            <div>対象節：{escape(str(matchweek_text))}</div>
-            <div>最終更新：{escape(str(updated))}</div>
+            <div class="meta-chip">シーズン：{escape(str(season))}</div>
+            <div class="meta-chip">対象節：{escape(str(matchweek_text))}</div>
+            <div class="meta-chip">最終更新：{escape(str(updated))}</div>
           </div>
         </div>
         """,
@@ -180,7 +282,7 @@ def render_future_matches(latest: dict[str, Any], all_unplayed: dict[str, Any]) 
         st.session_state.view = "list"
         st.session_state.selected_match_id = None
 
-    st.subheader("試合一覧")
+    st.markdown('<div class="section-title">試合一覧</div>', unsafe_allow_html=True)
     if all_unplayed.get("matches"):
         st.caption(f"管理用の未消化試合全件データ: {len(all_unplayed['matches'])}試合")
     if not matches:
@@ -196,7 +298,7 @@ def render_future_matches(latest: dict[str, Any], all_unplayed: dict[str, Any]) 
 
 
 def filter_future_matches(matches: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    st.markdown("#### 絞り込み")
+    st.markdown('<div class="section-title">絞り込み</div>', unsafe_allow_html=True)
     teams = sorted({display_team(team) for match in matches for team in [match.get("home_team"), match.get("away_team")] if team})
     sections = sorted({int(match_section(match)) for match in matches if _is_int_like(match_section(match))})
 
@@ -209,7 +311,7 @@ def filter_future_matches(matches: list[dict[str, Any]]) -> list[dict[str, Any]]
 
         if team != "すべてのチーム" and team not in names:
             continue
-        if section != "すべての節" and int(match_section(match)) != int(section):
+        if section != "すべての節" and safe_int(match_section(match)) != int(section):
             continue
         filtered.append(match)
     return filtered
@@ -226,7 +328,8 @@ def render_match_card(match: dict[str, Any]) -> None:
     score = format_score(match.get("predicted_score"))
     meta = format_match_meta(match)
     href = f"?view=detail&match_id={quote(match_id)}"
-    insight_html = f'<span class="label">{escape(insight)}</span>' if insight else ""
+    insight_class = "home-advantage" if insight == "ホーム優勢" else "away-advantage" if insight == "アウェイ優勢" else ""
+    insight_html = f'<span class="label {insight_class}">{escape(insight)}</span>' if insight else ""
 
     st.markdown(
         f"""
@@ -234,8 +337,10 @@ def render_match_card(match: dict[str, Any]) -> None:
           <div class="match-card">
             <div class="small">{escape(meta)}</div>
             <div class="teams">{escape(matchup)}</div>
-            <div class="score">{escape(score)}</div>
-            <div class="muted">勝敗確率トップ：{escape(str(strongest["label"]))} {escape(format_percent(strongest["value"]))}</div>
+            <div class="score-row">
+              <div class="score-pill">{escape(score)}</div>
+              <div class="prob-line">勝敗確率トップ：{escape(str(strongest["label"]))}<br>{escape(format_percent(strongest["value"]))}</div>
+            </div>
             {insight_html}
           </div>
         </a>
@@ -260,7 +365,7 @@ def render_match_detail(match: dict[str, Any]) -> None:
     predicted_score = match.get("predicted_score")
     score_text = format_score(predicted_score)
 
-    st.subheader(matchup)
+    st.markdown(f'<div class="section-title">{escape(matchup)}</div>', unsafe_allow_html=True)
     st.caption(format_match_meta(match))
     st.markdown(f"<div class='score'>{score_text}</div>", unsafe_allow_html=True)
 
@@ -292,7 +397,7 @@ def render_expected_goals(match: dict[str, Any]) -> None:
     expected = match.get("expected_goals") if isinstance(match.get("expected_goals"), dict) else {}
     home_xg = safe_float(expected.get("home"))
     away_xg = safe_float(expected.get("away"))
-    st.markdown("#### 期待得点")
+    st.markdown('<div class="section-title">期待得点</div>', unsafe_allow_html=True)
     col1, col2 = st.columns(2)
     col1.metric("ホーム期待得点", f"{home_xg:.2f}" if home_xg is not None else "-")
     col2.metric("アウェイ期待得点", f"{away_xg:.2f}" if away_xg is not None else "-")
@@ -303,7 +408,7 @@ def render_expected_goals(match: dict[str, Any]) -> None:
 
 
 def render_probability_bars(probabilities: dict | None) -> None:
-    st.markdown("#### 勝敗確率")
+    st.markdown('<div class="section-title">勝敗確率</div>', unsafe_allow_html=True)
     values = [
         ("ホーム勝利", _probability_value(probabilities, "home_win")),
         ("引き分け", _probability_value(probabilities, "draw")),
@@ -372,7 +477,7 @@ def render_team_scorers(team: str, scorers: Any, team_expected_goals: float | No
 
 
 def render_past_predictions(data: dict[str, Any]) -> None:
-    st.subheader("過去の予測結果")
+    st.markdown('<div class="section-title">過去の予測結果</div>', unsafe_allow_html=True)
     matches = safe_matches(data)
     if not matches:
         st.info("過去の予測結果はまだありません。")
@@ -393,7 +498,7 @@ def filter_past_matches(matches: list[dict[str, Any]]) -> list[dict[str, Any]]:
     teams = sorted({display_team(team) for m in matches for team in [m.get("home_team"), m.get("away_team")] if team})
     result_options = ["すべての判定", "勝敗的中", "勝敗外れ", "スコア的中", "スコア外れ"]
 
-    st.markdown("#### 絞り込み")
+    st.markdown('<div class="section-title">絞り込み</div>', unsafe_allow_html=True)
     team = st.selectbox("チーム", ["すべてのチーム", *teams], key="past_team_filter")
     section = st.selectbox("試合が行われた節", ["すべての節", *sections], key="past_section_filter")
     judgment = st.selectbox("予測結果に対する判定", result_options, key="past_judgment_filter")
@@ -403,7 +508,7 @@ def filter_past_matches(matches: list[dict[str, Any]]) -> list[dict[str, Any]]:
         evaluation = evaluate_prediction(match.get("predicted_score"), match.get("actual_score"))
         match_section = match.get("matchweek") or match.get("section")
         names = {display_team(match.get("home_team")), display_team(match.get("away_team"))}
-        if section != "すべての節" and int(match_section) != int(section):
+        if section != "すべての節" and safe_int(match_section) != int(section):
             continue
         if team != "すべてのチーム" and team not in names:
             continue
@@ -422,9 +527,20 @@ def render_past_summary(matches: list[dict[str, Any]]) -> None:
     st.markdown(
         f"""
         <div class="summary-card">
-          <div>勝敗的中率：<strong>{format_accuracy(result_hits, total)}</strong></div>
-          <div>スコア的中率：<strong>{format_accuracy(score_hits, total)}</strong></div>
-          <div>今シーズン予測試合数：<strong>{total}</strong></div>
+          <div class="summary-grid">
+            <div class="summary-item">
+              <div class="summary-label">勝敗的中率</div>
+              <div class="summary-value">{format_accuracy(result_hits, total)}</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label">スコア的中率</div>
+              <div class="summary-value">{format_accuracy(score_hits, total)}</div>
+            </div>
+            <div class="summary-item">
+              <div class="summary-label">今シーズン予測試合数</div>
+              <div class="summary-value">{total}</div>
+            </div>
+          </div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -442,12 +558,14 @@ def render_past_card(match: dict[str, Any]) -> None:
     st.markdown(
         f"""
         <div class="match-card">
-          <div class="small">{format_match_meta(match)}</div>
-          <div class="teams">{matchup}</div>
+          <div class="small">{escape(format_match_meta(match))}</div>
+          <div class="teams">{escape(matchup)}</div>
           <span class="label {result_class}">{evaluation["result_label"]}</span>
           <span class="label {score_class}">{evaluation["score_label"]}</span>
-          <div style="margin-top:.6rem;">予測スコア：<strong>{format_score(match.get("predicted_score"))}</strong></div>
-          <div>実際のスコア：<strong>{format_score(match.get("actual_score"))}</strong></div>
+          <div class="score-row">
+            <div>予測スコア：<strong class="score">{format_score(match.get("predicted_score"))}</strong></div>
+            <div>実際のスコア：<strong class="score">{format_score(match.get("actual_score"))}</strong></div>
+          </div>
           <div class="small">予測の勝敗方向：{outcome_label(evaluation["predicted_outcome"])}</div>
           <div class="small">実際の勝敗方向：{outcome_label(evaluation["actual_outcome"])}</div>
         </div>
@@ -494,6 +612,13 @@ def display_team(value: Any) -> str:
 def safe_float(value: Any) -> float | None:
     try:
         return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def safe_int(value: Any) -> int | None:
+    try:
+        return int(value)
     except (TypeError, ValueError):
         return None
 
