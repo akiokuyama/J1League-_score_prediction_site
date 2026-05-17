@@ -1,0 +1,95 @@
+name: Update Predictions Manual
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-predictions:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run syntax check
+        run: python -m compileall app src scripts
+
+      - name: Run tests
+        run: pytest
+
+      - name: Run next section prediction pipeline
+        run: python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache
+
+      - name: Update all unplayed predictions
+        run: python scripts/run_prediction.py --mode all_unplayed
+
+      - name: Build past prediction results
+        run: python scripts/build_past_prediction_results.py
+
+      - name: Validate generated outputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          latest_path = Path("outputs/latest_predictions.json")
+          all_unplayed_path = Path("outputs/all_unplayed_predictions.json")
+          history_dir = Path("outputs/prediction_history")
+          local_metrics_path = Path("outputs/local/model_metrics.json")
+
+          for path in [latest_path, all_unplayed_path]:
+              if not path.exists():
+                  raise SystemExit(f"Missing required output: {path}")
+              data = json.loads(path.read_text(encoding="utf-8"))
+              if "matches" not in data:
+                  raise SystemExit(f"Missing matches key: {path}")
+
+          if not history_dir.exists() or not any(history_dir.glob("*.json")):
+              raise SystemExit("No prediction history JSON files were generated")
+
+          if local_metrics_path.exists():
+              raise SystemExit("outputs/local/model_metrics.json must not be generated in Actions")
+          PY
+
+      - name: Commit prediction outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for target in \
+            data/processed \
+            data/features \
+            Data/processed \
+            Data/features \
+            outputs/latest_predictions.json \
+            outputs/latest_predictions.csv \
+            outputs/all_unplayed_predictions.json \
+            outputs/all_unplayed_predictions.csv \
+            outputs/prediction_history \
+            outputs/past_prediction_results.json \
+            outputs/last_updated.txt
+          do
+            if [ -e "$target" ]; then
+              git add "$target"
+            fi
+          done
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update prediction outputs"
+            git push
+          fi

@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-05-17T18:17:12+09:00",
-  "use_cache": false,
+  "updated_at": "2026-05-17T19:54:51+09:00",
+  "use_cache": true,
   "sources": {
     "matches": {
       "url": "https://data.j-league.or.jp/SFMS01/search?competition_years=20261&competition_frame_ids=35&tv_relay_station_name=",
       "fallback_url": "https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section=",
       "warnings": [],
       "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/a66c2e643f5f90a45722.html",
-      "from_cache": false,
+      "from_cache": true,
       "rows": 200,
       "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/matches/schedule_2026_100yj1.csv",
       "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/matches_2026_clean.csv"
