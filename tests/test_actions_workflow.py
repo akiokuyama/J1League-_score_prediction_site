@@ -9,6 +9,7 @@ def test_manual_update_workflow_excludes_local_model_metrics() -> None:
     assert "schedule:" not in text
     assert "python scripts/build_model_metrics.py" not in text
     assert "GITHUB_ENV" in text
+    assert "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" in text
     assert "ln -s Data data" in text
     assert "python -m pytest" in text
     assert "git add outputs/local" not in text
