@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T11:20:54",
+  "generated_at": "2026-05-23T13:33:31",
   "season": 2026,
   "league": "J1",
   "source": {
@@ -7,17 +7,17 @@
     "actual_matches": "data/processed/matches_2026_clean.csv"
   },
   "diagnostics": {
-    "prediction_history_files": 82,
-    "prediction_history_matches": 992,
+    "prediction_history_files": 83,
+    "prediction_history_matches": 1001,
     "prediction_history_unique_matches": 29,
     "matches_rows": 200,
     "match_id_matched": 29,
-    "finished_matched": 18,
-    "score_complete_matched": 18,
-    "evaluation_target_matches": 18,
+    "finished_matched": 20,
+    "score_complete_matched": 20,
+    "evaluation_target_matches": 20,
     "unmatched_prediction_matches": 0,
-    "matched_but_unplayed": 11,
-    "matched_but_missing_score": 11
+    "matched_but_unplayed": 9,
+    "matched_but_missing_score": 9
   },
   "matches": [
     {
@@ -1041,6 +1041,74 @@
       ]
     },
     {
+      "match_id": "2026-100yj1-17-ka-f-vs-mcd",
+      "matchweek": 17,
+      "date": "2026-05-17",
+      "kickoff": "19:03",
+      "venue": "Ｕ等々力",
+      "home_team": "ka-f",
+      "away_team": "mcd",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "actual_score": {
+        "home": 1,
+        "away": 1
+      },
+      "predicted_result": "home_win",
+      "actual_result": "draw",
+      "is_result_correct": false,
+      "is_score_correct": false,
+      "result_probabilities": {
+        "home_win": 0.9092531087644272,
+        "draw": 0.06768159473583435,
+        "away_win": 0.02306529649973853
+      },
+      "score_candidates": [
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.2875660235692297,
+          "poisson_probability": 0.09857912766799608,
+          "combined_score": 0.03445995000371542
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.2504330550228505,
+          "poisson_probability": 0.0858497530305089,
+          "combined_score": 0.030010188436908804
+        },
+        {
+          "score": "2-0",
+          "home_goals": 2,
+          "away_goals": 0,
+          "probability": 0.19933690203453075,
+          "poisson_probability": 0.08583316023554606,
+          "combined_score": 0.02388717412699399
+        },
+        {
+          "score": "3-1",
+          "home_goals": 3,
+          "away_goals": 1,
+          "probability": 0.152595724669676,
+          "poisson_probability": 0.06570671638391705,
+          "combined_score": 0.01828603037880037
+        },
+        {
+          "score": "3-2",
+          "home_goals": 3,
+          "away_goals": 2,
+          "probability": 0.11006829470371285,
+          "poisson_probability": 0.037731983567188536,
+          "combined_score": 0.01318983336559241
+        }
+      ]
+    },
+    {
       "match_id": "2026-100yj1-17-kyot-vs-hiro",
       "matchweek": 17,
       "date": "2026-05-17",
@@ -1241,6 +1309,74 @@
           "probability": 0.10590198928850682,
           "poisson_probability": 0.08033769980341207,
           "combined_score": 0.00573698554770888
+        }
+      ]
+    },
+    {
+      "match_id": "2026-100yj1-18-mcd-vs-uraw",
+      "matchweek": 18,
+      "date": "2026-05-22",
+      "kickoff": "19:33",
+      "venue": "MUFG国立",
+      "home_team": "mcd",
+      "away_team": "uraw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "actual_score": {
+        "home": 1,
+        "away": 0
+      },
+      "predicted_result": "draw",
+      "actual_result": "home_win",
+      "is_result_correct": false,
+      "is_score_correct": false,
+      "result_probabilities": {
+        "home_win": 0.3115775422941936,
+        "draw": 0.4225129211591466,
+        "away_win": 0.2659095365466598
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.2864151716398325,
+          "poisson_probability": 0.10894231582248805,
+          "combined_score": 0.01431112377407161
+        },
+        {
+          "score": "2-1",
+          "home_goals": 2,
+          "away_goals": 1,
+          "probability": 0.22436997301611133,
+          "poisson_probability": 0.09417147572648431,
+          "combined_score": 0.011210951000376812
+        },
+        {
+          "score": "1-0",
+          "home_goals": 1,
+          "away_goals": 0,
+          "probability": 0.20107754918270462,
+          "poisson_probability": 0.084395292683127,
+          "combined_score": 0.010047113349705166
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.1597964680627846,
+          "poisson_probability": 0.0607809886303975,
+          "combined_score": 0.007984447960674828
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.12834083809856703,
+          "poisson_probability": 0.04881636694385368,
+          "combined_score": 0.006412724608060683
         }
       ]
     }

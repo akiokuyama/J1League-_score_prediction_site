@@ -1,349 +1,350 @@
 rank,team,team_name,value,value_text,stat_type,stat_label
-1,hiro,サンフレッチェ広島,259.0,259,shoot,Total Shots
-2,FCtk,ＦＣ東京,247.0,247,shoot,Total Shots
-3,uraw,浦和レッズ,225.0,225,shoot,Total Shots
-4,g-os,ガンバ大阪,222.0,222,shoot,Total Shots
-5,nago,名古屋グランパス,216.0,216,shoot,Total Shots
-6,kasw,柏レイソル,211.0,211,shoot,Total Shots
-7,kyot,京都サンガF.C.,210.0,210,shoot,Total Shots
-8,kobe,ヴィッセル神戸,209.0,209,shoot,Total Shots
-9,kasm,鹿島アントラーズ,191.0,191,shoot,Total Shots
-10,mcd,ＦＣ町田ゼルビア,183.0,183,shoot,Total Shots
-11,chib,ジェフユナイテッド千葉,182.0,182,shoot,Total Shots
-11,y-fm,横浜Ｆ・マリノス,182.0,182,shoot,Total Shots
-11,fuku,アビスパ福岡,182.0,182,shoot,Total Shots
-14,c-os,セレッソ大阪,180.0,180,shoot,Total Shots
-14,okay,ファジアーノ岡山,180.0,180,shoot,Total Shots
-16,ka-f,川崎フロンターレ,177.0,177,shoot,Total Shots
-17,mito,水戸ホーリーホック,176.0,176,shoot,Total Shots
-18,ngsk,Ｖ・ファーレン長崎,175.0,175,shoot,Total Shots
-19,shim,清水エスパルス,170.0,170,shoot,Total Shots
-20,tk-v,東京ヴェルディ,151.0,151,shoot,Total Shots
+1,hiro,サンフレッチェ広島,277.0,277,shoot,Total Shots
+2,FCtk,ＦＣ東京,267.0,267,shoot,Total Shots
+3,uraw,浦和レッズ,234.0,234,shoot,Total Shots
+4,nago,名古屋グランパス,228.0,228,shoot,Total Shots
+5,kobe,ヴィッセル神戸,224.0,224,shoot,Total Shots
+6,g-os,ガンバ大阪,222.0,222,shoot,Total Shots
+7,kasw,柏レイソル,216.0,216,shoot,Total Shots
+8,kyot,京都サンガF.C.,213.0,213,shoot,Total Shots
+9,kasm,鹿島アントラーズ,204.0,204,shoot,Total Shots
+10,ka-f,川崎フロンターレ,197.0,197,shoot,Total Shots
+11,y-fm,横浜Ｆ・マリノス,196.0,196,shoot,Total Shots
+11,c-os,セレッソ大阪,196.0,196,shoot,Total Shots
+13,chib,ジェフユナイテッド千葉,192.0,192,shoot,Total Shots
+14,okay,ファジアーノ岡山,191.0,191,shoot,Total Shots
+15,mcd,ＦＣ町田ゼルビア,189.0,189,shoot,Total Shots
+16,mito,水戸ホーリーホック,187.0,187,shoot,Total Shots
+16,ngsk,Ｖ・ファーレン長崎,187.0,187,shoot,Total Shots
+18,fuku,アビスパ福岡,182.0,182,shoot,Total Shots
+19,shim,清水エスパルス,181.0,181,shoot,Total Shots
+20,tk-v,東京ヴェルディ,159.0,159,shoot,Total Shots
 1,g-os,ガンバ大阪,90.0,90,shoot_on_target,Shots on Target
-2,FCtk,ＦＣ東京,82.0,82,shoot_on_target,Shots on Target
-3,nago,名古屋グランパス,74.0,74,shoot_on_target,Shots on Target
-4,uraw,浦和レッズ,71.0,71,shoot_on_target,Shots on Target
-5,kyot,京都サンガF.C.,69.0,69,shoot_on_target,Shots on Target
-6,hiro,サンフレッチェ広島,67.0,67,shoot_on_target,Shots on Target
-7,kobe,ヴィッセル神戸,65.0,65,shoot_on_target,Shots on Target
-8,kasm,鹿島アントラーズ,61.0,61,shoot_on_target,Shots on Target
-8,mcd,ＦＣ町田ゼルビア,61.0,61,shoot_on_target,Shots on Target
-10,c-os,セレッソ大阪,60.0,60,shoot_on_target,Shots on Target
-11,chib,ジェフユナイテッド千葉,58.0,58,shoot_on_target,Shots on Target
-12,ngsk,Ｖ・ファーレン長崎,57.0,57,shoot_on_target,Shots on Target
-13,kasw,柏レイソル,55.0,55,shoot_on_target,Shots on Target
-14,mito,水戸ホーリーホック,53.0,53,shoot_on_target,Shots on Target
-14,okay,ファジアーノ岡山,53.0,53,shoot_on_target,Shots on Target
-16,ka-f,川崎フロンターレ,52.0,52,shoot_on_target,Shots on Target
-16,fuku,アビスパ福岡,52.0,52,shoot_on_target,Shots on Target
-18,shim,清水エスパルス,47.0,47,shoot_on_target,Shots on Target
-19,y-fm,横浜Ｆ・マリノス,46.0,46,shoot_on_target,Shots on Target
-20,tk-v,東京ヴェルディ,45.0,45,shoot_on_target,Shots on Target
-1,chib,ジェフユナイテッド千葉,271.0,271,suffer_shoot,Total Shots Against
-2,ka-f,川崎フロンターレ,239.0,239,suffer_shoot,Total Shots Against
-3,ngsk,Ｖ・ファーレン長崎,233.0,233,suffer_shoot,Total Shots Against
-4,nago,名古屋グランパス,227.0,227,suffer_shoot,Total Shots Against
-5,c-os,セレッソ大阪,219.0,219,suffer_shoot,Total Shots Against
-6,fuku,アビスパ福岡,205.0,205,suffer_shoot,Total Shots Against
-7,kyot,京都サンガF.C.,204.0,204,suffer_shoot,Total Shots Against
-7,g-os,ガンバ大阪,204.0,204,suffer_shoot,Total Shots Against
-9,shim,清水エスパルス,199.0,199,suffer_shoot,Total Shots Against
-10,kasm,鹿島アントラーズ,190.0,190,suffer_shoot,Total Shots Against
-11,mito,水戸ホーリーホック,189.0,189,suffer_shoot,Total Shots Against
-12,uraw,浦和レッズ,188.0,188,suffer_shoot,Total Shots Against
-13,okay,ファジアーノ岡山,182.0,182,suffer_shoot,Total Shots Against
-14,kasw,柏レイソル,181.0,181,suffer_shoot,Total Shots Against
-15,mcd,ＦＣ町田ゼルビア,170.0,170,suffer_shoot,Total Shots Against
-16,y-fm,横浜Ｆ・マリノス,169.0,169,suffer_shoot,Total Shots Against
-16,kobe,ヴィッセル神戸,169.0,169,suffer_shoot,Total Shots Against
-18,FCtk,ＦＣ東京,165.0,165,suffer_shoot,Total Shots Against
-19,tk-v,東京ヴェルディ,163.0,163,suffer_shoot,Total Shots Against
-20,hiro,サンフレッチェ広島,161.0,161,suffer_shoot,Total Shots Against
-1,FCtk,ＦＣ東京,28.0,28 GOALS,score,Total Goals
-1,nago,名古屋グランパス,28.0,28 GOALS,score,Total Goals
-3,kasm,鹿島アントラーズ,26.0,26 GOALS,score,Total Goals
-4,uraw,浦和レッズ,25.0,25 GOALS,score,Total Goals
-5,g-os,ガンバ大阪,24.0,24 GOALS,score,Total Goals
-5,kobe,ヴィッセル神戸,24.0,24 GOALS,score,Total Goals
-7,y-fm,横浜Ｆ・マリノス,22.0,22 GOALS,score,Total Goals
-8,mcd,ＦＣ町田ゼルビア,21.0,21 GOALS,score,Total Goals
-8,hiro,サンフレッチェ広島,21.0,21 GOALS,score,Total Goals
-10,okay,ファジアーノ岡山,20.0,20 GOALS,score,Total Goals
-11,ka-f,川崎フロンターレ,19.0,19 GOALS,score,Total Goals
-12,mito,水戸ホーリーホック,18.0,18 GOALS,score,Total Goals
-12,tk-v,東京ヴェルディ,18.0,18 GOALS,score,Total Goals
-12,shim,清水エスパルス,18.0,18 GOALS,score,Total Goals
-12,kyot,京都サンガF.C.,18.0,18 GOALS,score,Total Goals
-12,ngsk,Ｖ・ファーレン長崎,18.0,18 GOALS,score,Total Goals
-17,c-os,セレッソ大阪,17.0,17 GOALS,score,Total Goals
-17,fuku,アビスパ福岡,17.0,17 GOALS,score,Total Goals
-19,chib,ジェフユナイテッド千葉,16.0,16 GOALS,score,Total Goals
-19,kasw,柏レイソル,16.0,16 GOALS,score,Total Goals
-1,mito,水戸ホーリーホック,31.0,31,lost,Total Goals Against
-2,y-fm,横浜Ｆ・マリノス,28.0,28,lost,Total Goals Against
-3,fuku,アビスパ福岡,26.0,26,lost,Total Goals Against
-4,chib,ジェフユナイテッド千葉,25.0,25,lost,Total Goals Against
-4,ka-f,川崎フロンターレ,25.0,25,lost,Total Goals Against
-4,ngsk,Ｖ・ファーレン長崎,25.0,25,lost,Total Goals Against
-7,kasw,柏レイソル,22.0,22,lost,Total Goals Against
-7,kyot,京都サンガF.C.,22.0,22,lost,Total Goals Against
-7,okay,ファジアーノ岡山,22.0,22,lost,Total Goals Against
-10,g-os,ガンバ大阪,21.0,21,lost,Total Goals Against
-11,tk-v,東京ヴェルディ,19.0,19,lost,Total Goals Against
-11,kobe,ヴィッセル神戸,19.0,19,lost,Total Goals Against
-11,hiro,サンフレッチェ広島,19.0,19,lost,Total Goals Against
-14,mcd,ＦＣ町田ゼルビア,18.0,18,lost,Total Goals Against
-14,nago,名古屋グランパス,18.0,18,lost,Total Goals Against
-16,uraw,浦和レッズ,17.0,17,lost,Total Goals Against
-16,shim,清水エスパルス,17.0,17,lost,Total Goals Against
-18,c-os,セレッソ大阪,16.0,16,lost,Total Goals Against
+2,FCtk,ＦＣ東京,88.0,88,shoot_on_target,Shots on Target
+3,nago,名古屋グランパス,78.0,78,shoot_on_target,Shots on Target
+4,hiro,サンフレッチェ広島,75.0,75,shoot_on_target,Shots on Target
+5,uraw,浦和レッズ,73.0,73,shoot_on_target,Shots on Target
+6,kobe,ヴィッセル神戸,72.0,72,shoot_on_target,Shots on Target
+7,kyot,京都サンガF.C.,71.0,71,shoot_on_target,Shots on Target
+8,c-os,セレッソ大阪,69.0,69,shoot_on_target,Shots on Target
+9,kasm,鹿島アントラーズ,66.0,66,shoot_on_target,Shots on Target
+10,mcd,ＦＣ町田ゼルビア,63.0,63,shoot_on_target,Shots on Target
+11,chib,ジェフユナイテッド千葉,62.0,62,shoot_on_target,Shots on Target
+11,ngsk,Ｖ・ファーレン長崎,62.0,62,shoot_on_target,Shots on Target
+13,ka-f,川崎フロンターレ,58.0,58,shoot_on_target,Shots on Target
+14,kasw,柏レイソル,57.0,57,shoot_on_target,Shots on Target
+14,okay,ファジアーノ岡山,57.0,57,shoot_on_target,Shots on Target
+16,mito,水戸ホーリーホック,54.0,54,shoot_on_target,Shots on Target
+17,fuku,アビスパ福岡,52.0,52,shoot_on_target,Shots on Target
+18,shim,清水エスパルス,49.0,49,shoot_on_target,Shots on Target
+19,tk-v,東京ヴェルディ,48.0,48,shoot_on_target,Shots on Target
+19,y-fm,横浜Ｆ・マリノス,48.0,48,shoot_on_target,Shots on Target
+1,chib,ジェフユナイテッド千葉,284.0,284,suffer_shoot,Total Shots Against
+2,ngsk,Ｖ・ファーレン長崎,248.0,248,suffer_shoot,Total Shots Against
+3,ka-f,川崎フロンターレ,245.0,245,suffer_shoot,Total Shots Against
+4,nago,名古屋グランパス,243.0,243,suffer_shoot,Total Shots Against
+5,c-os,セレッソ大阪,231.0,231,suffer_shoot,Total Shots Against
+6,kyot,京都サンガF.C.,222.0,222,suffer_shoot,Total Shots Against
+7,shim,清水エスパルス,210.0,210,suffer_shoot,Total Shots Against
+8,uraw,浦和レッズ,208.0,208,suffer_shoot,Total Shots Against
+9,fuku,アビスパ福岡,205.0,205,suffer_shoot,Total Shots Against
+10,g-os,ガンバ大阪,204.0,204,suffer_shoot,Total Shots Against
+11,kasm,鹿島アントラーズ,200.0,200,suffer_shoot,Total Shots Against
+12,mito,水戸ホーリーホック,197.0,197,suffer_shoot,Total Shots Against
+13,kasw,柏レイソル,195.0,195,suffer_shoot,Total Shots Against
+14,okay,ファジアーノ岡山,193.0,193,suffer_shoot,Total Shots Against
+15,mcd,ＦＣ町田ゼルビア,190.0,190,suffer_shoot,Total Shots Against
+16,kobe,ヴィッセル神戸,181.0,181,suffer_shoot,Total Shots Against
+17,FCtk,ＦＣ東京,174.0,174,suffer_shoot,Total Shots Against
+17,tk-v,東京ヴェルディ,174.0,174,suffer_shoot,Total Shots Against
+17,y-fm,横浜Ｆ・マリノス,174.0,174,suffer_shoot,Total Shots Against
+20,hiro,サンフレッチェ広島,164.0,164,suffer_shoot,Total Shots Against
+1,nago,名古屋グランパス,29.0,29 GOALS,score,Total Goals
+2,kasm,鹿島アントラーズ,28.0,28 GOALS,score,Total Goals
+2,FCtk,ＦＣ東京,28.0,28 GOALS,score,Total Goals
+4,kobe,ヴィッセル神戸,26.0,26 GOALS,score,Total Goals
+5,uraw,浦和レッズ,25.0,25 GOALS,score,Total Goals
+5,hiro,サンフレッチェ広島,25.0,25 GOALS,score,Total Goals
+7,g-os,ガンバ大阪,24.0,24 GOALS,score,Total Goals
+8,c-os,セレッソ大阪,23.0,23 GOALS,score,Total Goals
+9,mcd,ＦＣ町田ゼルビア,22.0,22 GOALS,score,Total Goals
+9,y-fm,横浜Ｆ・マリノス,22.0,22 GOALS,score,Total Goals
+9,okay,ファジアーノ岡山,22.0,22 GOALS,score,Total Goals
+12,ka-f,川崎フロンターレ,20.0,20 GOALS,score,Total Goals
+12,ngsk,Ｖ・ファーレン長崎,20.0,20 GOALS,score,Total Goals
+14,tk-v,東京ヴェルディ,19.0,19 GOALS,score,Total Goals
+15,mito,水戸ホーリーホック,18.0,18 GOALS,score,Total Goals
+15,shim,清水エスパルス,18.0,18 GOALS,score,Total Goals
+15,kyot,京都サンガF.C.,18.0,18 GOALS,score,Total Goals
+18,kasw,柏レイソル,17.0,17 GOALS,score,Total Goals
+18,fuku,アビスパ福岡,17.0,17 GOALS,score,Total Goals
+20,chib,ジェフユナイテッド千葉,16.0,16 GOALS,score,Total Goals
+1,mito,水戸ホーリーホック,32.0,32,lost,Total Goals Against
+2,y-fm,横浜Ｆ・マリノス,29.0,29,lost,Total Goals Against
+3,chib,ジェフユナイテッド千葉,27.0,27,lost,Total Goals Against
+3,ngsk,Ｖ・ファーレン長崎,27.0,27,lost,Total Goals Against
+5,ka-f,川崎フロンターレ,26.0,26,lost,Total Goals Against
+5,kyot,京都サンガF.C.,26.0,26,lost,Total Goals Against
+5,fuku,アビスパ福岡,26.0,26,lost,Total Goals Against
+8,nago,名古屋グランパス,24.0,24,lost,Total Goals Against
+9,kasw,柏レイソル,22.0,22,lost,Total Goals Against
+9,okay,ファジアーノ岡山,22.0,22,lost,Total Goals Against
+11,g-os,ガンバ大阪,21.0,21,lost,Total Goals Against
+11,kobe,ヴィッセル神戸,21.0,21,lost,Total Goals Against
+13,tk-v,東京ヴェルディ,19.0,19,lost,Total Goals Against
+13,mcd,ＦＣ町田ゼルビア,19.0,19,lost,Total Goals Against
+13,shim,清水エスパルス,19.0,19,lost,Total Goals Against
+13,hiro,サンフレッチェ広島,19.0,19,lost,Total Goals Against
+17,uraw,浦和レッズ,17.0,17,lost,Total Goals Against
+17,c-os,セレッソ大阪,17.0,17,lost,Total Goals Against
 19,FCtk,ＦＣ東京,15.0,15,lost,Total Goals Against
 20,kasm,鹿島アントラーズ,9.0,9,lost,Total Goals Against
-1,kasm,鹿島アントラーズ,9.0,9,clean_sheet,Clean Sheets
-2,uraw,浦和レッズ,6.0,6,clean_sheet,Clean Sheets
-2,mcd,ＦＣ町田ゼルビア,6.0,6,clean_sheet,Clean Sheets
-2,c-os,セレッソ大阪,6.0,6,clean_sheet,Clean Sheets
-5,FCtk,ＦＣ東京,5.0,5,clean_sheet,Clean Sheets
-5,tk-v,東京ヴェルディ,5.0,5,clean_sheet,Clean Sheets
-5,nago,名古屋グランパス,5.0,5,clean_sheet,Clean Sheets
-5,kobe,ヴィッセル神戸,5.0,5,clean_sheet,Clean Sheets
-9,kasw,柏レイソル,4.0,4,clean_sheet,Clean Sheets
-9,g-os,ガンバ大阪,4.0,4,clean_sheet,Clean Sheets
-9,okay,ファジアーノ岡山,4.0,4,clean_sheet,Clean Sheets
-12,ka-f,川崎フロンターレ,3.0,3,clean_sheet,Clean Sheets
-12,shim,清水エスパルス,3.0,3,clean_sheet,Clean Sheets
-12,hiro,サンフレッチェ広島,3.0,3,clean_sheet,Clean Sheets
-12,ngsk,Ｖ・ファーレン長崎,3.0,3,clean_sheet,Clean Sheets
+1,kasm,鹿島アントラーズ,10.0,10,clean_sheet,Clean Sheets
+2,uraw,浦和レッズ,7.0,7,clean_sheet,Clean Sheets
+3,FCtk,ＦＣ東京,6.0,6,clean_sheet,Clean Sheets
+3,tk-v,東京ヴェルディ,6.0,6,clean_sheet,Clean Sheets
+3,mcd,ＦＣ町田ゼルビア,6.0,6,clean_sheet,Clean Sheets
+3,c-os,セレッソ大阪,6.0,6,clean_sheet,Clean Sheets
+7,kasw,柏レイソル,5.0,5,clean_sheet,Clean Sheets
+7,nago,名古屋グランパス,5.0,5,clean_sheet,Clean Sheets
+7,kobe,ヴィッセル神戸,5.0,5,clean_sheet,Clean Sheets
+7,okay,ファジアーノ岡山,5.0,5,clean_sheet,Clean Sheets
+11,g-os,ガンバ大阪,4.0,4,clean_sheet,Clean Sheets
+11,hiro,サンフレッチェ広島,4.0,4,clean_sheet,Clean Sheets
+13,ka-f,川崎フロンターレ,3.0,3,clean_sheet,Clean Sheets
+13,shim,清水エスパルス,3.0,3,clean_sheet,Clean Sheets
+13,ngsk,Ｖ・ファーレン長崎,3.0,3,clean_sheet,Clean Sheets
 16,mito,水戸ホーリーホック,2.0,2,clean_sheet,Clean Sheets
 16,chib,ジェフユナイテッド千葉,2.0,2,clean_sheet,Clean Sheets
 16,y-fm,横浜Ｆ・マリノス,2.0,2,clean_sheet,Clean Sheets
 16,fuku,アビスパ福岡,2.0,2,clean_sheet,Clean Sheets
 20,kyot,京都サンガF.C.,1.0,1,clean_sheet,Clean Sheets
-1,kasw,柏レイソル,9141.0,9141,pass_count,Total Passes
-2,kasm,鹿島アントラーズ,8421.0,8421,pass_count,Total Passes
-3,ka-f,川崎フロンターレ,7962.0,7962,pass_count,Total Passes
-4,g-os,ガンバ大阪,7954.0,7954,pass_count,Total Passes
-5,FCtk,ＦＣ東京,7666.0,7666,pass_count,Total Passes
-6,hiro,サンフレッチェ広島,7539.0,7539,pass_count,Total Passes
-7,kobe,ヴィッセル神戸,7436.0,7436,pass_count,Total Passes
-8,c-os,セレッソ大阪,7376.0,7376,pass_count,Total Passes
-9,uraw,浦和レッズ,7359.0,7359,pass_count,Total Passes
-10,mito,水戸ホーリーホック,7003.0,7003,pass_count,Total Passes
-11,nago,名古屋グランパス,6863.0,6863,pass_count,Total Passes
-12,chib,ジェフユナイテッド千葉,6685.0,6685,pass_count,Total Passes
-13,mcd,ＦＣ町田ゼルビア,6634.0,6634,pass_count,Total Passes
-14,ngsk,Ｖ・ファーレン長崎,6623.0,6623,pass_count,Total Passes
-15,shim,清水エスパルス,6440.0,6440,pass_count,Total Passes
-16,kyot,京都サンガF.C.,6141.0,6141,pass_count,Total Passes
-17,y-fm,横浜Ｆ・マリノス,6058.0,6058,pass_count,Total Passes
-18,tk-v,東京ヴェルディ,6003.0,6003,pass_count,Total Passes
+1,kasw,柏レイソル,9537.0,9537,pass_count,Total Passes
+2,kasm,鹿島アントラーズ,8927.0,8927,pass_count,Total Passes
+3,ka-f,川崎フロンターレ,8656.0,8656,pass_count,Total Passes
+4,FCtk,ＦＣ東京,8091.0,8091,pass_count,Total Passes
+5,g-os,ガンバ大阪,7954.0,7954,pass_count,Total Passes
+6,uraw,浦和レッズ,7891.0,7891,pass_count,Total Passes
+7,hiro,サンフレッチェ広島,7888.0,7888,pass_count,Total Passes
+8,kobe,ヴィッセル神戸,7876.0,7876,pass_count,Total Passes
+9,c-os,セレッソ大阪,7755.0,7755,pass_count,Total Passes
+10,mito,水戸ホーリーホック,7503.0,7503,pass_count,Total Passes
+11,nago,名古屋グランパス,7399.0,7399,pass_count,Total Passes
+12,mcd,ＦＣ町田ゼルビア,7007.0,7007,pass_count,Total Passes
+13,chib,ジェフユナイテッド千葉,6991.0,6991,pass_count,Total Passes
+14,ngsk,Ｖ・ファーレン長崎,6949.0,6949,pass_count,Total Passes
+15,shim,清水エスパルス,6877.0,6877,pass_count,Total Passes
+16,kyot,京都サンガF.C.,6549.0,6549,pass_count,Total Passes
+17,y-fm,横浜Ｆ・マリノス,6540.0,6540,pass_count,Total Passes
+18,tk-v,東京ヴェルディ,6330.0,6330,pass_count,Total Passes
 19,fuku,アビスパ福岡,5771.0,5771,pass_count,Total Passes
-20,okay,ファジアーノ岡山,5090.0,5090,pass_count,Total Passes
-1,kasw,柏レイソル,214.0,214,dribble_count,Total Dribbles
-2,g-os,ガンバ大阪,210.0,210,dribble_count,Total Dribbles
-3,chib,ジェフユナイテッド千葉,204.0,204,dribble_count,Total Dribbles
-4,mcd,ＦＣ町田ゼルビア,189.0,189,dribble_count,Total Dribbles
-5,uraw,浦和レッズ,181.0,181,dribble_count,Total Dribbles
-6,mito,水戸ホーリーホック,179.0,179,dribble_count,Total Dribbles
-7,FCtk,ＦＣ東京,177.0,177,dribble_count,Total Dribbles
-8,fuku,アビスパ福岡,172.0,172,dribble_count,Total Dribbles
-9,c-os,セレッソ大阪,169.0,169,dribble_count,Total Dribbles
-10,okay,ファジアーノ岡山,167.0,167,dribble_count,Total Dribbles
-11,y-fm,横浜Ｆ・マリノス,164.0,164,dribble_count,Total Dribbles
-11,nago,名古屋グランパス,164.0,164,dribble_count,Total Dribbles
-13,ngsk,Ｖ・ファーレン長崎,163.0,163,dribble_count,Total Dribbles
-14,ka-f,川崎フロンターレ,155.0,155,dribble_count,Total Dribbles
-15,hiro,サンフレッチェ広島,151.0,151,dribble_count,Total Dribbles
-16,tk-v,東京ヴェルディ,140.0,140,dribble_count,Total Dribbles
-17,kasm,鹿島アントラーズ,132.0,132,dribble_count,Total Dribbles
-17,kyot,京都サンガF.C.,132.0,132,dribble_count,Total Dribbles
-19,kobe,ヴィッセル神戸,118.0,118,dribble_count,Total Dribbles
-20,shim,清水エスパルス,114.0,114,dribble_count,Total Dribbles
-1,c-os,セレッソ大阪,317.0,317,through_pass_count,Total Through Balls
-2,kasw,柏レイソル,311.0,311,through_pass_count,Total Through Balls
-3,hiro,サンフレッチェ広島,279.0,279,through_pass_count,Total Through Balls
-4,g-os,ガンバ大阪,266.0,266,through_pass_count,Total Through Balls
-5,FCtk,ＦＣ東京,261.0,261,through_pass_count,Total Through Balls
-6,ka-f,川崎フロンターレ,252.0,252,through_pass_count,Total Through Balls
-7,kyot,京都サンガF.C.,250.0,250,through_pass_count,Total Through Balls
-8,kasm,鹿島アントラーズ,246.0,246,through_pass_count,Total Through Balls
-9,nago,名古屋グランパス,227.0,227,through_pass_count,Total Through Balls
-10,uraw,浦和レッズ,226.0,226,through_pass_count,Total Through Balls
-11,y-fm,横浜Ｆ・マリノス,203.0,203,through_pass_count,Total Through Balls
-12,shim,清水エスパルス,202.0,202,through_pass_count,Total Through Balls
-13,kobe,ヴィッセル神戸,183.0,183,through_pass_count,Total Through Balls
-14,okay,ファジアーノ岡山,167.0,167,through_pass_count,Total Through Balls
-14,ngsk,Ｖ・ファーレン長崎,167.0,167,through_pass_count,Total Through Balls
+20,okay,ファジアーノ岡山,5378.0,5378,pass_count,Total Passes
+1,kasw,柏レイソル,221.0,221,dribble_count,Total Dribbles
+2,chib,ジェフユナイテッド千葉,212.0,212,dribble_count,Total Dribbles
+3,g-os,ガンバ大阪,210.0,210,dribble_count,Total Dribbles
+4,mcd,ＦＣ町田ゼルビア,196.0,196,dribble_count,Total Dribbles
+5,uraw,浦和レッズ,195.0,195,dribble_count,Total Dribbles
+5,FCtk,ＦＣ東京,195.0,195,dribble_count,Total Dribbles
+7,mito,水戸ホーリーホック,193.0,193,dribble_count,Total Dribbles
+8,c-os,セレッソ大阪,185.0,185,dribble_count,Total Dribbles
+9,okay,ファジアーノ岡山,178.0,178,dribble_count,Total Dribbles
+10,nago,名古屋グランパス,176.0,176,dribble_count,Total Dribbles
+11,y-fm,横浜Ｆ・マリノス,175.0,175,dribble_count,Total Dribbles
+12,fuku,アビスパ福岡,172.0,172,dribble_count,Total Dribbles
+13,ka-f,川崎フロンターレ,171.0,171,dribble_count,Total Dribbles
+13,ngsk,Ｖ・ファーレン長崎,171.0,171,dribble_count,Total Dribbles
+15,hiro,サンフレッチェ広島,163.0,163,dribble_count,Total Dribbles
+16,tk-v,東京ヴェルディ,147.0,147,dribble_count,Total Dribbles
+17,kasm,鹿島アントラーズ,139.0,139,dribble_count,Total Dribbles
+18,kyot,京都サンガF.C.,138.0,138,dribble_count,Total Dribbles
+19,shim,清水エスパルス,128.0,128,dribble_count,Total Dribbles
+20,kobe,ヴィッセル神戸,125.0,125,dribble_count,Total Dribbles
+1,c-os,セレッソ大阪,339.0,339,through_pass_count,Total Through Balls
+2,kasw,柏レイソル,326.0,326,through_pass_count,Total Through Balls
+3,hiro,サンフレッチェ広島,298.0,298,through_pass_count,Total Through Balls
+4,ka-f,川崎フロンターレ,275.0,275,through_pass_count,Total Through Balls
+5,FCtk,ＦＣ東京,272.0,272,through_pass_count,Total Through Balls
+6,kyot,京都サンガF.C.,270.0,270,through_pass_count,Total Through Balls
+7,g-os,ガンバ大阪,266.0,266,through_pass_count,Total Through Balls
+8,kasm,鹿島アントラーズ,256.0,256,through_pass_count,Total Through Balls
+9,uraw,浦和レッズ,241.0,241,through_pass_count,Total Through Balls
+10,nago,名古屋グランパス,236.0,236,through_pass_count,Total Through Balls
+11,y-fm,横浜Ｆ・マリノス,214.0,214,through_pass_count,Total Through Balls
+11,shim,清水エスパルス,214.0,214,through_pass_count,Total Through Balls
+13,kobe,ヴィッセル神戸,188.0,188,through_pass_count,Total Through Balls
+14,okay,ファジアーノ岡山,181.0,181,through_pass_count,Total Through Balls
+15,ngsk,Ｖ・ファーレン長崎,177.0,177,through_pass_count,Total Through Balls
 16,fuku,アビスパ福岡,158.0,158,through_pass_count,Total Through Balls
-17,chib,ジェフユナイテッド千葉,148.0,148,through_pass_count,Total Through Balls
-18,mito,水戸ホーリーホック,147.0,147,through_pass_count,Total Through Balls
-18,mcd,ＦＣ町田ゼルビア,147.0,147,through_pass_count,Total Through Balls
-20,tk-v,東京ヴェルディ,134.0,134,through_pass_count,Total Through Balls
-1,hiro,サンフレッチェ広島,285.0,285,cross_count,Total Crosses
-2,okay,ファジアーノ岡山,263.0,263,cross_count,Total Crosses
-3,nago,名古屋グランパス,262.0,262,cross_count,Total Crosses
-4,kasw,柏レイソル,258.0,258,cross_count,Total Crosses
-5,FCtk,ＦＣ東京,244.0,244,cross_count,Total Crosses
-6,kobe,ヴィッセル神戸,243.0,243,cross_count,Total Crosses
-7,kyot,京都サンガF.C.,229.0,229,cross_count,Total Crosses
-8,shim,清水エスパルス,225.0,225,cross_count,Total Crosses
-9,g-os,ガンバ大阪,222.0,222,cross_count,Total Crosses
-10,ka-f,川崎フロンターレ,218.0,218,cross_count,Total Crosses
-11,y-fm,横浜Ｆ・マリノス,217.0,217,cross_count,Total Crosses
-12,c-os,セレッソ大阪,216.0,216,cross_count,Total Crosses
-13,uraw,浦和レッズ,214.0,214,cross_count,Total Crosses
-14,kasm,鹿島アントラーズ,209.0,209,cross_count,Total Crosses
-15,chib,ジェフユナイテッド千葉,202.0,202,cross_count,Total Crosses
-16,mcd,ＦＣ町田ゼルビア,191.0,191,cross_count,Total Crosses
-17,mito,水戸ホーリーホック,180.0,180,cross_count,Total Crosses
-18,fuku,アビスパ福岡,172.0,172,cross_count,Total Crosses
-19,tk-v,東京ヴェルディ,166.0,166,cross_count,Total Crosses
-20,ngsk,Ｖ・ファーレン長崎,154.0,154,cross_count,Total Crosses
-1,c-os,セレッソ大阪,464.0,464,clear_count,Total Clearances
-2,chib,ジェフユナイテッド千葉,456.0,456,clear_count,Total Clearances
-3,fuku,アビスパ福岡,451.0,451,clear_count,Total Clearances
-4,ngsk,Ｖ・ファーレン長崎,440.0,440,clear_count,Total Clearances
-5,okay,ファジアーノ岡山,431.0,431,clear_count,Total Clearances
-6,g-os,ガンバ大阪,398.0,398,clear_count,Total Clearances
-7,kyot,京都サンガF.C.,396.0,396,clear_count,Total Clearances
-8,kobe,ヴィッセル神戸,391.0,391,clear_count,Total Clearances
-9,nago,名古屋グランパス,388.0,388,clear_count,Total Clearances
-10,shim,清水エスパルス,387.0,387,clear_count,Total Clearances
-11,tk-v,東京ヴェルディ,375.0,375,clear_count,Total Clearances
-12,y-fm,横浜Ｆ・マリノス,355.0,355,clear_count,Total Clearances
-13,FCtk,ＦＣ東京,341.0,341,clear_count,Total Clearances
-14,ka-f,川崎フロンターレ,334.0,334,clear_count,Total Clearances
-15,mito,水戸ホーリーホック,330.0,330,clear_count,Total Clearances
-16,uraw,浦和レッズ,326.0,326,clear_count,Total Clearances
-17,kasm,鹿島アントラーズ,308.0,308,clear_count,Total Clearances
-18,kasw,柏レイソル,303.0,303,clear_count,Total Clearances
-19,hiro,サンフレッチェ広島,278.0,278,clear_count,Total Clearances
-20,mcd,ＦＣ町田ゼルビア,273.0,273,clear_count,Total Clearances
-1,nago,名古屋グランパス,310.0,310,tackle_count,Total Tackles
-2,uraw,浦和レッズ,308.0,308,tackle_count,Total Tackles
-3,fuku,アビスパ福岡,307.0,307,tackle_count,Total Tackles
-4,tk-v,東京ヴェルディ,304.0,304,tackle_count,Total Tackles
-5,y-fm,横浜Ｆ・マリノス,293.0,293,tackle_count,Total Tackles
-6,c-os,セレッソ大阪,292.0,292,tackle_count,Total Tackles
-7,kyot,京都サンガF.C.,290.0,290,tackle_count,Total Tackles
-8,kasm,鹿島アントラーズ,282.0,282,tackle_count,Total Tackles
-9,kasw,柏レイソル,281.0,281,tackle_count,Total Tackles
-10,g-os,ガンバ大阪,277.0,277,tackle_count,Total Tackles
-11,FCtk,ＦＣ東京,272.0,272,tackle_count,Total Tackles
-12,mcd,ＦＣ町田ゼルビア,271.0,271,tackle_count,Total Tackles
-13,chib,ジェフユナイテッド千葉,267.0,267,tackle_count,Total Tackles
-14,okay,ファジアーノ岡山,260.0,260,tackle_count,Total Tackles
-14,hiro,サンフレッチェ広島,260.0,260,tackle_count,Total Tackles
-16,kobe,ヴィッセル神戸,259.0,259,tackle_count,Total Tackles
-17,ka-f,川崎フロンターレ,254.0,254,tackle_count,Total Tackles
-17,shim,清水エスパルス,254.0,254,tackle_count,Total Tackles
-19,ngsk,Ｖ・ファーレン長崎,252.0,252,tackle_count,Total Tackles
-20,mito,水戸ホーリーホック,240.0,240,tackle_count,Total Tackles
-1,c-os,セレッソ大阪,387.0,387,block_count,Total Blocks
-2,okay,ファジアーノ岡山,373.0,373,block_count,Total Blocks
-3,g-os,ガンバ大阪,367.0,367,block_count,Total Blocks
-4,kyot,京都サンガF.C.,357.0,357,block_count,Total Blocks
-5,tk-v,東京ヴェルディ,352.0,352,block_count,Total Blocks
-6,hiro,サンフレッチェ広島,341.0,341,block_count,Total Blocks
-7,kobe,ヴィッセル神戸,331.0,331,block_count,Total Blocks
-8,fuku,アビスパ福岡,329.0,329,block_count,Total Blocks
-9,shim,清水エスパルス,327.0,327,block_count,Total Blocks
-9,ngsk,Ｖ・ファーレン長崎,327.0,327,block_count,Total Blocks
-11,kasm,鹿島アントラーズ,325.0,325,block_count,Total Blocks
-12,nago,名古屋グランパス,324.0,324,block_count,Total Blocks
-13,mito,水戸ホーリーホック,318.0,318,block_count,Total Blocks
-14,ka-f,川崎フロンターレ,317.0,317,block_count,Total Blocks
-15,uraw,浦和レッズ,309.0,309,block_count,Total Blocks
-16,chib,ジェフユナイテッド千葉,286.0,286,block_count,Total Blocks
-16,mcd,ＦＣ町田ゼルビア,286.0,286,block_count,Total Blocks
-18,y-fm,横浜Ｆ・マリノス,283.0,283,block_count,Total Blocks
-19,FCtk,ＦＣ東京,279.0,279,block_count,Total Blocks
-20,kasw,柏レイソル,250.0,250,block_count,Total Blocks
-1,okay,ファジアーノ岡山,221.0,221,foul_count,Total Fouls
+17,chib,ジェフユナイテッド千葉,157.0,157,through_pass_count,Total Through Balls
+18,mcd,ＦＣ町田ゼルビア,151.0,151,through_pass_count,Total Through Balls
+19,mito,水戸ホーリーホック,150.0,150,through_pass_count,Total Through Balls
+20,tk-v,東京ヴェルディ,142.0,142,through_pass_count,Total Through Balls
+1,hiro,サンフレッチェ広島,302.0,302,cross_count,Total Crosses
+2,nago,名古屋グランパス,284.0,284,cross_count,Total Crosses
+3,okay,ファジアーノ岡山,277.0,277,cross_count,Total Crosses
+4,kasw,柏レイソル,266.0,266,cross_count,Total Crosses
+5,kobe,ヴィッセル神戸,262.0,262,cross_count,Total Crosses
+6,FCtk,ＦＣ東京,259.0,259,cross_count,Total Crosses
+7,ka-f,川崎フロンターレ,242.0,242,cross_count,Total Crosses
+8,y-fm,横浜Ｆ・マリノス,241.0,241,cross_count,Total Crosses
+9,shim,清水エスパルス,239.0,239,cross_count,Total Crosses
+10,kyot,京都サンガF.C.,238.0,238,cross_count,Total Crosses
+11,c-os,セレッソ大阪,231.0,231,cross_count,Total Crosses
+12,uraw,浦和レッズ,227.0,227,cross_count,Total Crosses
+13,g-os,ガンバ大阪,222.0,222,cross_count,Total Crosses
+14,kasm,鹿島アントラーズ,219.0,219,cross_count,Total Crosses
+15,chib,ジェフユナイテッド千葉,212.0,212,cross_count,Total Crosses
+16,mcd,ＦＣ町田ゼルビア,199.0,199,cross_count,Total Crosses
+17,mito,水戸ホーリーホック,197.0,197,cross_count,Total Crosses
+18,tk-v,東京ヴェルディ,177.0,177,cross_count,Total Crosses
+19,fuku,アビスパ福岡,172.0,172,cross_count,Total Crosses
+20,ngsk,Ｖ・ファーレン長崎,164.0,164,cross_count,Total Crosses
+1,c-os,セレッソ大阪,487.0,487,clear_count,Total Clearances
+2,chib,ジェフユナイテッド千葉,472.0,472,clear_count,Total Clearances
+3,okay,ファジアーノ岡山,469.0,469,clear_count,Total Clearances
+4,ngsk,Ｖ・ファーレン長崎,467.0,467,clear_count,Total Clearances
+5,fuku,アビスパ福岡,451.0,451,clear_count,Total Clearances
+6,kyot,京都サンガF.C.,422.0,422,clear_count,Total Clearances
+7,shim,清水エスパルス,414.0,414,clear_count,Total Clearances
+8,kobe,ヴィッセル神戸,412.0,412,clear_count,Total Clearances
+9,tk-v,東京ヴェルディ,403.0,403,clear_count,Total Clearances
+10,nago,名古屋グランパス,398.0,398,clear_count,Total Clearances
+10,g-os,ガンバ大阪,398.0,398,clear_count,Total Clearances
+12,y-fm,横浜Ｆ・マリノス,363.0,363,clear_count,Total Clearances
+13,mito,水戸ホーリーホック,356.0,356,clear_count,Total Clearances
+14,FCtk,ＦＣ東京,354.0,354,clear_count,Total Clearances
+15,ka-f,川崎フロンターレ,350.0,350,clear_count,Total Clearances
+16,uraw,浦和レッズ,346.0,346,clear_count,Total Clearances
+17,kasw,柏レイソル,343.0,343,clear_count,Total Clearances
+18,kasm,鹿島アントラーズ,323.0,323,clear_count,Total Clearances
+19,hiro,サンフレッチェ広島,303.0,303,clear_count,Total Clearances
+20,mcd,ＦＣ町田ゼルビア,294.0,294,clear_count,Total Clearances
+1,nago,名古屋グランパス,334.0,334,tackle_count,Total Tackles
+2,uraw,浦和レッズ,330.0,330,tackle_count,Total Tackles
+2,tk-v,東京ヴェルディ,330.0,330,tackle_count,Total Tackles
+4,c-os,セレッソ大阪,307.0,307,tackle_count,Total Tackles
+4,fuku,アビスパ福岡,307.0,307,tackle_count,Total Tackles
+6,y-fm,横浜Ｆ・マリノス,304.0,304,tackle_count,Total Tackles
+6,kyot,京都サンガF.C.,304.0,304,tackle_count,Total Tackles
+8,kasm,鹿島アントラーズ,302.0,302,tackle_count,Total Tackles
+9,kasw,柏レイソル,295.0,295,tackle_count,Total Tackles
+10,FCtk,ＦＣ東京,291.0,291,tackle_count,Total Tackles
+11,mcd,ＦＣ町田ゼルビア,287.0,287,tackle_count,Total Tackles
+12,okay,ファジアーノ岡山,281.0,281,tackle_count,Total Tackles
+12,hiro,サンフレッチェ広島,281.0,281,tackle_count,Total Tackles
+14,chib,ジェフユナイテッド千葉,278.0,278,tackle_count,Total Tackles
+15,g-os,ガンバ大阪,277.0,277,tackle_count,Total Tackles
+16,kobe,ヴィッセル神戸,275.0,275,tackle_count,Total Tackles
+17,shim,清水エスパルス,267.0,267,tackle_count,Total Tackles
+18,mito,水戸ホーリーホック,265.0,265,tackle_count,Total Tackles
+18,ka-f,川崎フロンターレ,265.0,265,tackle_count,Total Tackles
+20,ngsk,Ｖ・ファーレン長崎,263.0,263,tackle_count,Total Tackles
+1,c-os,セレッソ大阪,407.0,407,block_count,Total Blocks
+2,okay,ファジアーノ岡山,395.0,395,block_count,Total Blocks
+3,kyot,京都サンガF.C.,382.0,382,block_count,Total Blocks
+4,tk-v,東京ヴェルディ,372.0,372,block_count,Total Blocks
+5,g-os,ガンバ大阪,367.0,367,block_count,Total Blocks
+6,hiro,サンフレッチェ広島,366.0,366,block_count,Total Blocks
+7,kobe,ヴィッセル神戸,344.0,344,block_count,Total Blocks
+8,shim,清水エスパルス,343.0,343,block_count,Total Blocks
+9,nago,名古屋グランパス,342.0,342,block_count,Total Blocks
+10,ngsk,Ｖ・ファーレン長崎,341.0,341,block_count,Total Blocks
+11,kasm,鹿島アントラーズ,340.0,340,block_count,Total Blocks
+12,mito,水戸ホーリーホック,337.0,337,block_count,Total Blocks
+13,uraw,浦和レッズ,331.0,331,block_count,Total Blocks
+14,ka-f,川崎フロンターレ,330.0,330,block_count,Total Blocks
+15,fuku,アビスパ福岡,329.0,329,block_count,Total Blocks
+16,mcd,ＦＣ町田ゼルビア,310.0,310,block_count,Total Blocks
+17,y-fm,横浜Ｆ・マリノス,306.0,306,block_count,Total Blocks
+18,chib,ジェフユナイテッド千葉,302.0,302,block_count,Total Blocks
+19,FCtk,ＦＣ東京,294.0,294,block_count,Total Blocks
+20,kasw,柏レイソル,275.0,275,block_count,Total Blocks
+1,okay,ファジアーノ岡山,230.0,230,foul_count,Total Fouls
 2,fuku,アビスパ福岡,213.0,213,foul_count,Total Fouls
-3,kyot,京都サンガF.C.,206.0,206,foul_count,Total Fouls
-4,chib,ジェフユナイテッド千葉,196.0,196,foul_count,Total Fouls
-5,c-os,セレッソ大阪,187.0,187,foul_count,Total Fouls
-6,tk-v,東京ヴェルディ,186.0,186,foul_count,Total Fouls
-7,g-os,ガンバ大阪,181.0,181,foul_count,Total Fouls
-8,FCtk,ＦＣ東京,174.0,174,foul_count,Total Fouls
-8,hiro,サンフレッチェ広島,174.0,174,foul_count,Total Fouls
-10,mito,水戸ホーリーホック,170.0,170,foul_count,Total Fouls
-10,y-fm,横浜Ｆ・マリノス,170.0,170,foul_count,Total Fouls
-12,uraw,浦和レッズ,169.0,169,foul_count,Total Fouls
-13,mcd,ＦＣ町田ゼルビア,167.0,167,foul_count,Total Fouls
-14,ngsk,Ｖ・ファーレン長崎,162.0,162,foul_count,Total Fouls
-15,shim,清水エスパルス,154.0,154,foul_count,Total Fouls
-16,nago,名古屋グランパス,151.0,151,foul_count,Total Fouls
-17,kasm,鹿島アントラーズ,147.0,147,foul_count,Total Fouls
-18,kasw,柏レイソル,131.0,131,foul_count,Total Fouls
-18,kobe,ヴィッセル神戸,131.0,131,foul_count,Total Fouls
-20,ka-f,川崎フロンターレ,129.0,129,foul_count,Total Fouls
+3,kyot,京都サンガF.C.,212.0,212,foul_count,Total Fouls
+4,chib,ジェフユナイテッド千葉,210.0,210,foul_count,Total Fouls
+5,c-os,セレッソ大阪,199.0,199,foul_count,Total Fouls
+6,tk-v,東京ヴェルディ,197.0,197,foul_count,Total Fouls
+7,hiro,サンフレッチェ広島,189.0,189,foul_count,Total Fouls
+8,FCtk,ＦＣ東京,185.0,185,foul_count,Total Fouls
+9,y-fm,横浜Ｆ・マリノス,182.0,182,foul_count,Total Fouls
+10,g-os,ガンバ大阪,181.0,181,foul_count,Total Fouls
+11,mito,水戸ホーリーホック,180.0,180,foul_count,Total Fouls
+12,mcd,ＦＣ町田ゼルビア,177.0,177,foul_count,Total Fouls
+13,uraw,浦和レッズ,174.0,174,foul_count,Total Fouls
+14,ngsk,Ｖ・ファーレン長崎,173.0,173,foul_count,Total Fouls
+15,shim,清水エスパルス,161.0,161,foul_count,Total Fouls
+16,kasm,鹿島アントラーズ,158.0,158,foul_count,Total Fouls
+17,nago,名古屋グランパス,156.0,156,foul_count,Total Fouls
+18,kobe,ヴィッセル神戸,140.0,140,foul_count,Total Fouls
+19,ka-f,川崎フロンターレ,138.0,138,foul_count,Total Fouls
+20,kasw,柏レイソル,137.0,137,foul_count,Total Fouls
 1,ngsk,Ｖ・ファーレン長崎,44.0,44,intercept_count,Total Interceptions
-2,fuku,アビスパ福岡,32.0,32,intercept_count,Total Interceptions
-3,FCtk,ＦＣ東京,31.0,31,intercept_count,Total Interceptions
-4,mito,水戸ホーリーホック,30.0,30,intercept_count,Total Interceptions
-4,g-os,ガンバ大阪,30.0,30,intercept_count,Total Interceptions
-6,kasm,鹿島アントラーズ,29.0,29,intercept_count,Total Interceptions
-6,chib,ジェフユナイテッド千葉,29.0,29,intercept_count,Total Interceptions
-6,shim,清水エスパルス,29.0,29,intercept_count,Total Interceptions
-6,kobe,ヴィッセル神戸,29.0,29,intercept_count,Total Interceptions
+2,FCtk,ＦＣ東京,36.0,36,intercept_count,Total Interceptions
+3,fuku,アビスパ福岡,32.0,32,intercept_count,Total Interceptions
+4,kasm,鹿島アントラーズ,31.0,31,intercept_count,Total Interceptions
+4,shim,清水エスパルス,31.0,31,intercept_count,Total Interceptions
+6,mito,水戸ホーリーホック,30.0,30,intercept_count,Total Interceptions
+6,chib,ジェフユナイテッド千葉,30.0,30,intercept_count,Total Interceptions
+6,g-os,ガンバ大阪,30.0,30,intercept_count,Total Interceptions
+6,kobe,ヴィッセル神戸,30.0,30,intercept_count,Total Interceptions
 10,ka-f,川崎フロンターレ,26.0,26,intercept_count,Total Interceptions
-11,okay,ファジアーノ岡山,23.0,23,intercept_count,Total Interceptions
-12,uraw,浦和レッズ,22.0,22,intercept_count,Total Interceptions
-12,tk-v,東京ヴェルディ,22.0,22,intercept_count,Total Interceptions
-12,nago,名古屋グランパス,22.0,22,intercept_count,Total Interceptions
-15,mcd,ＦＣ町田ゼルビア,21.0,21,intercept_count,Total Interceptions
-15,hiro,サンフレッチェ広島,21.0,21,intercept_count,Total Interceptions
-17,kasw,柏レイソル,20.0,20,intercept_count,Total Interceptions
-17,kyot,京都サンガF.C.,20.0,20,intercept_count,Total Interceptions
-19,c-os,セレッソ大阪,16.0,16,intercept_count,Total Interceptions
-20,y-fm,横浜Ｆ・マリノス,14.0,14,intercept_count,Total Interceptions
-1,kobe,ヴィッセル神戸,395.0,395,air_battle_win_count,Aerial Duels Won
-2,shim,清水エスパルス,335.0,335,air_battle_win_count,Aerial Duels Won
-3,okay,ファジアーノ岡山,324.0,324,air_battle_win_count,Aerial Duels Won
-4,hiro,サンフレッチェ広島,317.0,317,air_battle_win_count,Aerial Duels Won
-5,kyot,京都サンガF.C.,314.0,314,air_battle_win_count,Aerial Duels Won
-6,fuku,アビスパ福岡,283.0,283,air_battle_win_count,Aerial Duels Won
-7,tk-v,東京ヴェルディ,264.0,264,air_battle_win_count,Aerial Duels Won
-8,g-os,ガンバ大阪,262.0,262,air_battle_win_count,Aerial Duels Won
-9,ngsk,Ｖ・ファーレン長崎,254.0,254,air_battle_win_count,Aerial Duels Won
-10,nago,名古屋グランパス,250.0,250,air_battle_win_count,Aerial Duels Won
-11,c-os,セレッソ大阪,243.0,243,air_battle_win_count,Aerial Duels Won
-12,chib,ジェフユナイテッド千葉,237.0,237,air_battle_win_count,Aerial Duels Won
-13,kasm,鹿島アントラーズ,225.0,225,air_battle_win_count,Aerial Duels Won
-14,mcd,ＦＣ町田ゼルビア,220.0,220,air_battle_win_count,Aerial Duels Won
-14,y-fm,横浜Ｆ・マリノス,220.0,220,air_battle_win_count,Aerial Duels Won
-16,mito,水戸ホーリーホック,217.0,217,air_battle_win_count,Aerial Duels Won
-17,FCtk,ＦＣ東京,212.0,212,air_battle_win_count,Aerial Duels Won
-18,uraw,浦和レッズ,210.0,210,air_battle_win_count,Aerial Duels Won
-19,kasw,柏レイソル,171.0,171,air_battle_win_count,Aerial Duels Won
-20,ka-f,川崎フロンターレ,154.0,154,air_battle_win_count,Aerial Duels Won
-1,kyot,京都サンガF.C.,39.0,39,yellow_count,Yellow Cards
-1,fuku,アビスパ福岡,39.0,39,yellow_count,Yellow Cards
-3,mito,水戸ホーリーホック,29.0,29,yellow_count,Yellow Cards
-4,c-os,セレッソ大阪,25.0,25,yellow_count,Yellow Cards
-5,chib,ジェフユナイテッド千葉,24.0,24,yellow_count,Yellow Cards
+11,uraw,浦和レッズ,25.0,25,intercept_count,Total Interceptions
+11,okay,ファジアーノ岡山,25.0,25,intercept_count,Total Interceptions
+11,hiro,サンフレッチェ広島,25.0,25,intercept_count,Total Interceptions
+14,nago,名古屋グランパス,24.0,24,intercept_count,Total Interceptions
+15,kasw,柏レイソル,22.0,22,intercept_count,Total Interceptions
+15,tk-v,東京ヴェルディ,22.0,22,intercept_count,Total Interceptions
+15,kyot,京都サンガF.C.,22.0,22,intercept_count,Total Interceptions
+18,mcd,ＦＣ町田ゼルビア,21.0,21,intercept_count,Total Interceptions
+19,c-os,セレッソ大阪,20.0,20,intercept_count,Total Interceptions
+20,y-fm,横浜Ｆ・マリノス,17.0,17,intercept_count,Total Interceptions
+1,kobe,ヴィッセル神戸,423.0,423,air_battle_win_count,Aerial Duels Won
+2,shim,清水エスパルス,361.0,361,air_battle_win_count,Aerial Duels Won
+3,okay,ファジアーノ岡山,355.0,355,air_battle_win_count,Aerial Duels Won
+4,hiro,サンフレッチェ広島,330.0,330,air_battle_win_count,Aerial Duels Won
+5,kyot,京都サンガF.C.,328.0,328,air_battle_win_count,Aerial Duels Won
+6,tk-v,東京ヴェルディ,284.0,284,air_battle_win_count,Aerial Duels Won
+7,fuku,アビスパ福岡,283.0,283,air_battle_win_count,Aerial Duels Won
+8,ngsk,Ｖ・ファーレン長崎,271.0,271,air_battle_win_count,Aerial Duels Won
+9,g-os,ガンバ大阪,262.0,262,air_battle_win_count,Aerial Duels Won
+10,nago,名古屋グランパス,261.0,261,air_battle_win_count,Aerial Duels Won
+11,c-os,セレッソ大阪,250.0,250,air_battle_win_count,Aerial Duels Won
+12,chib,ジェフユナイテッド千葉,248.0,248,air_battle_win_count,Aerial Duels Won
+13,mito,水戸ホーリーホック,240.0,240,air_battle_win_count,Aerial Duels Won
+14,y-fm,横浜Ｆ・マリノス,238.0,238,air_battle_win_count,Aerial Duels Won
+15,kasm,鹿島アントラーズ,236.0,236,air_battle_win_count,Aerial Duels Won
+16,mcd,ＦＣ町田ゼルビア,235.0,235,air_battle_win_count,Aerial Duels Won
+17,uraw,浦和レッズ,223.0,223,air_battle_win_count,Aerial Duels Won
+18,FCtk,ＦＣ東京,218.0,218,air_battle_win_count,Aerial Duels Won
+19,kasw,柏レイソル,194.0,194,air_battle_win_count,Aerial Duels Won
+20,ka-f,川崎フロンターレ,166.0,166,air_battle_win_count,Aerial Duels Won
+1,kyot,京都サンガF.C.,41.0,41,yellow_count,Yellow Cards
+2,fuku,アビスパ福岡,39.0,39,yellow_count,Yellow Cards
+3,mito,水戸ホーリーホック,31.0,31,yellow_count,Yellow Cards
+4,chib,ジェフユナイテッド千葉,27.0,27,yellow_count,Yellow Cards
+5,c-os,セレッソ大阪,26.0,26,yellow_count,Yellow Cards
 6,FCtk,ＦＣ東京,22.0,22,yellow_count,Yellow Cards
+6,kobe,ヴィッセル神戸,22.0,22,yellow_count,Yellow Cards
 6,okay,ファジアーノ岡山,22.0,22,yellow_count,Yellow Cards
-8,g-os,ガンバ大阪,21.0,21,yellow_count,Yellow Cards
-8,kobe,ヴィッセル神戸,21.0,21,yellow_count,Yellow Cards
-10,tk-v,東京ヴェルディ,18.0,18,yellow_count,Yellow Cards
-10,mcd,ＦＣ町田ゼルビア,18.0,18,yellow_count,Yellow Cards
-10,hiro,サンフレッチェ広島,18.0,18,yellow_count,Yellow Cards
-10,ngsk,Ｖ・ファーレン長崎,18.0,18,yellow_count,Yellow Cards
-14,kasm,鹿島アントラーズ,16.0,16,yellow_count,Yellow Cards
-14,shim,清水エスパルス,16.0,16,yellow_count,Yellow Cards
+9,g-os,ガンバ大阪,21.0,21,yellow_count,Yellow Cards
+9,ngsk,Ｖ・ファーレン長崎,21.0,21,yellow_count,Yellow Cards
+11,tk-v,東京ヴェルディ,20.0,20,yellow_count,Yellow Cards
+12,mcd,ＦＣ町田ゼルビア,19.0,19,yellow_count,Yellow Cards
+12,hiro,サンフレッチェ広島,19.0,19,yellow_count,Yellow Cards
+14,kasm,鹿島アントラーズ,17.0,17,yellow_count,Yellow Cards
+14,shim,清水エスパルス,17.0,17,yellow_count,Yellow Cards
 16,uraw,浦和レッズ,15.0,15,yellow_count,Yellow Cards
+17,y-fm,横浜Ｆ・マリノス,14.0,14,yellow_count,Yellow Cards
 17,nago,名古屋グランパス,14.0,14,yellow_count,Yellow Cards
-18,kasw,柏レイソル,12.0,12,yellow_count,Yellow Cards
-18,ka-f,川崎フロンターレ,12.0,12,yellow_count,Yellow Cards
-18,y-fm,横浜Ｆ・マリノス,12.0,12,yellow_count,Yellow Cards
+19,kasw,柏レイソル,13.0,13,yellow_count,Yellow Cards
+19,ka-f,川崎フロンターレ,13.0,13,yellow_count,Yellow Cards
 1,mito,水戸ホーリーホック,6.0,6,red_count,Red Cards
 2,kasm,鹿島アントラーズ,3.0,3,red_count,Red Cards
 2,fuku,アビスパ福岡,3.0,3,red_count,Red Cards
 4,kasw,柏レイソル,2.0,2,red_count,Red Cards
 4,g-os,ガンバ大阪,2.0,2,red_count,Red Cards
+6,chib,ジェフユナイテッド千葉,1.0,1,red_count,Red Cards
 6,mcd,ＦＣ町田ゼルビア,1.0,1,red_count,Red Cards
 6,y-fm,横浜Ｆ・マリノス,1.0,1,red_count,Red Cards
 6,shim,清水エスパルス,1.0,1,red_count,Red Cards
@@ -352,170 +353,169 @@ rank,team,team_name,value,value_text,stat_type,stat_label
 6,kobe,ヴィッセル神戸,1.0,1,red_count,Red Cards
 6,okay,ファジアーノ岡山,1.0,1,red_count,Red Cards
 6,ngsk,Ｖ・ファーレン長崎,1.0,1,red_count,Red Cards
-14,uraw,浦和レッズ,0.0,0,red_count,Red Cards
-14,chib,ジェフユナイテッド千葉,0.0,0,red_count,Red Cards
-14,FCtk,ＦＣ東京,0.0,0,red_count,Red Cards
-14,tk-v,東京ヴェルディ,0.0,0,red_count,Red Cards
-14,ka-f,川崎フロンターレ,0.0,0,red_count,Red Cards
-14,nago,名古屋グランパス,0.0,0,red_count,Red Cards
-14,hiro,サンフレッチェ広島,0.0,0,red_count,Red Cards
-1,kasw,柏レイソル,55.9,55.9,ball_rate,Average Possession
-2,g-os,ガンバ大阪,55.8,55.8,ball_rate,Average Possession
-3,kasm,鹿島アントラーズ,54.7,54.7,ball_rate,Average Possession
-4,hiro,サンフレッチェ広島,53.8,53.8,ball_rate,Average Possession
-5,kobe,ヴィッセル神戸,53.7,53.7,ball_rate,Average Possession
-6,FCtk,ＦＣ東京,52.5,52.5,ball_rate,Average Possession
+15,uraw,浦和レッズ,0.0,0,red_count,Red Cards
+15,FCtk,ＦＣ東京,0.0,0,red_count,Red Cards
+15,tk-v,東京ヴェルディ,0.0,0,red_count,Red Cards
+15,ka-f,川崎フロンターレ,0.0,0,red_count,Red Cards
+15,nago,名古屋グランパス,0.0,0,red_count,Red Cards
+15,hiro,サンフレッチェ広島,0.0,0,red_count,Red Cards
+1,g-os,ガンバ大阪,55.8,55.8,ball_rate,Average Possession
+2,kasw,柏レイソル,55.5,55.5,ball_rate,Average Possession
+3,kasm,鹿島アントラーズ,54.9,54.9,ball_rate,Average Possession
+4,kobe,ヴィッセル神戸,53.8,53.8,ball_rate,Average Possession
+5,hiro,サンフレッチェ広島,53.5,53.5,ball_rate,Average Possession
 6,kyot,京都サンガF.C.,52.5,52.5,ball_rate,Average Possession
+7,FCtk,ＦＣ東京,52.2,52.2,ball_rate,Average Possession
 8,uraw,浦和レッズ,51.9,51.9,ball_rate,Average Possession
-9,nago,名古屋グランパス,51.3,51.3,ball_rate,Average Possession
-10,c-os,セレッソ大阪,50.5,50.5,ball_rate,Average Possession
-11,mito,水戸ホーリーホック,50.1,50.1,ball_rate,Average Possession
-12,ka-f,川崎フロンターレ,49.6,49.6,ball_rate,Average Possession
-13,shim,清水エスパルス,49.4,49.4,ball_rate,Average Possession
-14,ngsk,Ｖ・ファーレン長崎,48.3,48.3,ball_rate,Average Possession
-15,chib,ジェフユナイテッド千葉,47.7,47.7,ball_rate,Average Possession
-16,y-fm,横浜Ｆ・マリノス,47.2,47.2,ball_rate,Average Possession
-17,mcd,ＦＣ町田ゼルビア,46.0,46.0,ball_rate,Average Possession
-18,tk-v,東京ヴェルディ,43.9,43.9,ball_rate,Average Possession
+9,nago,名古屋グランパス,51.6,51.6,ball_rate,Average Possession
+10,mito,水戸ホーリーホック,50.5,50.5,ball_rate,Average Possession
+11,ka-f,川崎フロンターレ,50.3,50.3,ball_rate,Average Possession
+12,c-os,セレッソ大阪,50.1,50.1,ball_rate,Average Possession
+13,shim,清水エスパルス,49.8,49.8,ball_rate,Average Possession
+14,ngsk,Ｖ・ファーレン長崎,48.1,48.1,ball_rate,Average Possession
+15,chib,ジェフユナイテッド千葉,47.4,47.4,ball_rate,Average Possession
+15,y-fm,横浜Ｆ・マリノス,47.4,47.4,ball_rate,Average Possession
+17,mcd,ＦＣ町田ゼルビア,45.6,45.6,ball_rate,Average Possession
+18,tk-v,東京ヴェルディ,43.8,43.8,ball_rate,Average Possession
+19,okay,ファジアーノ岡山,42.6,42.6,ball_rate,Average Possession
 19,fuku,アビスパ福岡,42.6,42.6,ball_rate,Average Possession
-20,okay,ファジアーノ岡山,42.5,42.5,ball_rate,Average Possession
-1,kasw,柏レイソル,224.0,224,chance_create,Chances Created
-2,hiro,サンフレッチェ広島,212.0,212,chance_create,Chances Created
-3,FCtk,ＦＣ東京,204.0,204,chance_create,Chances Created
-4,g-os,ガンバ大阪,193.0,193,chance_create,Chances Created
-5,nago,名古屋グランパス,187.0,187,chance_create,Chances Created
-6,kasm,鹿島アントラーズ,177.0,177,chance_create,Chances Created
-7,kyot,京都サンガF.C.,174.0,174,chance_create,Chances Created
-8,ka-f,川崎フロンターレ,172.0,172,chance_create,Chances Created
-8,c-os,セレッソ大阪,172.0,172,chance_create,Chances Created
-10,uraw,浦和レッズ,171.0,171,chance_create,Chances Created
-11,kobe,ヴィッセル神戸,151.0,151,chance_create,Chances Created
-12,y-fm,横浜Ｆ・マリノス,148.0,148,chance_create,Chances Created
-13,okay,ファジアーノ岡山,141.0,141,chance_create,Chances Created
-14,mito,水戸ホーリーホック,140.0,140,chance_create,Chances Created
-14,ngsk,Ｖ・ファーレン長崎,140.0,140,chance_create,Chances Created
-16,chib,ジェフユナイテッド千葉,138.0,138,chance_create,Chances Created
-16,fuku,アビスパ福岡,138.0,138,chance_create,Chances Created
-18,mcd,ＦＣ町田ゼルビア,137.0,137,chance_create,Chances Created
-19,shim,清水エスパルス,129.0,129,chance_create,Chances Created
-20,tk-v,東京ヴェルディ,123.0,123,chance_create,Chances Created
-1,kasw,柏レイソル,310.0,310,one_on_one,Duels Won
-2,nago,名古屋グランパス,307.0,307,one_on_one,Duels Won
-3,uraw,浦和レッズ,297.0,297,one_on_one,Duels Won
-3,g-os,ガンバ大阪,297.0,297,one_on_one,Duels Won
-5,mcd,ＦＣ町田ゼルビア,291.0,291,one_on_one,Duels Won
-6,FCtk,ＦＣ東京,272.0,272,one_on_one,Duels Won
-6,y-fm,横浜Ｆ・マリノス,272.0,272,one_on_one,Duels Won
-8,c-os,セレッソ大阪,271.0,271,one_on_one,Duels Won
-9,fuku,アビスパ福岡,263.0,263,one_on_one,Duels Won
-10,chib,ジェフユナイテッド千葉,260.0,260,one_on_one,Duels Won
-11,kyot,京都サンガF.C.,259.0,259,one_on_one,Duels Won
-12,hiro,サンフレッチェ広島,248.0,248,one_on_one,Duels Won
-13,ka-f,川崎フロンターレ,247.0,247,one_on_one,Duels Won
-14,tk-v,東京ヴェルディ,244.0,244,one_on_one,Duels Won
-15,ngsk,Ｖ・ファーレン長崎,241.0,241,one_on_one,Duels Won
-16,mito,水戸ホーリーホック,238.0,238,one_on_one,Duels Won
-17,okay,ファジアーノ岡山,237.0,237,one_on_one,Duels Won
-18,kasm,鹿島アントラーズ,225.0,225,one_on_one,Duels Won
-19,shim,清水エスパルス,221.0,221,one_on_one,Duels Won
-20,kobe,ヴィッセル神戸,216.0,216,one_on_one,Duels Won
+1,kasw,柏レイソル,228.0,228,chance_create,Chances Created
+2,hiro,サンフレッチェ広島,223.0,223,chance_create,Chances Created
+3,FCtk,ＦＣ東京,221.0,221,chance_create,Chances Created
+4,nago,名古屋グランパス,196.0,196,chance_create,Chances Created
+5,ka-f,川崎フロンターレ,193.0,193,chance_create,Chances Created
+5,g-os,ガンバ大阪,193.0,193,chance_create,Chances Created
+7,kasm,鹿島アントラーズ,189.0,189,chance_create,Chances Created
+8,c-os,セレッソ大阪,188.0,188,chance_create,Chances Created
+9,uraw,浦和レッズ,179.0,179,chance_create,Chances Created
+10,kyot,京都サンガF.C.,176.0,176,chance_create,Chances Created
+11,kobe,ヴィッセル神戸,169.0,169,chance_create,Chances Created
+12,y-fm,横浜Ｆ・マリノス,155.0,155,chance_create,Chances Created
+13,okay,ファジアーノ岡山,153.0,153,chance_create,Chances Created
+14,mito,水戸ホーリーホック,151.0,151,chance_create,Chances Created
+14,ngsk,Ｖ・ファーレン長崎,151.0,151,chance_create,Chances Created
+16,chib,ジェフユナイテッド千葉,145.0,145,chance_create,Chances Created
+17,mcd,ＦＣ町田ゼルビア,142.0,142,chance_create,Chances Created
+18,shim,清水エスパルス,138.0,138,chance_create,Chances Created
+18,fuku,アビスパ福岡,138.0,138,chance_create,Chances Created
+20,tk-v,東京ヴェルディ,130.0,130,chance_create,Chances Created
+1,nago,名古屋グランパス,332.0,332,one_on_one,Duels Won
+2,kasw,柏レイソル,323.0,323,one_on_one,Duels Won
+3,uraw,浦和レッズ,320.0,320,one_on_one,Duels Won
+4,mcd,ＦＣ町田ゼルビア,299.0,299,one_on_one,Duels Won
+5,g-os,ガンバ大阪,297.0,297,one_on_one,Duels Won
+6,FCtk,ＦＣ東京,291.0,291,one_on_one,Duels Won
+7,c-os,セレッソ大阪,288.0,288,one_on_one,Duels Won
+8,y-fm,横浜Ｆ・マリノス,284.0,284,one_on_one,Duels Won
+9,kyot,京都サンガF.C.,275.0,275,one_on_one,Duels Won
+10,chib,ジェフユナイテッド千葉,271.0,271,one_on_one,Duels Won
+11,hiro,サンフレッチェ広島,267.0,267,one_on_one,Duels Won
+12,ka-f,川崎フロンターレ,263.0,263,one_on_one,Duels Won
+12,fuku,アビスパ福岡,263.0,263,one_on_one,Duels Won
+14,mito,水戸ホーリーホック,259.0,259,one_on_one,Duels Won
+15,tk-v,東京ヴェルディ,258.0,258,one_on_one,Duels Won
+16,okay,ファジアーノ岡山,255.0,255,one_on_one,Duels Won
+16,ngsk,Ｖ・ファーレン長崎,255.0,255,one_on_one,Duels Won
+18,kasm,鹿島アントラーズ,243.0,243,one_on_one,Duels Won
+19,shim,清水エスパルス,233.0,233,one_on_one,Duels Won
+19,kobe,ヴィッセル神戸,233.0,233,one_on_one,Duels Won
 1,g-os,ガンバ大阪,704.0,704,recovery_count,Recoveries
-2,hiro,サンフレッチェ広島,658.0,658,recovery_count,Recoveries
-3,kobe,ヴィッセル神戸,614.0,614,recovery_count,Recoveries
-4,kyot,京都サンガF.C.,610.0,610,recovery_count,Recoveries
-5,shim,清水エスパルス,609.0,609,recovery_count,Recoveries
-6,nago,名古屋グランパス,576.0,576,recovery_count,Recoveries
-7,FCtk,ＦＣ東京,574.0,574,recovery_count,Recoveries
-8,fuku,アビスパ福岡,570.0,570,recovery_count,Recoveries
-9,c-os,セレッソ大阪,552.0,552,recovery_count,Recoveries
-10,ka-f,川崎フロンターレ,544.0,544,recovery_count,Recoveries
-11,kasm,鹿島アントラーズ,531.0,531,recovery_count,Recoveries
-12,ngsk,Ｖ・ファーレン長崎,530.0,530,recovery_count,Recoveries
-13,okay,ファジアーノ岡山,525.0,525,recovery_count,Recoveries
-14,kasw,柏レイソル,518.0,518,recovery_count,Recoveries
-15,uraw,浦和レッズ,510.0,510,recovery_count,Recoveries
-16,mito,水戸ホーリーホック,487.0,487,recovery_count,Recoveries
-16,mcd,ＦＣ町田ゼルビア,487.0,487,recovery_count,Recoveries
-18,chib,ジェフユナイテッド千葉,477.0,477,recovery_count,Recoveries
-19,tk-v,東京ヴェルディ,453.0,453,recovery_count,Recoveries
-20,y-fm,横浜Ｆ・マリノス,419.0,419,recovery_count,Recoveries
-1,hiro,サンフレッチェ広島,28.8,28.8,expected_goals,Expected Goals
-2,kobe,ヴィッセル神戸,26.2,26.2,expected_goals,Expected Goals
-3,FCtk,ＦＣ東京,26.2,26.2,expected_goals,Expected Goals
-4,g-os,ガンバ大阪,24.3,24.3,expected_goals,Expected Goals
-5,uraw,浦和レッズ,23.8,23.8,expected_goals,Expected Goals
-6,kasm,鹿島アントラーズ,23.2,23.2,expected_goals,Expected Goals
-7,nago,名古屋グランパス,23.1,23.1,expected_goals,Expected Goals
-8,kasw,柏レイソル,22.9,22.9,expected_goals,Expected Goals
-9,c-os,セレッソ大阪,20.9,20.9,expected_goals,Expected Goals
-10,ngsk,Ｖ・ファーレン長崎,20.7,20.7,expected_goals,Expected Goals
-11,okay,ファジアーノ岡山,20.3,20.3,expected_goals,Expected Goals
-12,chib,ジェフユナイテッド千葉,19.5,19.5,expected_goals,Expected Goals
-13,y-fm,横浜Ｆ・マリノス,18.9,18.9,expected_goals,Expected Goals
-14,shim,清水エスパルス,18.8,18.8,expected_goals,Expected Goals
-15,mcd,ＦＣ町田ゼルビア,18.7,18.7,expected_goals,Expected Goals
-16,kyot,京都サンガF.C.,18.6,18.6,expected_goals,Expected Goals
-17,ka-f,川崎フロンターレ,17.3,17.3,expected_goals,Expected Goals
-18,fuku,アビスパ福岡,16.2,16.2,expected_goals,Expected Goals
-19,mito,水戸ホーリーホック,16.1,16.1,expected_goals,Expected Goals
-20,tk-v,東京ヴェルディ,14.4,14.4,expected_goals,Expected Goals
-1,chib,ジェフユナイテッド千葉,28.3,28.3,expected_goals_against,Expected Goals Against
-2,ka-f,川崎フロンターレ,27.2,27.2,expected_goals_against,Expected Goals Against
-3,c-os,セレッソ大阪,26.2,26.2,expected_goals_against,Expected Goals Against
-4,ngsk,Ｖ・ファーレン長崎,25.0,25.0,expected_goals_against,Expected Goals Against
-5,kyot,京都サンガF.C.,24.1,24.1,expected_goals_against,Expected Goals Against
-6,g-os,ガンバ大阪,23.8,23.8,expected_goals_against,Expected Goals Against
-7,mito,水戸ホーリーホック,23.7,23.7,expected_goals_against,Expected Goals Against
-8,shim,清水エスパルス,23.3,23.3,expected_goals_against,Expected Goals Against
-9,nago,名古屋グランパス,21.8,21.8,expected_goals_against,Expected Goals Against
-10,fuku,アビスパ福岡,20.6,20.6,expected_goals_against,Expected Goals Against
-11,kasw,柏レイソル,19.6,19.6,expected_goals_against,Expected Goals Against
-12,okay,ファジアーノ岡山,18.7,18.7,expected_goals_against,Expected Goals Against
-13,y-fm,横浜Ｆ・マリノス,18.6,18.6,expected_goals_against,Expected Goals Against
-14,uraw,浦和レッズ,17.9,17.9,expected_goals_against,Expected Goals Against
-15,hiro,サンフレッチェ広島,17.3,17.3,expected_goals_against,Expected Goals Against
-16,tk-v,東京ヴェルディ,17.3,17.3,expected_goals_against,Expected Goals Against
-17,kobe,ヴィッセル神戸,17.3,17.3,expected_goals_against,Expected Goals Against
-18,mcd,ＦＣ町田ゼルビア,17.1,17.1,expected_goals_against,Expected Goals Against
-19,kasm,鹿島アントラーズ,16.8,16.8,expected_goals_against,Expected Goals Against
-20,FCtk,ＦＣ東京,14.4,14.4,expected_goals_against,Expected Goals Against
+2,hiro,サンフレッチェ広島,702.0,702,recovery_count,Recoveries
+3,shim,清水エスパルス,649.0,649,recovery_count,Recoveries
+4,kobe,ヴィッセル神戸,647.0,647,recovery_count,Recoveries
+5,kyot,京都サンガF.C.,645.0,645,recovery_count,Recoveries
+6,nago,名古屋グランパス,608.0,608,recovery_count,Recoveries
+7,FCtk,ＦＣ東京,596.0,596,recovery_count,Recoveries
+8,ka-f,川崎フロンターレ,588.0,588,recovery_count,Recoveries
+9,c-os,セレッソ大阪,580.0,580,recovery_count,Recoveries
+10,fuku,アビスパ福岡,570.0,570,recovery_count,Recoveries
+11,okay,ファジアーノ岡山,567.0,567,recovery_count,Recoveries
+12,ngsk,Ｖ・ファーレン長崎,560.0,560,recovery_count,Recoveries
+13,kasm,鹿島アントラーズ,557.0,557,recovery_count,Recoveries
+14,kasw,柏レイソル,554.0,554,recovery_count,Recoveries
+15,uraw,浦和レッズ,540.0,540,recovery_count,Recoveries
+16,mito,水戸ホーリーホック,530.0,530,recovery_count,Recoveries
+17,mcd,ＦＣ町田ゼルビア,518.0,518,recovery_count,Recoveries
+18,chib,ジェフユナイテッド千葉,503.0,503,recovery_count,Recoveries
+19,tk-v,東京ヴェルディ,481.0,481,recovery_count,Recoveries
+20,y-fm,横浜Ｆ・マリノス,452.0,452,recovery_count,Recoveries
+1,hiro,サンフレッチェ広島,32.4,32.4,expected_goals,Expected Goals
+2,kobe,ヴィッセル神戸,29.2,29.2,expected_goals,Expected Goals
+3,FCtk,ＦＣ東京,27.7,27.7,expected_goals,Expected Goals
+4,kasm,鹿島アントラーズ,24.5,24.5,expected_goals,Expected Goals
+5,uraw,浦和レッズ,24.4,24.4,expected_goals,Expected Goals
+6,g-os,ガンバ大阪,24.3,24.3,expected_goals,Expected Goals
+7,nago,名古屋グランパス,24.3,24.3,expected_goals,Expected Goals
+8,kasw,柏レイソル,23.7,23.7,expected_goals,Expected Goals
+9,c-os,セレッソ大阪,23.1,23.1,expected_goals,Expected Goals
+10,ngsk,Ｖ・ファーレン長崎,22.3,22.3,expected_goals,Expected Goals
+11,okay,ファジアーノ岡山,21.3,21.3,expected_goals,Expected Goals
+12,y-fm,横浜Ｆ・マリノス,20.4,20.4,expected_goals,Expected Goals
+13,chib,ジェフユナイテッド千葉,20.3,20.3,expected_goals,Expected Goals
+14,ka-f,川崎フロンターレ,19.9,19.9,expected_goals,Expected Goals
+15,shim,清水エスパルス,19.7,19.7,expected_goals,Expected Goals
+16,mcd,ＦＣ町田ゼルビア,19.2,19.2,expected_goals,Expected Goals
+17,kyot,京都サンガF.C.,18.8,18.8,expected_goals,Expected Goals
+18,mito,水戸ホーリーホック,17.4,17.4,expected_goals,Expected Goals
+19,fuku,アビスパ福岡,16.2,16.2,expected_goals,Expected Goals
+20,tk-v,東京ヴェルディ,15.1,15.1,expected_goals,Expected Goals
+1,chib,ジェフユナイテッド千葉,29.5,29.5,expected_goals_against,Expected Goals Against
+2,ngsk,Ｖ・ファーレン長崎,27.9,27.9,expected_goals_against,Expected Goals Against
+3,ka-f,川崎フロンターレ,27.7,27.7,expected_goals_against,Expected Goals Against
+4,kyot,京都サンガF.C.,27.7,27.7,expected_goals_against,Expected Goals Against
+5,c-os,セレッソ大阪,27.4,27.4,expected_goals_against,Expected Goals Against
+6,mito,水戸ホーリーホック,24.5,24.5,expected_goals_against,Expected Goals Against
+7,shim,清水エスパルス,24.3,24.3,expected_goals_against,Expected Goals Against
+8,nago,名古屋グランパス,24.0,24.0,expected_goals_against,Expected Goals Against
+9,g-os,ガンバ大阪,23.8,23.8,expected_goals_against,Expected Goals Against
+10,kasw,柏レイソル,21.1,21.1,expected_goals_against,Expected Goals Against
+11,fuku,アビスパ福岡,20.6,20.6,expected_goals_against,Expected Goals Against
+12,mcd,ＦＣ町田ゼルビア,19.6,19.6,expected_goals_against,Expected Goals Against
+13,okay,ファジアーノ岡山,19.6,19.6,expected_goals_against,Expected Goals Against
+14,uraw,浦和レッズ,19.4,19.4,expected_goals_against,Expected Goals Against
+15,y-fm,横浜Ｆ・マリノス,19.4,19.4,expected_goals_against,Expected Goals Against
+16,kobe,ヴィッセル神戸,18.8,18.8,expected_goals_against,Expected Goals Against
+17,tk-v,東京ヴェルディ,18.6,18.6,expected_goals_against,Expected Goals Against
+18,kasm,鹿島アントラーズ,17.6,17.6,expected_goals_against,Expected Goals Against
+19,hiro,サンフレッチェ広島,17.5,17.5,expected_goals_against,Expected Goals Against
+20,FCtk,ＦＣ東京,15.0,15.0,expected_goals_against,Expected Goals Against
 1,c-os,セレッソ大阪,121.0,121,distance_per_game,Avg Distance Covered
 2,kasw,柏レイソル,120.0,120,distance_per_game,Avg Distance Covered
 2,tk-v,東京ヴェルディ,120.0,120,distance_per_game,Avg Distance Covered
 4,chib,ジェフユナイテッド千葉,119.0,119,distance_per_game,Avg Distance Covered
 5,mito,水戸ホーリーホック,118.0,118,distance_per_game,Avg Distance Covered
 5,FCtk,ＦＣ東京,118.0,118,distance_per_game,Avg Distance Covered
-7,mcd,ＦＣ町田ゼルビア,117.0,117,distance_per_game,Avg Distance Covered
-7,y-fm,横浜Ｆ・マリノス,117.0,117,distance_per_game,Avg Distance Covered
-9,uraw,浦和レッズ,116.0,116,distance_per_game,Avg Distance Covered
+5,mcd,ＦＣ町田ゼルビア,118.0,118,distance_per_game,Avg Distance Covered
+8,y-fm,横浜Ｆ・マリノス,117.0,117,distance_per_game,Avg Distance Covered
 9,fuku,アビスパ福岡,116.0,116,distance_per_game,Avg Distance Covered
-11,kobe,ヴィッセル神戸,115.0,115,distance_per_game,Avg Distance Covered
+10,uraw,浦和レッズ,115.0,115,distance_per_game,Avg Distance Covered
+10,kobe,ヴィッセル神戸,115.0,115,distance_per_game,Avg Distance Covered
+12,ka-f,川崎フロンターレ,114.0,114,distance_per_game,Avg Distance Covered
 12,kyot,京都サンガF.C.,114.0,114,distance_per_game,Avg Distance Covered
-13,kasm,鹿島アントラーズ,113.0,113,distance_per_game,Avg Distance Covered
-13,ka-f,川崎フロンターレ,113.0,113,distance_per_game,Avg Distance Covered
-13,nago,名古屋グランパス,113.0,113,distance_per_game,Avg Distance Covered
-13,g-os,ガンバ大阪,113.0,113,distance_per_game,Avg Distance Covered
-13,okay,ファジアーノ岡山,113.0,113,distance_per_game,Avg Distance Covered
-13,ngsk,Ｖ・ファーレン長崎,113.0,113,distance_per_game,Avg Distance Covered
-19,shim,清水エスパルス,112.0,112,distance_per_game,Avg Distance Covered
+14,nago,名古屋グランパス,113.0,113,distance_per_game,Avg Distance Covered
+14,g-os,ガンバ大阪,113.0,113,distance_per_game,Avg Distance Covered
+14,okay,ファジアーノ岡山,113.0,113,distance_per_game,Avg Distance Covered
+14,ngsk,Ｖ・ファーレン長崎,113.0,113,distance_per_game,Avg Distance Covered
+18,kasm,鹿島アントラーズ,112.0,112,distance_per_game,Avg Distance Covered
+18,shim,清水エスパルス,112.0,112,distance_per_game,Avg Distance Covered
 20,hiro,サンフレッチェ広島,111.0,111,distance_per_game,Avg Distance Covered
-1,kyot,京都サンガF.C.,157.0,157,sprint_per_game,Avg Sprints
-2,FCtk,ＦＣ東京,150.0,150,sprint_per_game,Avg Sprints
-3,tk-v,東京ヴェルディ,145.0,145,sprint_per_game,Avg Sprints
-4,uraw,浦和レッズ,144.0,144,sprint_per_game,Avg Sprints
-5,c-os,セレッソ大阪,140.0,140,sprint_per_game,Avg Sprints
-6,nago,名古屋グランパス,138.0,138,sprint_per_game,Avg Sprints
-6,okay,ファジアーノ岡山,138.0,138,sprint_per_game,Avg Sprints
-8,y-fm,横浜Ｆ・マリノス,136.0,136,sprint_per_game,Avg Sprints
-9,kasw,柏レイソル,135.0,135,sprint_per_game,Avg Sprints
+1,kyot,京都サンガF.C.,156.0,156,sprint_per_game,Avg Sprints
+2,FCtk,ＦＣ東京,148.0,148,sprint_per_game,Avg Sprints
+3,uraw,浦和レッズ,143.0,143,sprint_per_game,Avg Sprints
+3,tk-v,東京ヴェルディ,143.0,143,sprint_per_game,Avg Sprints
+5,c-os,セレッソ大阪,142.0,142,sprint_per_game,Avg Sprints
+6,nago,名古屋グランパス,139.0,139,sprint_per_game,Avg Sprints
+7,okay,ファジアーノ岡山,137.0,137,sprint_per_game,Avg Sprints
+8,kasw,柏レイソル,136.0,136,sprint_per_game,Avg Sprints
+9,y-fm,横浜Ｆ・マリノス,135.0,135,sprint_per_game,Avg Sprints
 10,kasm,鹿島アントラーズ,134.0,134,sprint_per_game,Avg Sprints
 10,kobe,ヴィッセル神戸,134.0,134,sprint_per_game,Avg Sprints
-12,ngsk,Ｖ・ファーレン長崎,132.0,132,sprint_per_game,Avg Sprints
+12,ngsk,Ｖ・ファーレン長崎,133.0,133,sprint_per_game,Avg Sprints
 13,hiro,サンフレッチェ広島,131.0,131,sprint_per_game,Avg Sprints
-14,mito,水戸ホーリーホック,130.0,130,sprint_per_game,Avg Sprints
-15,shim,清水エスパルス,127.0,127,sprint_per_game,Avg Sprints
+14,mito,水戸ホーリーホック,127.0,127,sprint_per_game,Avg Sprints
+15,shim,清水エスパルス,126.0,126,sprint_per_game,Avg Sprints
 16,g-os,ガンバ大阪,123.0,123,sprint_per_game,Avg Sprints
-17,chib,ジェフユナイテッド千葉,120.0,120,sprint_per_game,Avg Sprints
-18,ka-f,川崎フロンターレ,119.0,119,sprint_per_game,Avg Sprints
-19,mcd,ＦＣ町田ゼルビア,112.0,112,sprint_per_game,Avg Sprints
+17,chib,ジェフユナイテッド千葉,121.0,121,sprint_per_game,Avg Sprints
+17,ka-f,川崎フロンターレ,121.0,121,sprint_per_game,Avg Sprints
+19,mcd,ＦＣ町田ゼルビア,113.0,113,sprint_per_game,Avg Sprints
 20,fuku,アビスパ福岡,111.0,111,sprint_per_game,Avg Sprints
