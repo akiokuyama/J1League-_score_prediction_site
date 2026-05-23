@@ -50,6 +50,7 @@ def test_scheduled_prediction_workflow_updates_predictions() -> None:
 def test_manual_workflow_remains_manual_only() -> None:
     text = read_workflow("update_predictions_manual.yml")
 
+    assert "name: Manual Prediction Update" in text
     assert "workflow_dispatch:" in text
     assert "schedule:" not in text
     assert "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" in text

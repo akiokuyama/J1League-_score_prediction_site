@@ -1,4 +1,4 @@
-name: Update Predictions Manual
+name: Manual Prediction Update
 
 on:
   workflow_dispatch:

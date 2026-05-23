@@ -50,7 +50,7 @@ python scripts/smoke_test_load_models.py
 
 ## GitHub Actionsで予測を手動更新する
 
-GitHub上で予測ファイルを更新する場合は、リポジトリの `Actions` タブを開き、`Update Predictions Manual` を選択して `Run workflow` をクリックします。
+GitHub上で予測ファイルを更新する場合は、リポジトリの `Actions` タブを開き、`Manual Prediction Update` を選択して `Run workflow` をクリックします。
 
 この手動ワークフローでは、構文チェック、`pytest`、次節予測、全未消化試合予測、過去予測結果JSONの生成を実行します。デバッグ、試合延期対応、スクレイピング修正後の再実行に使います。主に以下のファイルが更新対象です。
 

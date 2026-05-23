@@ -5,6 +5,7 @@ def test_manual_update_workflow_excludes_local_model_metrics() -> None:
     workflow = Path(".github/workflows/update_predictions_manual.yml")
     text = workflow.read_text(encoding="utf-8")
 
+    assert "name: Manual Prediction Update" in text
     assert "workflow_dispatch:" in text
     assert "schedule:" not in text
     assert "python scripts/build_model_metrics.py" not in text
