@@ -13,6 +13,7 @@ def test_manual_update_workflow_excludes_local_model_metrics() -> None:
     assert "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" in text
     assert "ln -s Data data" in text
     assert "python -m pytest" in text
+    assert "git pull --rebase origin main" in text
     assert "git add outputs/local" not in text
     assert "outputs/local/model_metrics.json must not be generated in Actions" in text
     assert "python scripts/build_past_prediction_results.py" in text
