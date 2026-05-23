@@ -238,6 +238,18 @@ def inject_css() -> None:
             font-size: .9rem;
             line-height: 1.65;
         }
+        .beta-note {
+            border: 1px solid #fde68a;
+            border-left: 5px solid #f59e0b;
+            border-radius: 8px;
+            background: #fffbeb;
+            color: #92400e;
+            padding: 12px 14px;
+            margin: 0 0 16px 0;
+            font-size: .9rem;
+            line-height: 1.55;
+            font-weight: 650;
+        }
         .summary-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -279,6 +291,9 @@ def render_prediction_logic_summary(data: dict[str, Any]) -> None:
     feature_text = f"{feature_count}個" if feature_count is not None else "複数"
     st.markdown(
         f"""
+        <div class="beta-note">
+          このアプリの予測は、過去データと機械学習モデルに基づく参考情報です。実際の試合結果を保証するものではありません。
+        </div>
         <div class="logic-card">
           <div class="logic-card-title">このアプリの予測について</div>
           <ul>

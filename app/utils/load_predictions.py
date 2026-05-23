@@ -6,10 +6,14 @@ import json
 from pathlib import Path
 from typing import Any
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
 
 def load_json_file(path: str | Path) -> dict[str, Any]:
     """JSONを安全に読み込む。存在しない、壊れている場合は空dictを返す。"""
     target = Path(path)
+    if not target.is_absolute():
+        target = PROJECT_ROOT / target
     if not target.exists() or target.stat().st_size == 0:
         return {}
     try:
@@ -37,4 +41,3 @@ def load_all_unplayed_predictions(path: str | Path = "outputs/all_unplayed_predi
 def load_past_prediction_results(path: str | Path = "outputs/past_prediction_results.json") -> dict[str, Any]:
     """過去予測結果を読み込む。存在しなければ空のmatchesを返す。"""
     return _with_matches(load_json_file(path))
-

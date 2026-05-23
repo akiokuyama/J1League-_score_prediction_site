@@ -2,6 +2,17 @@
 
 J1リーグの試合結果・スコア予測に向けたデータ分析、特徴量作成、学習済みモデル読み込みを管理するプロジェクトです。
 
+## アプリ概要
+
+このプロジェクトには、J1の試合結果を確認するためのStreamlitアプリが含まれています。
+
+- これから行われる試合の予測スコアを表示します。
+- ホーム勝利、引き分け、アウェイ勝利の勝敗確率を表示します。
+- 得点者候補Top 5を表示します。
+- 過去予測結果と実際の結果を照合して確認できます。
+
+予測は過去データと機械学習モデルに基づく参考情報であり、実際の試合結果を保証するものではありません。
+
 ## セットアップ
 
 このプロジェクトは `uv` で管理しています。
@@ -18,6 +29,59 @@ uv sync
 ```bash
 pip install -r requirements.txt
 ```
+
+## Streamlitアプリのローカル起動
+
+```bash
+pip install -r requirements.txt
+streamlit run app/streamlit_app.py
+```
+
+ブラウザで `http://localhost:8501` を開き、これからの試合一覧、試合詳細、過去の予測結果が表示されるか確認します。
+
+## 事前検証コマンド
+
+Week7.5のβ公開準備では、デプロイ前に以下を確認します。
+
+```bash
+python -m compileall app src scripts
+pytest
+python scripts/validate_prediction_outputs.py
+python scripts/validate_past_prediction_results.py
+```
+
+`outputs/latest_predictions.json` はStreamlit表示用の次節予測、`outputs/all_unplayed_predictions.json` は管理確認用の全未消化試合予測です。
+
+## Streamlit Community Cloudでのβ公開手順
+
+この手順は、正式公開ではなく、自分用確認のためのβ公開環境を作るためのものです。
+
+1. Streamlit Community Cloudにログインします。
+2. GitHubアカウントを連携します。
+3. `Create app` を選択します。
+4. RepositoryにこのプロジェクトのGitHubリポジトリを指定します。
+5. Branchに `main` を指定します。
+6. Main file path に以下を指定します。
+
+```text
+app/streamlit_app.py
+```
+
+7. Advanced settingsでPythonバージョンを選べる場合は、GitHub Actionsと合わせて `3.11` を選択します。
+8. secretsは現状不要です。今後APIキー等を使う場合のみ、Streamlit Community CloudのAdvanced settingsで設定します。
+9. Deployを実行します。
+10. 発行されたURLでアプリが起動するか確認します。
+
+β公開後の確認項目:
+
+- アプリが起動する
+- `outputs/latest_predictions.json` が読めている
+- これからの試合一覧が表示される
+- 試合詳細に遷移できる
+- 過去予測画面が落ちない
+- スマホ表示で大きく崩れない
+- GitHub Actions実行後に表示が更新される
+- 予測が参考情報であり、確定情報ではないことが画面上で分かる
 
 ## 現在のディレクトリ構成
 
