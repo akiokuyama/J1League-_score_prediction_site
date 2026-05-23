@@ -52,7 +52,34 @@
 - `outputs/prediction_history/`: latest / all_unplayed の履歴JSON生成を確認
 - `outputs/local/model_metrics.json`: ローカルには残るが、Git管理対象から除外
 
+## GitHub Actions 実行結果
+
+- `Update Predictions Manual` の手動実行がGitHub Actions上で成功しました。
+- Actions実行後、更新対象として想定していたファイルがGitHub上で更新されていることを確認しました。
+- Actionsが生成した更新コミットをローカルへ `git pull origin main` で取り込み済みです。
+- 取り込み後の最新コミットは `531dcc8 Update prediction outputs` です。
+
+更新確認済みファイル:
+
+- `Data/processed/update_2026_report.json`
+- `Data/features/match_features_2026.csv`
+- `Data/features/upcoming_features_2026.csv`
+- `outputs/latest_predictions.json`
+- `outputs/latest_predictions.csv`
+- `outputs/all_unplayed_predictions.json`
+- `outputs/all_unplayed_predictions.csv`
+- `outputs/prediction_history/`
+- `outputs/past_prediction_results.json`
+- `outputs/last_updated.txt`
+
+Actions実行時に発生した問題と対応:
+
+- `src` importエラーに対して、`PYTHONPATH` とpytest設定を追加しました。
+- Linux上の大文字小文字区別により `Data/` と `data/` の参照差異が出たため、Actions内で `data -> Data` のシンボリックリンクを作成するようにしました。
+- `outputs/local/model_metrics.json` はローカル確認専用のため、Actionsで生成・コミットしない方針に合わせてテストを修正しました。
+
 ## 残課題
 
 - Week7以降で必要に応じてcron定期実行化を検討します。
 - GitHub Actions上で外部サイト取得に失敗する場合は、キャッシュ運用または取得元ごとのリトライ方針を追加で検討します。
+- 中長期的には、`Data/` と `data/` のディレクトリ名をどちらかに統一し、Linux環境でもシンボリックリンクに依存しない構成へ整理する余地があります。
