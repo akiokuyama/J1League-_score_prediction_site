@@ -6,19 +6,33 @@ import sys
 from pathlib import Path
 
 
-def run_prediction(mode: str) -> None:
+def run_prediction(mode: str, tmp_path: Path) -> Path:
+    output_dir = tmp_path / mode
+    output_path = output_dir / f"{mode}.json"
+    csv_path = output_dir / f"{mode}.csv"
     result = subprocess.run(
-        [sys.executable, "scripts/run_prediction.py", "--mode", mode],
+        [
+            sys.executable,
+            "scripts/run_prediction.py",
+            "--mode",
+            mode,
+            "--output-dir",
+            str(output_dir),
+            "--output",
+            str(output_path),
+            "--csv-output",
+            str(csv_path),
+        ],
         check=False,
         capture_output=True,
         text=True,
     )
     assert result.returncode == 0, result.stderr or result.stdout
+    return output_path
 
 
-def test_next_section_writes_latest_predictions() -> None:
-    run_prediction("next_section")
-    path = Path("outputs/latest_predictions.json")
+def test_next_section_writes_latest_predictions(tmp_path: Path) -> None:
+    path = run_prediction("next_section", tmp_path)
     assert path.exists()
     data = json.loads(path.read_text(encoding="utf-8"))
     assert data["matches"]
@@ -26,9 +40,8 @@ def test_next_section_writes_latest_predictions() -> None:
     assert data.get("skipped_matches") == []
 
 
-def test_all_unplayed_writes_separate_predictions() -> None:
-    run_prediction("all_unplayed")
-    path = Path("outputs/all_unplayed_predictions.json")
+def test_all_unplayed_writes_separate_predictions(tmp_path: Path) -> None:
+    path = run_prediction("all_unplayed", tmp_path)
     assert path.exists()
     data = json.loads(path.read_text(encoding="utf-8"))
     assert data["matches"]
