@@ -20,6 +20,7 @@ def test_results_after_matches_workflow_is_results_only() -> None:
     assert "python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results" in text
     assert "python scripts/build_past_prediction_results.py" in text
     assert "python scripts/validate_past_prediction_results.py" in text
+    assert "ln -s Data data" not in text
     assert "full_pipeline.py --season 2026 --category 100yj1 --mode next_section" not in text
     assert "run_prediction.py --mode all_unplayed" not in text
     assert "outputs/latest_predictions.json \\" not in text
@@ -48,6 +49,7 @@ def test_scheduled_prediction_workflow_updates_predictions() -> None:
     assert "python scripts/build_past_prediction_results.py" in text
     assert "python scripts/validate_prediction_outputs.py" in text
     assert "python scripts/validate_past_prediction_results.py" in text
+    assert "ln -s Data data" not in text
     assert "build_model_metrics.py" not in text
     assert "git add outputs/local" not in text
     assert "outputs/local/model_metrics.json must not be generated in Actions" in text
@@ -66,4 +68,5 @@ def test_manual_workflow_remains_manual_only() -> None:
     assert "python scripts/build_model_metrics.py" not in text
     assert "python scripts/validate_prediction_outputs.py" in text
     assert "python scripts/validate_past_prediction_results.py" in text
+    assert "ln -s Data data" not in text
     assert "git add outputs/local" not in text

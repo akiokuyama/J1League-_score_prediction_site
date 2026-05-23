@@ -71,7 +71,7 @@ def _recompute_simple_diffs(row: dict[str, Any]) -> None:
                 pass
 
 
-def _load_market_values(path: str | Path = "data/processed/market_values_2026_clean.csv") -> dict[str, float]:
+def _load_market_values(path: str | Path = "Data/processed/market_values_2026_clean.csv") -> dict[str, float]:
     file = Path(path)
     if not file.is_absolute():
         file = PROJECT_ROOT / file
@@ -89,7 +89,7 @@ def _load_football_lab_values() -> tuple[dict[str, float], dict[str, float], dic
     kagi: dict[str, float] = {}
     expected: dict[str, float] = {}
 
-    kagi_path = PROJECT_ROOT / "data" / "raw" / "football_lab" / "kagi_2026.csv"
+    kagi_path = PROJECT_ROOT / "Data" / "raw" / "football_lab" / "kagi_2026.csv"
     if kagi_path.exists():
         df = pd.read_csv(kagi_path)
         if "team" in df.columns:
@@ -100,7 +100,7 @@ def _load_football_lab_values() -> tuple[dict[str, float], dict[str, float], dic
                 for _, row in df.dropna(subset=["team", "KAGI"]).iterrows():
                     kagi[str(row["team"])] = float(row["KAGI"])
 
-    expected_path = PROJECT_ROOT / "data" / "raw" / "football_lab" / "expected_2026.csv"
+    expected_path = PROJECT_ROOT / "Data" / "raw" / "football_lab" / "expected_2026.csv"
     if expected_path.exists():
         df = pd.read_csv(expected_path)
         if "team" in df.columns and "期待値" in df.columns:
@@ -111,7 +111,7 @@ def _load_football_lab_values() -> tuple[dict[str, float], dict[str, float], dic
     return agi, kagi, expected
 
 
-def _load_formations(path: str | Path = "data/processed/formations_2026_clean.csv") -> dict[str, str]:
+def _load_formations(path: str | Path = "Data/processed/formations_2026_clean.csv") -> dict[str, str]:
     file = Path(path)
     if not file.is_absolute():
         file = PROJECT_ROOT / file
@@ -153,7 +153,7 @@ def _apply_current_formations(row: dict[str, Any], home: str, away: str, formati
 
 def build_upcoming_features(
     *,
-    matches_path: str | Path = "data/processed/matches_2026_clean.csv",
+    matches_path: str | Path = "Data/processed/matches_2026_clean.csv",
     history_path: str | Path = "Data/ML_dataset.csv",
     model_features_path: str | Path = "Models/model_features.pkl",
     output_path: str | Path = FEATURE_DATA_DIR / "upcoming_features_2026.csv",

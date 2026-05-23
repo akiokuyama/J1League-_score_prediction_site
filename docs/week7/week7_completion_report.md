@@ -113,6 +113,8 @@ outputs/last_updated.txt
 - 月曜朝は予測ファイルと履歴ディレクトリが変更されていないことを検証します。
 - 木曜夜と手動実行では `validate_prediction_outputs.py` と `validate_past_prediction_results.py` でJSON構造を検証します。
 - 差分がない場合はcommitせず正常終了します。
+- Actions内で自動コミット後にリモート側の更新が入った場合に備え、push前に `git pull --rebase origin main` を実行します。
+- rebase前にはActions runner上のコミット対象外の未保存差分を破棄し、`Data/raw` やHTMLキャッシュの未ステージ変更でrebaseが止まらないようにしました。
 - `scripts/build_model_metrics.py` と `outputs/local/model_metrics.json` はActionsに含めません。
 - ActionsログではGitHub Actionsのロググループを使い、処理モード、対象シーズン、対象カテゴリ、検証結果を見やすくしました。
 
@@ -148,6 +150,6 @@ python scripts/build_past_prediction_results.py
 
 ## 残課題
 
-- GitHub Actions上で初回の月曜・木曜定期実行が成功するか確認します。
-- 中長期的には、`Data/` と `data/` のディレクトリ名を統一し、Actions上のシンボリックリンク依存をなくす余地があります。
+- GitHub Actions上の手動確認では、`Update Results After Matches` と `Update Predictions Scheduled` の成功を確認済みです。
+- `Data/` を正式なデータディレクトリとして統一し、Actions上の `data -> Data` シンボリックリンク依存は解消済みです。
 - 外部サイト取得失敗時のfallback設計は、運用ログを見ながら必要に応じて追加検討します。

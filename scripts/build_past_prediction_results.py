@@ -20,7 +20,7 @@ from src.evaluation.past_predictions import build_past_prediction_results, write
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="過去予測結果JSONを生成します")
     parser.add_argument("--history-dir", default="outputs/prediction_history")
-    parser.add_argument("--matches", default="data/processed/matches_2026_clean.csv")
+    parser.add_argument("--matches", default="Data/processed/matches_2026_clean.csv")
     parser.add_argument("--output", default="outputs/past_prediction_results.json")
     parser.add_argument("--allow-empty", action="store_true", help="生成件数が0件でも出力ファイルを上書きします")
     return parser.parse_args()

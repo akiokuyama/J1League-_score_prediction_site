@@ -18,11 +18,11 @@ from src.predict.predict_match import predict_match
 from src.predict.scorer_candidates import load_team_scorer_candidates
 
 
-def load_upcoming_features(path: str | Path = "data/features/upcoming_features_2026.csv") -> pd.DataFrame:
+def load_upcoming_features(path: str | Path = "Data/features/upcoming_features_2026.csv") -> pd.DataFrame:
     return pd.read_csv(path)
 
 
-def load_scorer_candidates(path: str | Path = "data/processed/player_stats_2026_clean.csv", top_n: int = 5) -> dict[str, list[dict[str, Any]]]:
+def load_scorer_candidates(path: str | Path = "Data/processed/player_stats_2026_clean.csv", top_n: int = 5) -> dict[str, list[dict[str, Any]]]:
     return load_team_scorer_candidates(path, top_n=top_n)
 
 
@@ -111,7 +111,7 @@ def predict_upcoming_matches(
         "skipped_matches": skipped,
         "warnings": warnings,
         "data_sources": {
-            "features": "data/features/upcoming_features_2026.csv",
+            "features": "Data/features/upcoming_features_2026.csv",
         },
     }
 

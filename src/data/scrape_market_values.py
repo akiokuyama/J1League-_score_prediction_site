@@ -126,7 +126,7 @@ TRANSFERMARKT_URL = "https://www.transfermarkt.com/j1-100-year-vision-league/sta
 
 def scrape_market_values_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
     url = TRANSFERMARKT_URL
-    manual_path = PROJECT_ROOT / "data" / "manual" / "market_values_2026.csv"
+    manual_path = PROJECT_ROOT / "Data" / "manual" / "market_values_2026.csv"
     info: dict[str, Any] = {"url": url, "manual_path": str(manual_path), "warnings": []}
     if manual_path.exists():
         df = pd.read_csv(manual_path)

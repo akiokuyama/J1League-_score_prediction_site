@@ -67,7 +67,7 @@ def main() -> int:
             report["sources"][name] = {"warnings": [str(exc)]}
             print(f"[WARN] {name}: {exc}")
 
-    report_path = PROJECT_ROOT / "data" / "processed" / "update_2026_report.json"
+    report_path = PROJECT_ROOT / "Data" / "processed" / "update_2026_report.json"
     write_json(report_path, report)
     print(f"[OK] データ更新レポート: {report_path}")
     return 0

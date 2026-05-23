@@ -22,13 +22,6 @@ jobs:
           echo "PYTHONPATH=${GITHUB_WORKSPACE}" >> "$GITHUB_ENV"
           python -c "import os; print('PYTHONPATH=' + os.environ.get('PYTHONPATH', ''))"
 
-      - name: Prepare data directory alias
-        run: |
-          if [ ! -e data ] && [ -d Data ]; then
-            ln -s Data data
-          fi
-          ls -ld Data data
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:

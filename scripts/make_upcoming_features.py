@@ -66,8 +66,8 @@ def main() -> int:
     model_features = joblib.load(PROJECT_ROOT / "Models" / "model_features.pkl")
     validation = validate_feature_frame(upcoming_df, model_features)
     source_report = write_source_report(
-        PROJECT_ROOT / "data" / "features" / "upcoming_features_2026_sources.csv",
-        PROJECT_ROOT / "data" / "features" / "upcoming_features_2026_source_report.csv",
+        PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_sources.csv",
+        PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_source_report.csv",
     )
     print(
         json.dumps(
