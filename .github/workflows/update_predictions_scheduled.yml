@@ -1,7 +1,9 @@
-name: Update Predictions Manual
+name: Update Predictions Scheduled
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 4"  # Thu 21:00 JST
 
 permissions:
   contents: write
@@ -45,13 +47,25 @@ jobs:
         run: python -m pytest
 
       - name: Run next section prediction pipeline
-        run: python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache
+        run: |
+          echo "::group::Run scheduled prediction pipeline"
+          echo "mode=scheduled-predictions"
+          echo "season=2026"
+          echo "category=100yj1"
+          python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+          echo "::endgroup::"
 
       - name: Update all unplayed predictions
-        run: python scripts/run_prediction.py --mode all_unplayed
+        run: |
+          echo "::group::Update all unplayed predictions"
+          python scripts/run_prediction.py --mode all_unplayed
+          echo "::endgroup::"
 
       - name: Build past prediction results
-        run: python scripts/build_past_prediction_results.py
+        run: |
+          echo "::group::Build past prediction results"
+          python scripts/build_past_prediction_results.py
+          echo "::endgroup::"
 
       - name: Validate generated outputs
         run: |
@@ -64,7 +78,7 @@ jobs:
           fi
           echo "::endgroup::"
 
-      - name: Commit prediction outputs
+      - name: Commit scheduled prediction outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -82,12 +96,15 @@ jobs:
           do
             if [ -e "$target" ]; then
               git add "$target"
+              echo "Added $target"
+            else
+              echo "Skipped missing $target"
             fi
           done
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update prediction outputs"
+            git commit -m "Update scheduled prediction outputs"
             git push
           fi

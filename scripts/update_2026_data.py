@@ -25,6 +25,10 @@ from src.data.scraping import write_json
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="2026年データを更新します")
+    parser.add_argument("--season", type=int, default=2026)
+    parser.add_argument("--category", default="100yj1")
+    parser.add_argument("--scope", choices=["all", "results"], default="all")
+    parser.add_argument("--results-only", action="store_true", help="試合日程・結果のみ更新します")
     parser.add_argument("--use-cache", action="store_true")
     return parser.parse_args()
 
@@ -33,11 +37,17 @@ def main() -> int:
     args = parse_args()
     report: dict[str, object] = {
         "updated_at": datetime.now(ZoneInfo("Asia/Tokyo")).isoformat(timespec="seconds"),
+        "season": args.season,
+        "category": args.category,
+        "scope": "results" if args.results_only else args.scope,
         "use_cache": args.use_cache,
         "sources": {},
     }
 
-    steps = [
+    if args.results_only:
+        args.scope = "results"
+
+    all_steps = [
         ("matches", lambda: scrape_matches_2026(use_cache=args.use_cache)),
         ("standings", lambda: scrape_standings_2026(use_cache=args.use_cache)),
         ("team_stats", lambda: scrape_team_stats_2026(use_cache=args.use_cache)),
@@ -46,6 +56,7 @@ def main() -> int:
         ("formations", lambda: scrape_formations_2026(use_cache=args.use_cache)),
         ("player_stats", lambda: scrape_player_stats_2026(use_cache=args.use_cache)),
     ]
+    steps = all_steps if args.scope == "all" else all_steps[:1]
 
     for name, fn in steps:
         try:
@@ -64,4 +75,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
-
