@@ -1,103 +1,19 @@
 {
-  "updated_at": "2026-05-23T13:32:38+09:00",
+  "updated_at": "2026-05-23T13:54:36+09:00",
   "season": 2026,
   "category": "100yj1",
-  "scope": "all",
+  "scope": "results",
   "use_cache": false,
   "sources": {
     "matches": {
       "url": "https://data.j-league.or.jp/SFMS01/search?competition_years=20261&competition_frame_ids=35&tv_relay_station_name=",
       "fallback_url": "https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section=",
       "warnings": [],
-      "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/a66c2e643f5f90a45722.html",
+      "cache_path": "/home/runner/work/J1League-_score_prediction_site/J1League-_score_prediction_site/data/raw/html_cache/a66c2e643f5f90a45722.html",
       "from_cache": false,
       "rows": 200,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/matches/schedule_2026_100yj1.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/matches_2026_clean.csv"
-    },
-    "standings": {
-      "url": "https://www.jleague.jp/standings/j1/",
-      "warnings": [],
-      "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/836fd36e66a723a2c84c.html",
-      "divisions": {
-        "EAST": 10,
-        "WEST": 10
-      },
-      "rows": 20,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/standings/standings_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/standings_2026_clean.csv"
-    },
-    "team_stats": {
-      "urls": [
-        "https://www.jleague.jp/stats/j1/club/2026/shoot/",
-        "https://www.jleague.jp/stats/j1/club/2026/shoot_on_target/",
-        "https://www.jleague.jp/stats/j1/club/2026/suffer_shoot/",
-        "https://www.jleague.jp/stats/j1/club/2026/score/",
-        "https://www.jleague.jp/stats/j1/club/2026/lost/",
-        "https://www.jleague.jp/stats/j1/club/2026/clean_sheet/",
-        "https://www.jleague.jp/stats/j1/club/2026/pass_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/dribble_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/through_pass_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/cross_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/clear_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/tackle_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/block_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/foul_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/intercept_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/air_battle_win_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/yellow_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/red_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/ball_rate/",
-        "https://www.jleague.jp/stats/j1/club/2026/chance_create/",
-        "https://www.jleague.jp/stats/j1/club/2026/one_on_one/",
-        "https://www.jleague.jp/stats/j1/club/2026/recovery_count/",
-        "https://www.jleague.jp/stats/j1/club/2026/expected_goals/",
-        "https://www.jleague.jp/stats/j1/club/2026/expected_goals_against/",
-        "https://www.jleague.jp/stats/j1/club/2026/distance_per_game/",
-        "https://www.jleague.jp/stats/j1/club/2026/sprint_per_game/"
-      ],
-      "warnings": [],
-      "rows": 520,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/team_stats/team_stats_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/team_stats_2026_clean.csv"
-    },
-    "market_values": {
-      "url": "https://www.transfermarkt.com/j1-100-year-vision-league/startseite/wettbewerb/J1YV",
-      "manual_path": "/Users/akihirookuyama/Soccer_Score_App/data/manual/market_values_2026.csv",
-      "warnings": [],
-      "source": "manual",
-      "rows": 20,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/market_values/market_values_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/market_values_2026_clean.csv"
-    },
-    "football_lab": {
-      "urls": {
-        "expected": "https://www.football-lab.jp/summary/team_ranking/j1001?data=expected&year=100",
-        "kagi": "https://www.football-lab.jp/summary/team_ranking/j1001?data=kagi&year=100",
-        "goal_patterns": "https://www.football-lab.jp/summary/team_ranking/j1001?data=goal&year=100",
-        "team_styles": "https://www.football-lab.jp/summary/team_style/j1001?year=100&data=21"
-      },
-      "warnings": [],
-      "expected_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/expected_2026.csv",
-      "expected_rows": 40,
-      "kagi_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/kagi_2026.csv",
-      "kagi_rows": 40,
-      "goal_patterns_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/goal_patterns/goal_patterns_2026_asof_20260523.csv",
-      "goal_patterns_rows": 20,
-      "team_styles_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/team_styles/team_styles_2026_asof_20260523.csv",
-      "team_styles_rows": 60
-    },
-    "formations": {
-      "warnings": [],
-      "rows": 20,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/formations/formations_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/formations_2026_clean.csv"
-    },
-    "player_stats": {
-      "warnings": [],
-      "rows": 200,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/player_stats/player_stats_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/player_stats_2026_clean.csv"
+      "raw_path": "/home/runner/work/J1League-_score_prediction_site/J1League-_score_prediction_site/data/raw/matches/schedule_2026_100yj1.csv",
+      "processed_path": "/home/runner/work/J1League-_score_prediction_site/J1League-_score_prediction_site/data/processed/matches_2026_clean.csv"
     }
   }
 }
