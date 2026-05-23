@@ -14,6 +14,8 @@ def test_results_after_matches_workflow_is_results_only() -> None:
     assert "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" in text
     assert "python -m compileall app src scripts" in text
     assert "python -m pytest" in text
+    assert "git restore --worktree ." in text
+    assert "git clean -fd" in text
     assert "git pull --rebase origin main" in text
     assert "python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results" in text
     assert "python scripts/build_past_prediction_results.py" in text
@@ -38,6 +40,8 @@ def test_scheduled_prediction_workflow_updates_predictions() -> None:
     assert "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" in text
     assert "python -m compileall app src scripts" in text
     assert "python -m pytest" in text
+    assert "git restore --worktree ." in text
+    assert "git clean -fd" in text
     assert "git pull --rebase origin main" in text
     assert "python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section" in text
     assert "python scripts/run_prediction.py --mode all_unplayed" in text
@@ -56,6 +60,8 @@ def test_manual_workflow_remains_manual_only() -> None:
     assert "workflow_dispatch:" in text
     assert "schedule:" not in text
     assert "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" in text
+    assert "git restore --worktree ." in text
+    assert "git clean -fd" in text
     assert "git pull --rebase origin main" in text
     assert "python scripts/build_model_metrics.py" not in text
     assert "python scripts/validate_prediction_outputs.py" in text

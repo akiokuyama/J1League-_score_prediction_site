@@ -132,6 +132,9 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update past prediction results"
+            git status --short
+            git restore --worktree .
+            git clean -fd
             git pull --rebase origin main
             git push
           fi
