@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 import shutil
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -73,6 +74,20 @@ class TrainResult:
     models: dict[str, Any]
 
 
+def season_year(value: Any) -> int:
+    match = re.search(r"\d{4}", str(value))
+    if not match:
+        raise ValueError(f"Seasonから年を解釈できません: {value}")
+    return int(match.group(0))
+
+
+def season_label(value: Any) -> str:
+    text = str(value)
+    if text.endswith(".0"):
+        return text[:-2]
+    return text
+
+
 def default_model_params() -> dict[str, dict[str, Any]]:
     return {
         "step1": {
@@ -138,10 +153,17 @@ def train_and_evaluate(
     dataset_path: str | Path,
     *,
     exclude_weather: bool = True,
+    test_season: str | int = 2025,
 ) -> TrainResult:
     X, y_goals, y_result, y_diff, df = build_training_frame(dataset_path, exclude_weather=exclude_weather)
-    train_mask = df["Season"] < 2025
-    test_mask = df["Season"] == 2025
+    test_label = season_label(test_season)
+    test_year = season_year(test_season)
+    season_labels = df["Season"].map(season_label)
+    season_years = df["Season"].map(season_year)
+    test_mask = season_labels == test_label
+    if not test_mask.any():
+        test_mask = season_years == test_year
+    train_mask = season_years < test_year
     params = default_model_params()
 
     X_train, X_test = X[train_mask], X[test_mask]
@@ -226,6 +248,7 @@ def model_metadata(
     dataset_path: str | Path,
     evaluation: dict[str, Any],
     feature_count: int,
+    test_season: str | int = 2025,
 ) -> dict[str, Any]:
     now = datetime.now(ZoneInfo("Asia/Tokyo")).isoformat(timespec="seconds")
     return {
@@ -235,8 +258,8 @@ def model_metadata(
         "feature_count": int(feature_count),
         "exclude_weather": True,
         "training_split": {
-            "train": "Season < 2025",
-            "test": "Season == 2025",
+            "train": f"year(Season) < {season_year(test_season)}",
+            "test": f"Season == {season_label(test_season)}",
         },
         "evaluation": evaluation,
     }
@@ -281,4 +304,3 @@ def activate_models(source_dir: str | Path, model_dir: str | Path = "Models") ->
         if src.exists():
             shutil.copy2(src, target / filename)
     return backup_dir
-

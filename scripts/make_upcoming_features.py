@@ -13,6 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from src.features.build_match_features import build_match_features
 from src.features.build_upcoming_features import build_upcoming_features
+from src.features.snapshots import save_upcoming_feature_snapshot
 from src.features.validation import validate_feature_frame
 
 import joblib
@@ -56,11 +57,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="未来試合用特徴量を生成します")
     parser.add_argument("--season", type=int, default=2026)
     parser.add_argument("--category", default="100yj1")
+    parser.add_argument("--season-key", default="2026_special", help="保存用のシーズン識別子")
     return parser.parse_args()
 
 
 def main() -> int:
-    parse_args()
+    args = parse_args()
     match_df = build_match_features()
     upcoming_df = build_upcoming_features()
     model_features = joblib.load(PROJECT_ROOT / "Models" / "model_features.pkl")
@@ -69,6 +71,9 @@ def main() -> int:
         PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_sources.csv",
         PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_source_report.csv",
     )
+    sources_path = PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_sources.csv"
+    sources_df = pd.read_csv(sources_path) if sources_path.exists() else None
+    snapshot = save_upcoming_feature_snapshot(upcoming_df, sources=sources_df, season_key=args.season_key)
     print(
         json.dumps(
             {
@@ -76,6 +81,11 @@ def main() -> int:
                 "upcoming_features_rows": int(len(upcoming_df)),
                 "validation": validation,
                 "source_report": source_report,
+                "snapshot": {
+                    "features": str(snapshot.features.relative_to(PROJECT_ROOT)),
+                    "sources": str(snapshot.sources.relative_to(PROJECT_ROOT)) if snapshot.sources else None,
+                    "metadata": str(snapshot.metadata.relative_to(PROJECT_ROOT)),
+                },
             },
             ensure_ascii=False,
             indent=2,

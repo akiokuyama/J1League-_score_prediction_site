@@ -1,0 +1,16 @@
+{
+  "season": 2026,
+  "season_key": "2026_special",
+  "season_label": "2026 Special",
+  "season_name": "2026_Special",
+  "finished_matches": 171,
+  "training_rows": 171,
+  "snapshot_rows": 0,
+  "fallback_rows": 171,
+  "skipped_rows": 0,
+  "skipped_match_ids": [],
+  "reference_columns": 155,
+  "snapshot_files": 1,
+  "combined_rows": 1923,
+  "combined_output": "Data/features/training_dataset_with_2026_special_point_in_time.csv"
+}

@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-05-24T16:34:49+09:00",
+  "feature_as_of": "20260524_163449",
+  "season_key": "2026_special",
+  "season_label": "2026 Special",
+  "features_path": "Data/features/snapshots/upcoming_features_2026_special_asof_20260524_163449.csv",
+  "sources_path": "Data/features/snapshots/upcoming_features_2026_special_sources_asof_20260524_163449.csv",
+  "rows": 9,
+  "match_ids": [
+    "2026-100yj1-18-kasm-vs-FCtk",
+    "2026-100yj1-18-kasw-vs-chib",
+    "2026-100yj1-18-hiro-vs-nago",
+    "2026-100yj1-18-fuku-vs-kobe",
+    "2026-100yj1-18-kyot-vs-ngsk",
+    "2026-100yj1-18-mito-vs-ka-f",
+    "2026-100yj1-18-tk-v-vs-y-fm",
+    "2026-100yj1-18-okay-vs-c-os",
+    "2026-100yj1-18-shim-vs-g-os"
+  ]
+}

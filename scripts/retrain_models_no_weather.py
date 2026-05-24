@@ -28,6 +28,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="天候なしモデルを再学習します")
     parser.add_argument("--dataset", default="Data/ML_dataset.csv")
     parser.add_argument("--output-dir", default="Models/weather_removed_v1")
+    parser.add_argument("--test-season", default="2025", help="評価用に取り分けるシーズン。例: 2025, 2026_Special")
     parser.add_argument("--activate", action="store_true", help="既存モデルをバックアップ後に正式反映する")
     return parser.parse_args()
 
@@ -35,7 +36,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     try:
-        eval_result = train_and_evaluate(args.dataset, exclude_weather=True)
+        eval_result = train_and_evaluate(args.dataset, exclude_weather=True, test_season=args.test_season)
         full_result = train_full_models(args.dataset, exclude_weather=True)
         metadata = model_metadata(
             version="weather_removed_v1",
@@ -46,6 +47,7 @@ def main() -> int:
                 "metrics": eval_result.metrics,
             },
             feature_count=len(full_result.feature_names),
+            test_season=args.test_season,
         )
         save_models(full_result, args.output_dir, metadata)
 
