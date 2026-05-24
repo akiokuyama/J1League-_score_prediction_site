@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-05-24T21:34:18+09:00",
+  "feature_as_of": "20260524_213418",
+  "season_key": "2026_special",
+  "season_label": "2026_special",
+  "features_path": "Data/features/snapshots/upcoming_features_2026_special_asof_20260524_213418.csv",
+  "sources_path": "Data/features/snapshots/upcoming_features_2026_special_sources_asof_20260524_213418.csv",
+  "rows": 20,
+  "match_ids": [
+    "2026_special-100yj1-101-nago-vs-mcd",
+    "2026_special-100yj1-101-kobe-vs-kasm",
+    "2026_special-100yj1-101-hiro-vs-ka-f",
+    "2026_special-100yj1-101-c-os-vs-FCtk",
+    "2026_special-100yj1-101-g-os-vs-tk-v",
+    "2026_special-100yj1-101-fuku-vs-chib",
+    "2026_special-100yj1-101-ngsk-vs-mito",
+    "2026_special-100yj1-101-kyot-vs-kasw",
+    "2026_special-100yj1-102-shim-vs-y-fm",
+    "2026_special-100yj1-102-okay-vs-uraw",
+    "2026_special-100yj1-201-kasm-vs-kobe",
+    "2026_special-100yj1-201-chib-vs-fuku",
+    "2026_special-100yj1-201-FCtk-vs-c-os",
+    "2026_special-100yj1-201-mito-vs-ngsk",
+    "2026_special-100yj1-201-mcd-vs-nago",
+    "2026_special-100yj1-201-uraw-vs-okay",
+    "2026_special-100yj1-201-tk-v-vs-g-os",
+    "2026_special-100yj1-201-y-fm-vs-shim",
+    "2026_special-100yj1-201-kasw-vs-kyot",
+    "2026_special-100yj1-201-ka-f-vs-hiro"
+  ]
+}

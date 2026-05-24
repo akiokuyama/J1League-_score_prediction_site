@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T07:52:07",
+  "generated_at": "2026-05-24T12:34:25",
   "season": "2026_special",
   "league": "J1",
   "source": {
@@ -7,17 +7,17 @@
     "actual_matches": "Data/processed/matches_2026_special_clean.csv"
   },
   "diagnostics": {
-    "prediction_history_files": 88,
-    "prediction_history_matches": 1046,
-    "prediction_history_unique_matches": 29,
+    "prediction_history_files": 90,
+    "prediction_history_matches": 1074,
+    "prediction_history_unique_matches": 49,
     "matches_rows": 200,
-    "match_id_matched": 29,
-    "finished_matched": 28,
-    "score_complete_matched": 28,
-    "evaluation_target_matches": 28,
+    "match_id_matched": 49,
+    "finished_matched": 29,
+    "score_complete_matched": 29,
+    "evaluation_target_matches": 29,
     "unmatched_prediction_matches": 0,
-    "matched_but_unplayed": 1,
-    "matched_but_missing_score": 1
+    "matched_but_unplayed": 20,
+    "matched_but_missing_score": 20
   },
   "matches": [
     {
@@ -1853,6 +1853,74 @@
           "probability": 0.08457425013933731,
           "poisson_probability": 0.08490709287387306,
           "combined_score": 0.005585517943795474
+        }
+      ]
+    },
+    {
+      "match_id": "2026_special-100yj1-18-shim-vs-g-os",
+      "matchweek": 18,
+      "date": "2026-05-24",
+      "kickoff": "17:03",
+      "venue": "MUFG国立",
+      "home_team": "shim",
+      "away_team": "g-os",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "actual_score": {
+        "home": 1,
+        "away": 2
+      },
+      "predicted_result": "draw",
+      "actual_result": "away_win",
+      "is_result_correct": false,
+      "is_score_correct": false,
+      "result_probabilities": {
+        "home_win": 0.05153152385141343,
+        "draw": 0.7943931224793284,
+        "away_win": 0.15407535366925829
+      },
+      "score_candidates": [
+        {
+          "score": "1-1",
+          "home_goals": 1,
+          "away_goals": 1,
+          "probability": 0.4530191952221761,
+          "poisson_probability": 0.11511861187255151,
+          "combined_score": 0.03640598343777582
+        },
+        {
+          "score": "2-2",
+          "home_goals": 2,
+          "away_goals": 2,
+          "probability": 0.2407046750336742,
+          "poisson_probability": 0.061166476726268626,
+          "combined_score": 0.019343750783834743
+        },
+        {
+          "score": "0-0",
+          "home_goals": 0,
+          "away_goals": 0,
+          "probability": 0.21315164652601504,
+          "poisson_probability": 0.05416486083859974,
+          "combined_score": 0.017129506641225173
+        },
+        {
+          "score": "3-3",
+          "home_goals": 3,
+          "away_goals": 3,
+          "probability": 0.05684207566000134,
+          "poisson_probability": 0.014444378770141751,
+          "combined_score": 0.004567999958659386
+        },
+        {
+          "score": "1-2",
+          "home_goals": 1,
+          "away_goals": 2,
+          "probability": 0.0362824075581333,
+          "poisson_probability": 0.08364059671483413,
+          "combined_score": 0.0029157632669322545
         }
       ]
     },
