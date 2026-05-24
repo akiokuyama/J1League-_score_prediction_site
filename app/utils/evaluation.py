@@ -66,6 +66,37 @@ def get_match_insight_label(probabilities: dict | None) -> str | None:
     return None
 
 
+def get_confidence_label(probability: float | int | str | None) -> dict[str, str]:
+    try:
+        value = float(probability)
+    except (TypeError, ValueError):
+        value = 0.0
+    if value > 1:
+        value /= 100
+    if value >= 0.60:
+        return {"label": "確度高め", "class": "badge-confidence-high"}
+    if value >= 0.45:
+        return {"label": "やや優勢", "class": "badge-confidence-medium"}
+    return {"label": "拮抗", "class": "badge-confidence-low"}
+
+
+def build_score_probability_explanation(predicted_score: dict | None, result_probabilities: dict | None) -> str:
+    score_outcome = get_score_outcome(predicted_score)
+    strongest = get_strongest_outcome(result_probabilities)
+    probability_outcome = strongest.get("key")
+
+    if score_outcome == "unknown" or probability_outcome == "unknown":
+        return "予測スコアと勝敗確率トップは、計算単位が異なる参考情報です。"
+    if score_outcome == probability_outcome:
+        return "予測スコアと勝敗確率トップは同じ方向を示しています。"
+
+    score_label = outcome_label(score_outcome)
+    probability_label = outcome_label(str(probability_outcome))
+    if score_outcome == "draw":
+        return f"スコア候補では引き分けが最有力ですが、勝敗カテゴリ全体では{probability_label}が最も高くなっています。"
+    return f"単一スコアでは{score_label}が最有力ですが、勝敗カテゴリ全体では{probability_label}が最も高くなっています。"
+
+
 def evaluate_prediction(predicted_score: dict | None, actual_score: dict | None) -> dict:
     """
     戻り値例:

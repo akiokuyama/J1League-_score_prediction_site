@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+from datetime import datetime
 from html import escape
 from pathlib import Path
 from typing import Any
@@ -15,7 +16,9 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.utils.evaluation import (  # noqa: E402
+    build_score_probability_explanation,
     evaluate_prediction,
+    get_confidence_label,
     get_match_insight_label,
     get_score_outcome,
     get_strongest_outcome,
@@ -236,6 +239,21 @@ def inject_css() -> None:
             color: color-mix(in srgb, #15803d 82%, var(--text-color)) !important;
             border-color: rgba(34, 197, 94, 0.42) !important;
         }
+        .badge-confidence-high {
+            background: color-mix(in srgb, #6366f1 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #4338ca 82%, var(--text-color)) !important;
+            border-color: rgba(99, 102, 241, 0.42) !important;
+        }
+        .badge-confidence-medium {
+            background: color-mix(in srgb, #0ea5e9 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #0369a1 82%, var(--text-color)) !important;
+            border-color: rgba(14, 165, 233, 0.42) !important;
+        }
+        .badge-confidence-low {
+            background: color-mix(in srgb, #6b7280 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #374151 82%, var(--text-color)) !important;
+            border-color: rgba(107, 114, 128, 0.42) !important;
+        }
         .result-badge-correct {
             background: color-mix(in srgb, #22c55e 16%, var(--secondary-background-color)) !important;
             color: color-mix(in srgb, #15803d 82%, var(--text-color)) !important;
@@ -287,7 +305,7 @@ def inject_css() -> None:
         }
         .summary-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 10px;
         }
         .summary-item {
@@ -425,6 +443,7 @@ def filter_future_matches(matches: list[dict[str, Any]]) -> list[dict[str, Any]]
 def render_match_card(match: dict[str, Any]) -> None:
     probabilities = match.get("result_probabilities")
     strongest = get_strongest_outcome(probabilities)
+    confidence = get_confidence_label(strongest.get("value"))
     insight = get_match_insight_label(probabilities)
     match_id = str(match.get("match_id") or id(match))
     home = display_team(match.get("home_team"))
@@ -443,6 +462,8 @@ def render_match_card(match: dict[str, Any]) -> None:
         else ""
     )
     insight_html = f'<span class="label {insight_class}">{escape(insight)}</span>' if insight else ""
+    confidence_html = f'<span class="label {confidence["class"]}">{escape(confidence["label"])}</span>'
+    explanation = build_score_probability_explanation(match.get("predicted_score"), probabilities)
 
     st.markdown(
         f"""
@@ -452,9 +473,10 @@ def render_match_card(match: dict[str, Any]) -> None:
             <div class="teams">{escape(matchup)}</div>
             <div class="score-row">
               <div class="score-pill">{escape(score)}</div>
-              <div class="prob-line">勝敗確率トップ：{escape(str(strongest["label"]))}<br>{escape(format_percent(strongest["value"]))}</div>
+              <div class="prob-line">勝敗確率トップ：{escape(str(strongest["label"]))}<br>{escape(format_percent(strongest["value"]))}（{escape(confidence["label"])}）</div>
             </div>
-            {insight_html}
+            {insight_html}{confidence_html}
+            <div class="small">{escape(explanation)}</div>
           </div>
         </a>
         """,
@@ -498,16 +520,14 @@ def render_match_detail(match: dict[str, Any]) -> None:
 
 def render_conclusion(match: dict[str, Any], strongest: dict[str, Any], insight: str | None) -> None:
     score_text = format_score(match.get("predicted_score"))
-    predicted_outcome = get_score_outcome(match.get("predicted_score"))
-    strongest_key = strongest.get("key")
+    confidence = get_confidence_label(strongest.get("value"))
     trend = f'試合傾向は「{insight}」です。' if insight else ""
-
-    if strongest_key == "draw":
-        message = f"この試合の見立て：予測スコアは {score_text}、勝敗確率トップは 引き分け です。"
-    elif predicted_outcome == strongest_key:
-        message = f"この試合の見立て：予測スコアは {score_text}、勝敗確率トップは {strongest['label']} です。{trend}"
-    else:
-        message = f"この試合の見立て：単一スコアでは {score_text} が最有力です。ただし勝敗確率では {strongest['label']} が最も高くなっています。{trend}"
+    explanation = build_score_probability_explanation(match.get("predicted_score"), match.get("result_probabilities"))
+    message = (
+        f"この試合の見立て：予測スコアは {score_text}、勝敗確率トップは "
+        f"{strongest['label']} {format_percent(strongest.get('value'))}（{confidence['label']}）です。"
+        f"{trend} {explanation}"
+    )
 
     st.markdown(f"<div class='summary-card'><strong>{message}</strong></div>", unsafe_allow_html=True)
 
@@ -540,6 +560,7 @@ def render_probability_bars(probabilities: dict | None) -> None:
 
 def render_probability_note(match: dict[str, Any], strongest: dict[str, Any]) -> None:
     score_text = format_score(match.get("predicted_score"))
+    explanation = build_score_probability_explanation(match.get("predicted_score"), match.get("result_probabilities"))
     st.caption("勝敗確率は「勝ち・引き分け・負け」という結果カテゴリごとの合算値です。予測スコアとは計算単位が異なります。")
     predicted_outcome = get_score_outcome(match.get("predicted_score"))
     if strongest.get("key") in {"home", "away"} and predicted_outcome != strongest.get("key"):
@@ -549,6 +570,8 @@ def render_probability_note(match: dict[str, Any], strongest: dict[str, Any]) ->
             f"一方、勝敗確率は複数のスコア候補を合算した確率です。"
             f"そのため、単一スコアでは {score_text} が最上位でも、勝敗全体では{strongest['label']}が最も高くなる場合があります。"
         )
+    else:
+        st.info(explanation)
 
 
 def render_score_candidates(candidates: Any) -> None:
@@ -599,12 +622,12 @@ def render_past_predictions(data: dict[str, Any]) -> None:
     st.markdown('<div class="section-title">過去の予測結果</div>', unsafe_allow_html=True)
     matches = safe_matches(data)
     if not matches:
-        st.info("過去の予測結果はまだありません。")
+        st.info("まだ評価対象の過去予測結果がありません。試合結果が反映されると、ここに的中率が表示されます。")
         return
 
+    render_past_summary(matches)
     st.caption("判定の見方：「勝敗」は勝ち・引き分け・負けの方向性で判定し、「スコア」は点数まで完全一致したかで判定します。")
     filtered = filter_past_matches(matches)
-    render_past_summary(filtered)
     if not filtered:
         st.info("条件に一致する過去予測はありません。")
         return
@@ -642,22 +665,31 @@ def render_past_summary(matches: list[dict[str, Any]]) -> None:
     total = len(evaluations)
     result_hits = sum(1 for item in evaluations if item["result_hit"])
     score_hits = sum(1 for item in evaluations if item["score_hit"])
+    recent = sorted(matches, key=past_match_sort_key, reverse=True)[:5]
+    recent_evaluations = [evaluate_prediction(m.get("predicted_score"), m.get("actual_score")) for m in recent]
+    recent_total = len(recent_evaluations)
+    recent_result_hits = sum(1 for item in recent_evaluations if item["result_hit"])
+    recent_score_hits = sum(1 for item in recent_evaluations if item["score_hit"])
 
     st.markdown(
         f"""
         <div class="summary-card">
           <div class="summary-grid">
             <div class="summary-item">
+              <div class="summary-label">評価対象</div>
+              <div class="summary-value">{total}試合</div>
+            </div>
+            <div class="summary-item">
               <div class="summary-label">勝敗的中率</div>
               <div class="summary-value">{format_accuracy(result_hits, total)}</div>
             </div>
             <div class="summary-item">
-              <div class="summary-label">スコア的中率</div>
+              <div class="summary-label">スコア完全的中率</div>
               <div class="summary-value">{format_accuracy(score_hits, total)}</div>
             </div>
             <div class="summary-item">
-              <div class="summary-label">今シーズン予測試合数</div>
-              <div class="summary-value">{total}</div>
+              <div class="summary-label">直近5試合</div>
+              <div class="summary-value">勝敗 {recent_result_hits}/{recent_total}・スコア {recent_score_hits}/{recent_total}</div>
             </div>
           </div>
         </div>
@@ -691,6 +723,17 @@ def render_past_card(match: dict[str, Any]) -> None:
         """,
         unsafe_allow_html=True,
     )
+
+
+def past_match_sort_key(match: dict[str, Any]) -> tuple[str, str, str]:
+    raw_date = match.get("date") or match.get("match_date") or ""
+    raw_kickoff = match.get("kickoff") or match.get("kickoff_time") or ""
+    try:
+        parsed = datetime.fromisoformat(str(raw_date))
+        date_key = parsed.date().isoformat()
+    except ValueError:
+        date_key = str(raw_date)
+    return date_key, str(raw_kickoff), str(match.get("match_id") or "")
 
 
 def format_match_meta(match: dict[str, Any]) -> str:

@@ -12,7 +12,6 @@ def test_streamlit_does_not_display_model_metrics() -> None:
         "勝敗Accuracy",
         "Home MAE",
         "Away MAE",
-        "スコア完全的中率",
     ]
     for pattern in forbidden:
         assert pattern not in app_text
