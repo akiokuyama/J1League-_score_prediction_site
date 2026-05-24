@@ -6,7 +6,7 @@ import sys
 from html import escape
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import urlencode
 
 import streamlit as st
 
@@ -80,6 +80,9 @@ def initialize_state() -> None:
     if query_params.get("view") == "detail" and query_params.get("match_id"):
         st.session_state.view = "detail"
         st.session_state.selected_match_id = query_params.get("match_id")
+    elif query_params.get("view") == "list":
+        st.session_state.view = "list"
+        st.session_state.selected_match_id = None
 
 
 def inject_css() -> None:
@@ -387,8 +390,21 @@ def filter_future_matches(matches: list[dict[str, Any]]) -> list[dict[str, Any]]
     teams = sorted({display_team(team) for match in matches for team in [match.get("home_team"), match.get("away_team")] if team})
     sections = sorted({int(match_section(match)) for match in matches if _is_int_like(match_section(match))})
 
-    team = st.selectbox("チーム", ["すべてのチーム", *teams], key="future_team_filter")
-    section = st.selectbox("試合が行われる節", ["すべての節", *sections], key="future_section_filter")
+    team_options = ["すべてのチーム", *teams]
+    section_options = ["すべての節", *sections]
+    team = st.selectbox(
+        "チーム",
+        team_options,
+        index=option_index(team_options, query_value("upcoming_team"), default=0),
+        key="future_team_filter",
+    )
+    section = st.selectbox(
+        "試合が行われる節",
+        section_options,
+        index=option_index(section_options, query_value("upcoming_section"), default=0),
+        key="future_section_filter",
+    )
+    update_future_filter_query_params(team, section)
 
     filtered: list[dict[str, Any]] = []
     for match in matches:
@@ -412,7 +428,7 @@ def render_match_card(match: dict[str, Any]) -> None:
     matchup = format_matchup(home, away)
     score = format_score(match.get("predicted_score"))
     meta = format_match_meta(match)
-    href = f"?view=detail&match_id={quote(match_id)}"
+    href = build_detail_href(match_id)
     insight_class = (
         "home-advantage"
         if insight == "ホーム優勢"
@@ -446,7 +462,13 @@ def render_match_detail(match: dict[str, Any]) -> None:
     if st.button("← 試合一覧に戻る", use_container_width=True):
         st.session_state.view = "list"
         st.session_state.selected_match_id = None
-        st.query_params.clear()
+        set_query_params_if_changed(
+            {
+                "view": "list",
+                "upcoming_team": current_future_team_filter(),
+                "upcoming_section": str(current_future_section_filter()),
+            }
+        )
         st.rerun()
 
     home = display_team(match.get("home_team"))
@@ -672,6 +694,66 @@ def format_match_meta(match: dict[str, Any]) -> str:
     kickoff = match.get("kickoff")
     venue = match.get("venue")
     return format_optional_parts(date, kickoff, venue)
+
+
+def build_detail_href(match_id: str) -> str:
+    return "?" + urlencode(
+        {
+            "view": "detail",
+            "match_id": match_id,
+            "upcoming_team": current_future_team_filter(),
+            "upcoming_section": str(current_future_section_filter()),
+        }
+    )
+
+
+def update_future_filter_query_params(team: Any, section: Any) -> None:
+    if st.session_state.view == "detail":
+        return
+    set_query_params_if_changed(
+        {
+            "view": "list",
+            "upcoming_team": str(team),
+            "upcoming_section": str(section),
+        }
+    )
+
+
+def current_future_team_filter() -> str:
+    return str(st.session_state.get("future_team_filter") or query_value("upcoming_team") or "すべてのチーム")
+
+
+def current_future_section_filter() -> str:
+    return str(st.session_state.get("future_section_filter") or query_value("upcoming_section") or "すべての節")
+
+
+def set_query_params_if_changed(params: dict[str, Any]) -> None:
+    cleaned = {key: str(value) for key, value in params.items() if value is not None}
+    current = {key: query_value(key) for key in cleaned}
+    if current == cleaned and set(st.query_params.keys()) == set(cleaned.keys()):
+        return
+    st.query_params.clear()
+    for key, value in cleaned.items():
+        st.query_params[key] = value
+
+
+def query_value(key: str) -> str | None:
+    value = st.query_params.get(key)
+    if isinstance(value, list):
+        return str(value[0]) if value else None
+    if value is None:
+        return None
+    return str(value)
+
+
+def option_index(options: list[Any], selected: Any, default: int = 0) -> int:
+    if selected is None:
+        return default
+    selected_text = str(selected)
+    for index, option in enumerate(options):
+        if str(option) == selected_text:
+            return index
+    return default
 
 
 def format_matchup(home: str, away: str) -> str:
