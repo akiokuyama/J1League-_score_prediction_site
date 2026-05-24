@@ -220,6 +220,7 @@ def inject_css() -> None:
         }
         .home-advantage { background: #dbeafe; color: #1d4ed8; border-color: #bfdbfe; }
         .away-advantage { background: #fee2e2; color: #b91c1c; border-color: #fecaca; }
+        .draw-badge { background: rgba(34, 197, 94, 0.12); color: #15803d; border-color: rgba(34, 197, 94, 0.35); }
         .hit { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
         .miss { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
         .metric-line { display: flex; justify-content: space-between; gap: 10px; }
@@ -286,6 +287,7 @@ def inject_css() -> None:
         @media (prefers-color-scheme: dark) {
             .home-advantage { background: rgba(37, 99, 235, 0.28); color: #bfdbfe; border-color: rgba(191, 219, 254, 0.35); }
             .away-advantage { background: rgba(220, 38, 38, 0.28); color: #fecaca; border-color: rgba(254, 202, 202, 0.35); }
+            .draw-badge { background: rgba(34, 197, 94, 0.24); color: #bbf7d0; border-color: rgba(187, 247, 208, 0.35); }
             .hit { background: rgba(22, 163, 74, 0.24); color: #bbf7d0; border-color: rgba(187, 247, 208, 0.35); }
             .miss { background: rgba(220, 38, 38, 0.28); color: #fecaca; border-color: rgba(254, 202, 202, 0.35); }
         }
@@ -402,7 +404,15 @@ def render_match_card(match: dict[str, Any]) -> None:
     score = format_score(match.get("predicted_score"))
     meta = format_match_meta(match)
     href = f"?view=detail&match_id={quote(match_id)}"
-    insight_class = "home-advantage" if insight == "ホーム優勢" else "away-advantage" if insight == "アウェイ優勢" else ""
+    insight_class = (
+        "home-advantage"
+        if insight == "ホーム優勢"
+        else "away-advantage"
+        if insight == "アウェイ優勢"
+        else "draw-badge"
+        if insight == "引き分け濃厚"
+        else ""
+    )
     insight_html = f'<span class="label {insight_class}">{escape(insight)}</span>' if insight else ""
 
     st.markdown(

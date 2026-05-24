@@ -54,13 +54,15 @@ def get_match_insight_label(probabilities: dict | None) -> str | None:
     """
     home_win が最大 -> 'ホーム優勢'
     away_win が最大 -> 'アウェイ優勢'
-    draw が最大 -> None
+    draw が最大 -> '引き分け濃厚'
     """
     strongest = get_strongest_outcome(probabilities)
     if strongest["key"] == "home":
         return "ホーム優勢"
     if strongest["key"] == "away":
         return "アウェイ優勢"
+    if strongest["key"] == "draw":
+        return "引き分け濃厚"
     return None
 
 
