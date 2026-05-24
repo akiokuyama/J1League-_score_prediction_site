@@ -625,9 +625,9 @@ def render_past_predictions(data: dict[str, Any]) -> None:
         st.info("まだ評価対象の過去予測結果がありません。試合結果が反映されると、ここに的中率が表示されます。")
         return
 
-    render_past_summary(matches)
     st.caption("判定の見方：「勝敗」は勝ち・引き分け・負けの方向性で判定し、「スコア」は点数まで完全一致したかで判定します。")
     filtered = filter_past_matches(matches)
+    render_past_summary(filtered)
     if not filtered:
         st.info("条件に一致する過去予測はありません。")
         return
