@@ -236,8 +236,16 @@ def inject_css() -> None:
             color: color-mix(in srgb, #15803d 82%, var(--text-color)) !important;
             border-color: rgba(34, 197, 94, 0.42) !important;
         }
-        .hit { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
-        .miss { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
+        .result-badge-correct {
+            background: color-mix(in srgb, #22c55e 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #15803d 82%, var(--text-color)) !important;
+            border-color: rgba(34, 197, 94, 0.42) !important;
+        }
+        .result-badge-wrong {
+            background: color-mix(in srgb, #ef4444 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #b91c1c 82%, var(--text-color)) !important;
+            border-color: rgba(239, 68, 68, 0.42) !important;
+        }
         .metric-line { display: flex; justify-content: space-between; gap: 10px; }
         .summary-card {
             border-left: 5px solid #f59e0b;
@@ -298,10 +306,6 @@ def inject_css() -> None:
             color: var(--text-color);
             font-size: 1.05rem;
             font-weight: 850;
-        }
-        @media (prefers-color-scheme: dark) {
-            .hit { background: rgba(22, 163, 74, 0.24); color: #bbf7d0; border-color: rgba(187, 247, 208, 0.35); }
-            .miss { background: rgba(220, 38, 38, 0.28); color: #fecaca; border-color: rgba(254, 202, 202, 0.35); }
         }
         @media (max-width: 640px) {
             .block-container { padding-left: 1rem; padding-right: 1rem; }
@@ -664,8 +668,8 @@ def render_past_summary(matches: list[dict[str, Any]]) -> None:
 
 def render_past_card(match: dict[str, Any]) -> None:
     evaluation = evaluate_prediction(match.get("predicted_score"), match.get("actual_score"))
-    result_class = "hit" if evaluation["result_hit"] else "miss"
-    score_class = "hit" if evaluation["score_hit"] else "miss"
+    result_class = "result-badge-correct" if evaluation["result_hit"] else "result-badge-wrong"
+    score_class = "result-badge-correct" if evaluation["score_hit"] else "result-badge-wrong"
     home = display_team(match.get("home_team"))
     away = display_team(match.get("away_team"))
     matchup = format_matchup(home, away)
