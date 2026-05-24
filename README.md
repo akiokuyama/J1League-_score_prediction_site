@@ -89,17 +89,23 @@ app/streamlit_app.py
 Soccer_Score_App/
 ├── Data/                  # 学習・推論用CSVとRawデータ
 │   ├── ML_dataset.csv
-│   └── RawData/
+│   ├── processed/
+│   ├── features/
+│   ├── raw/
+│   └── manual/
 ├── Models/                # 学習済みモデルと特徴量リスト
-├── Notebook/              # 既存の分析・学習Notebook
-├── docs/                  # 指示書、棚卸し、完了レポート
+├── archive/               # 旧分析資産
+│   ├── notebooks/
+│   └── legacy_rawdata/
+├── docs/                  # レポート、指示書アーカイブ、UIモック
+│   ├── reports/
+│   └── archive/
 ├── logs/                  # 実行ログ用ディレクトリ
 ├── outputs/               # 予測結果などの出力先
 ├── scripts/               # 確認・運用用スクリプト
 ├── src/                   # 今後アプリ化するための再利用可能コード
 │   ├── models/
 │   └── predict/
-├── 資料/                  # 既存の日本語メモ・設計資料
 ├── pyproject.toml
 ├── requirements.txt
 └── uv.lock
@@ -203,5 +209,6 @@ outputs/last_updated.txt
 ## メモ
 
 - `Models/model_features.pkl` を推論時の特徴量スキーマとして扱います。
-- `Notebook/` は既存資産として残し、Week2以降の実装は `src/` 配下に切り出して進めます。
+- 旧Notebookは `archive/notebooks/`、旧RawDataは `archive/legacy_rawdata/` に保存しています。
+- 作業指示書は `docs/archive/instructions/`、完了レポートや判断メモは `docs/reports/` に整理しています。
 - `.DS_Store`、Pythonキャッシュ、生成ログはGit管理対象外です。

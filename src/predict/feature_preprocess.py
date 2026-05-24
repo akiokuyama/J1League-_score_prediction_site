@@ -1,7 +1,7 @@
 """Preprocess existing ML-table rows into model input features.
 
-This module does not recreate the RawData-to-ML_dataset feature engineering
-implemented in Notebook/01 and Notebook/02. It only prepares an already
+This module does not recreate the legacy RawData-to-ML_dataset feature
+engineering preserved under archive/notebooks. It only prepares an already
 feature-engineered row for inference.
 """
 

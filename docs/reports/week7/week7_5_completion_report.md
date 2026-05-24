@@ -20,8 +20,8 @@
 - `README.md`
 - `app/streamlit_app.py`
 - `app/utils/load_predictions.py`
-- `docs/week7_5_beta_deployment_checklist.md`
-- `docs/week7_5_completion_report.md`
+- `docs/reports/week7/week7_5_beta_deployment_checklist.md`
+- `docs/reports/week7/week7_5_completion_report.md`
 
 ## 確認結果
 

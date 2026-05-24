@@ -26,7 +26,7 @@ Week6で作成した手動実行ワークフローを残したまま、月曜朝
 - `scripts/validate_past_prediction_results.py`
 - `tests/test_scheduled_workflows.py`
 - `README.md`
-- `docs/week7/week7_completion_report.md`
+- `docs/reports/week7/week7_completion_report.md`
 
 ## 月曜朝ワークフロー
 
