@@ -218,9 +218,21 @@ def inject_css() -> None:
             margin-right: 4px;
             margin-top: 6px;
         }
-        .home-advantage { background: #dbeafe; color: #1d4ed8; border-color: #bfdbfe; }
-        .away-advantage { background: #fee2e2; color: #b91c1c; border-color: #fecaca; }
-        .draw-badge { background: rgba(34, 197, 94, 0.12); color: #15803d; border-color: rgba(34, 197, 94, 0.35); }
+        .home-advantage {
+            background: color-mix(in srgb, #3b82f6 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #1d4ed8 82%, var(--text-color)) !important;
+            border-color: rgba(59, 130, 246, 0.42) !important;
+        }
+        .away-advantage {
+            background: color-mix(in srgb, #ef4444 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #b91c1c 82%, var(--text-color)) !important;
+            border-color: rgba(239, 68, 68, 0.42) !important;
+        }
+        .draw-badge {
+            background: color-mix(in srgb, #22c55e 16%, var(--secondary-background-color)) !important;
+            color: color-mix(in srgb, #15803d 82%, var(--text-color)) !important;
+            border-color: rgba(34, 197, 94, 0.42) !important;
+        }
         .hit { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
         .miss { background: #fee2e2; color: #991b1b; border-color: #fecaca; }
         .metric-line { display: flex; justify-content: space-between; gap: 10px; }
@@ -285,9 +297,6 @@ def inject_css() -> None:
             font-weight: 850;
         }
         @media (prefers-color-scheme: dark) {
-            .home-advantage { background: rgba(37, 99, 235, 0.28); color: #bfdbfe; border-color: rgba(191, 219, 254, 0.35); }
-            .away-advantage { background: rgba(220, 38, 38, 0.28); color: #fecaca; border-color: rgba(254, 202, 202, 0.35); }
-            .draw-badge { background: rgba(34, 197, 94, 0.24); color: #bbf7d0; border-color: rgba(187, 247, 208, 0.35); }
             .hit { background: rgba(22, 163, 74, 0.24); color: #bbf7d0; border-color: rgba(187, 247, 208, 0.35); }
             .miss { background: rgba(220, 38, 38, 0.28); color: #fecaca; border-color: rgba(254, 202, 202, 0.35); }
         }
