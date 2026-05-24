@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-05-17T12:05:59+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "league": "J1",
   "competition": "明治安田J1百年構想リーグ",
   "category": "100yj1",
@@ -11,7 +11,7 @@
   },
   "matches": [
     {
-      "match_id": "2026-100yj1-16-y-fm-vs-kasm",
+      "match_id": "2026_special-100yj1-16-y-fm-vs-kasm",
       "date": "2026-05-10",
       "home_team": "y-fm",
       "away_team": "kasm",
@@ -188,7 +188,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-16-FCtk-vs-tk-v",
+      "match_id": "2026_special-100yj1-16-FCtk-vs-tk-v",
       "date": "2026-05-10",
       "home_team": "FCtk",
       "away_team": "tk-v",
@@ -365,7 +365,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-16-kasw-vs-ka-f",
+      "match_id": "2026_special-100yj1-16-kasw-vs-ka-f",
       "date": "2026-05-10",
       "home_team": "kasw",
       "away_team": "ka-f",
@@ -542,7 +542,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-16-chib-vs-mcd",
+      "match_id": "2026_special-100yj1-16-chib-vs-mcd",
       "date": "2026-05-10",
       "home_team": "chib",
       "away_team": "mcd",
@@ -719,7 +719,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-16-shim-vs-fuku",
+      "match_id": "2026_special-100yj1-16-shim-vs-fuku",
       "date": "2026-05-10",
       "home_team": "shim",
       "away_team": "fuku",
@@ -896,7 +896,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-16-kobe-vs-okay",
+      "match_id": "2026_special-100yj1-16-kobe-vs-okay",
       "date": "2026-05-10",
       "home_team": "kobe",
       "away_team": "okay",
@@ -1073,7 +1073,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-16-g-os-vs-hiro",
+      "match_id": "2026_special-100yj1-16-g-os-vs-hiro",
       "date": "2026-05-10",
       "home_team": "g-os",
       "away_team": "hiro",
@@ -1250,7 +1250,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-16-nago-vs-kyot",
+      "match_id": "2026_special-100yj1-16-nago-vs-kyot",
       "date": "2026-05-10",
       "home_team": "nago",
       "away_team": "kyot",
@@ -1427,7 +1427,7 @@
       "section": 16
     },
     {
-      "match_id": "2026-100yj1-12-mcd-vs-tk-v",
+      "match_id": "2026_special-100yj1-12-mcd-vs-tk-v",
       "date": "2026-05-13",
       "home_team": "mcd",
       "away_team": "tk-v",
@@ -1604,7 +1604,7 @@
       "section": 12
     },
     {
-      "match_id": "2026-100yj1-12-kobe-vs-kyot",
+      "match_id": "2026_special-100yj1-12-kobe-vs-kyot",
       "date": "2026-05-13",
       "home_team": "kobe",
       "away_team": "kyot",
@@ -1781,7 +1781,7 @@
       "section": 12
     },
     {
-      "match_id": "2026-100yj1-17-mito-vs-tk-v",
+      "match_id": "2026_special-100yj1-17-mito-vs-tk-v",
       "date": "2026-05-16",
       "home_team": "mito",
       "away_team": "tk-v",
@@ -1958,7 +1958,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-uraw-vs-FCtk",
+      "match_id": "2026_special-100yj1-17-uraw-vs-FCtk",
       "date": "2026-05-16",
       "home_team": "uraw",
       "away_team": "FCtk",
@@ -2135,7 +2135,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-y-fm-vs-kasw",
+      "match_id": "2026_special-100yj1-17-y-fm-vs-kasw",
       "date": "2026-05-16",
       "home_team": "y-fm",
       "away_team": "kasw",
@@ -2312,7 +2312,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-chib-vs-kasm",
+      "match_id": "2026_special-100yj1-17-chib-vs-kasm",
       "date": "2026-05-17",
       "home_team": "chib",
       "away_team": "kasm",
@@ -2489,7 +2489,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-ka-f-vs-mcd",
+      "match_id": "2026_special-100yj1-17-ka-f-vs-mcd",
       "date": "2026-05-17",
       "home_team": "ka-f",
       "away_team": "mcd",
@@ -2666,7 +2666,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-ngsk-vs-kobe",
+      "match_id": "2026_special-100yj1-17-ngsk-vs-kobe",
       "date": "2026-05-17",
       "home_team": "ngsk",
       "away_team": "kobe",
@@ -2843,7 +2843,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-okay-vs-shim",
+      "match_id": "2026_special-100yj1-17-okay-vs-shim",
       "date": "2026-05-17",
       "home_team": "okay",
       "away_team": "shim",
@@ -3020,7 +3020,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-kyot-vs-hiro",
+      "match_id": "2026_special-100yj1-17-kyot-vs-hiro",
       "date": "2026-05-17",
       "home_team": "kyot",
       "away_team": "hiro",
@@ -3197,7 +3197,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-17-c-os-vs-nago",
+      "match_id": "2026_special-100yj1-17-c-os-vs-nago",
       "date": "2026-05-17",
       "home_team": "c-os",
       "away_team": "nago",
@@ -3374,7 +3374,7 @@
       "section": 17
     },
     {
-      "match_id": "2026-100yj1-18-mcd-vs-uraw",
+      "match_id": "2026_special-100yj1-18-mcd-vs-uraw",
       "date": "2026-05-22",
       "home_team": "mcd",
       "away_team": "uraw",
@@ -3551,7 +3551,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-kasm-vs-FCtk",
+      "match_id": "2026_special-100yj1-18-kasm-vs-FCtk",
       "date": "2026-05-23",
       "home_team": "kasm",
       "away_team": "FCtk",
@@ -3728,7 +3728,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-kasw-vs-chib",
+      "match_id": "2026_special-100yj1-18-kasw-vs-chib",
       "date": "2026-05-23",
       "home_team": "kasw",
       "away_team": "chib",
@@ -3905,7 +3905,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-hiro-vs-nago",
+      "match_id": "2026_special-100yj1-18-hiro-vs-nago",
       "date": "2026-05-23",
       "home_team": "hiro",
       "away_team": "nago",
@@ -4082,7 +4082,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-fuku-vs-kobe",
+      "match_id": "2026_special-100yj1-18-fuku-vs-kobe",
       "date": "2026-05-23",
       "home_team": "fuku",
       "away_team": "kobe",
@@ -4259,7 +4259,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-kyot-vs-ngsk",
+      "match_id": "2026_special-100yj1-18-kyot-vs-ngsk",
       "date": "2026-05-23",
       "home_team": "kyot",
       "away_team": "ngsk",
@@ -4436,7 +4436,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-mito-vs-ka-f",
+      "match_id": "2026_special-100yj1-18-mito-vs-ka-f",
       "date": "2026-05-24",
       "home_team": "mito",
       "away_team": "ka-f",
@@ -4613,7 +4613,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-tk-v-vs-y-fm",
+      "match_id": "2026_special-100yj1-18-tk-v-vs-y-fm",
       "date": "2026-05-24",
       "home_team": "tk-v",
       "away_team": "y-fm",
@@ -4790,7 +4790,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-okay-vs-c-os",
+      "match_id": "2026_special-100yj1-18-okay-vs-c-os",
       "date": "2026-05-24",
       "home_team": "okay",
       "away_team": "c-os",
@@ -4967,7 +4967,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-shim-vs-g-os",
+      "match_id": "2026_special-100yj1-18-shim-vs-g-os",
       "date": "2026-05-24",
       "home_team": "shim",
       "away_team": "g-os",
@@ -5147,6 +5147,6 @@
   "skipped_matches": [],
   "warnings": [],
   "data_sources": {
-    "features": "data/features/upcoming_features_2026.csv"
+    "features": "data/features/upcoming_features_2026_special.csv"
   }
 }

@@ -1,6 +1,6 @@
 {
   "updated_at": "2026-05-24T16:52:04+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "category": "100yj1",
   "scope": "results",
   "use_cache": false,
@@ -12,8 +12,8 @@
       "cache_path": "/home/runner/work/J1League_score_prediction_site/J1League_score_prediction_site/Data/raw/html_cache/a66c2e643f5f90a45722.html",
       "from_cache": false,
       "rows": 200,
-      "raw_path": "/home/runner/work/J1League_score_prediction_site/J1League_score_prediction_site/Data/raw/matches/schedule_2026_100yj1.csv",
-      "processed_path": "/home/runner/work/J1League_score_prediction_site/J1League_score_prediction_site/Data/processed/matches_2026_clean.csv"
+      "raw_path": "/home/runner/work/J1League_score_prediction_site/J1League_score_prediction_site/Data/raw/matches/schedule_2026_special_100yj1.csv",
+      "processed_path": "/home/runner/work/J1League_score_prediction_site/J1League_score_prediction_site/Data/processed/matches_2026_special_clean.csv"
     }
   }
 }

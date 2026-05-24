@@ -14,7 +14,7 @@ def test_save_upcoming_feature_snapshot(tmp_path: Path) -> None:
         [
             {
                 "match_id": "m1",
-                "Season": 2026,
+                "Season": "2026_special",
                 "Section": 18,
                 "Home": "home",
                 "Away": "away",
@@ -63,7 +63,7 @@ def test_build_point_in_time_training_dataset_uses_snapshot_then_fallback(tmp_pa
     matches = pd.DataFrame(
         [
             {
-                "season": 2026,
+                "season": "2026_special",
                 "section": 1,
                 "match_date": "2026-02-06",
                 "kickoff_time": "19:00",
@@ -75,7 +75,7 @@ def test_build_point_in_time_training_dataset_uses_snapshot_then_fallback(tmp_pa
                 "match_id": "m1",
             },
             {
-                "season": 2026,
+                "season": "2026_special",
                 "section": 18,
                 "match_date": "2026-05-30",
                 "kickoff_time": "14:00",
@@ -95,7 +95,7 @@ def test_build_point_in_time_training_dataset_uses_snapshot_then_fallback(tmp_pa
         [
             {
                 "match_id": "m1",
-                "Season": 2026,
+                "Season": "2026_special",
                 "Section": 1,
                 "Date": "2026-02-06",
                 "Home": "a",
@@ -117,7 +117,7 @@ def test_build_point_in_time_training_dataset_uses_snapshot_then_fallback(tmp_pa
             [
                 {
                     "match_id": "m2",
-                    "Season": 2026,
+                    "Season": "2026_special",
                     "Section": 18,
                     "Date": "2026-05-30",
                     "Home": "c",
@@ -136,7 +136,7 @@ def test_build_point_in_time_training_dataset_uses_snapshot_then_fallback(tmp_pa
     )
 
     dataset, sources, report = build_point_in_time_training_dataset(
-        season=2026,
+        season="2026_special",
         reference_dataset=reference_path,
         matches_path=matches_path,
         fallback_features_path=fallback_path,
@@ -147,9 +147,9 @@ def test_build_point_in_time_training_dataset_uses_snapshot_then_fallback(tmp_pa
     assert report["snapshot_rows"] == 1
     assert report["fallback_rows"] == 1
     assert report["season_key"] == "2026_special"
-    assert report["season_label"] == "2026 Special"
+    assert report["season_label"] == "2026_special"
     assert sources["feature_source"].tolist() == ["fallback_rebuilt", "snapshot"]
-    assert dataset["Season"].tolist() == ["2026_Special", "2026_Special"]
+    assert dataset["Season"].tolist() == ["2026_special", "2026_special"]
     assert dataset["Score"].tolist() == ["2-1", "0-0"]
     assert dataset["Match_Result"].tolist() == [1, 0]
     assert dataset["Home_Current_Rank"].tolist() == [9, 3]

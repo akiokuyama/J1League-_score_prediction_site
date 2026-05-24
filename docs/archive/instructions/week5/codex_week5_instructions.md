@@ -325,8 +325,8 @@ scripts/build_past_prediction_results.py
 outputs/prediction_history/*.json
 outputs/latest_predictions.json
 outputs/all_unplayed_predictions.json
-data/processed/matches_2026_clean.csv
-data/features/match_features_2026.csv
+data/processed/matches_2026_special_clean.csv
+data/features/match_features_2026_special.csv
 ```
 
 出力:
@@ -340,7 +340,7 @@ outputs/past_prediction_results.json
 ```json
 {
   "last_updated": "2026-05-17T00:00:00+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "results": [
     {
       "match_id": "...",
@@ -393,7 +393,7 @@ outputs/model_metrics.json
 ```json
 {
   "last_updated": "2026-05-17T00:00:00+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "sample_size": 4,
   "result_accuracy": 0.5,
   "score_exact_match_rate": 0.25,

@@ -2,14 +2,14 @@
 
 ## 目的
 
-2026 Special、つまり2026年のJ1百年構想リーグは、今後始まる通常の2026シーズンと区別して扱う。
+2026_special、つまり2026年特別シーズンのJ1百年構想リーグは、今後始まる通常の2026年シーズンと区別して扱う。
 前半戦の週次特徴量スナップショットを保存していなかったため、シーズン終了後の再学習では以下の方針を取る。
 
 - 前半戦など、予測時点の特徴量スナップショットが存在しない試合はフォールバック特徴量を使う
 - 今後の週次更新以降は、予測時点の特徴量を保存し、シーズン終了後の学習に使えるようにする
 - 試合結果は目的変数として後から結合し、特徴量保存時点では結果を使わない
 - 保存用のシーズン識別子は `2026_special` とする
-- 学習データ上の `Season` 列は `2026_Special` とする
+- 学習データ上の `Season` 列は `2026_special` とする
 
 ## 追加した仕組み
 
@@ -34,7 +34,7 @@
 このスクリプトは、終了済み試合に対して以下の優先順位で特徴量を選ぶ。
 
 1. 同じ `match_id` のスナップショットがある場合は、試合日以前に保存された最新スナップショットを使う
-2. スナップショットがない場合は、`Data/features/match_features_2026.csv` のフォールバック特徴量を使う
+2. スナップショットがない場合は、`Data/features/match_features_2026_special.csv` のフォールバック特徴量を使う
 3. 試合結果を目的変数として結合する
 
 出力ファイル:
@@ -48,14 +48,14 @@
 
 `scripts/retrain_models_no_weather.py` に `--test-season` を追加した。
 
-2026年シーズン終了後は、以下のように実行できる。
+2026年特別シーズン終了後は、以下のように実行できる。
 
 ```bash
 python scripts/build_point_in_time_training_dataset.py
 python scripts/retrain_models_no_weather.py \
   --dataset Data/features/training_dataset_with_2026_special_point_in_time.csv \
   --output-dir Models/point_in_time_2026_special \
-  --test-season 2026_Special
+  --test-season 2026_special
 ```
 
 正式反映する場合のみ `--activate` を付ける。
@@ -66,8 +66,8 @@ python scripts/retrain_models_no_weather.py \
 
 - finished matches: 171
 - season key: `2026_special`
-- season label: `2026 Special`
-- Season column value: `2026_Special`
+- season label: `2026_special`
+- Season column value: `2026_special`
 - training rows: 171
 - snapshot rows: 0
 - fallback rows: 171
@@ -94,7 +94,7 @@ python scripts/retrain_models_no_weather.py \
 python scripts/retrain_models_no_weather.py \
   --dataset Data/features/training_dataset_with_2026_special_point_in_time.csv \
   --output-dir /private/tmp/soccer_score_app_point_in_time_model_check \
-  --test-season 2026_Special
+  --test-season 2026_special
 ```
 
 結果:
@@ -109,5 +109,5 @@ python scripts/retrain_models_no_weather.py \
 
 ## 注意点
 
-現時点の2026年データは前半戦スナップショットがないため、厳密なpoint-in-time学習としては不完全。
+現時点の2026_specialデータは前半戦スナップショットがないため、厳密なpoint-in-time学習としては不完全。
 ただし、今後の試合分については週次更新時にスナップショットを保存できるため、シーズン終了後には「前半はフォールバック、後半はスナップショット」という再学習データを作成できる。

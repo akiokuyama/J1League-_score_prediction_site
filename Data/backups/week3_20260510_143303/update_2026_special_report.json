@@ -8,8 +8,8 @@
       "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/ad943ca5b09cfc2f236e.html",
       "from_cache": true,
       "rows": 180,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/matches/schedule_2026_100yj1.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/matches_2026_clean.csv"
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/matches/schedule_2026_special_100yj1.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/matches_2026_special_clean.csv"
     },
     "standings": {
       "url": "https://www.jleague.jp/standings/j1/",
@@ -18,8 +18,8 @@
       ],
       "cache_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/html_cache/836fd36e66a723a2c84c.html",
       "rows": 10,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/standings/standings_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/standings_2026_clean.csv"
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/standings/standings_2026_special.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/standings_2026_special_clean.csv"
     },
     "team_stats": {
       "urls": [
@@ -79,12 +79,12 @@
         "sprint_per_game: No tables found"
       ],
       "rows": 0,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/team_stats/team_stats_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/team_stats_2026_clean.csv"
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/team_stats/team_stats_2026_special.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/team_stats_2026_special_clean.csv"
     },
     "market_values": {
       "url": "https://www.transfermarkt.com/j1-league/startseite/wettbewerb/JAP1/plus/?saison_id=2025",
-      "manual_path": "/Users/akihirookuyama/Soccer_Score_App/data/manual/market_values_2026.csv",
+      "manual_path": "/Users/akihirookuyama/Soccer_Score_App/data/manual/market_values_2026_special.csv",
       "warnings": [
         "Transfermarktから市場価値テーブルを特定できませんでした。フィルタ表などの非データ表は採用していません。"
       ],
@@ -92,8 +92,8 @@
       "from_cache": true,
       "source": "empty",
       "rows": 0,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/market_values/market_values_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/market_values_2026_clean.csv"
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/market_values/market_values_2026_special.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/market_values_2026_special_clean.csv"
     },
     "football_lab": {
       "urls": {
@@ -108,26 +108,26 @@
         "goal_patterns: HTML取得に失敗しました: https://www.football-lab.jp/summary/team_ranking/j1?year=2026&data=goal: HTTPSConnectionPool(host='www.football-lab.jp', port=443): Max retries exceeded with url: /summary/team_ranking/j1?year=2026&data=goal (Caused by NameResolutionError(\"HTTPSConnection(host='www.football-lab.jp', port=443): Failed to resolve 'www.football-lab.jp' ([Errno 8] nodename nor servname provided, or not known)\"))",
         "team_styles: HTML取得に失敗しました: https://www.football-lab.jp/summary/team_style/j1?year=2026&data=21: HTTPSConnectionPool(host='www.football-lab.jp', port=443): Max retries exceeded with url: /summary/team_style/j1?year=2026&data=21 (Caused by NameResolutionError(\"HTTPSConnection(host='www.football-lab.jp', port=443): Failed to resolve 'www.football-lab.jp' ([Errno 8] nodename nor servname provided, or not known)\"))"
       ],
-      "expected_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/expected_2026.csv",
+      "expected_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/expected_2026_special.csv",
       "expected_rows": 0,
-      "kagi_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/kagi_2026.csv",
+      "kagi_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/kagi_2026_special.csv",
       "kagi_rows": 0,
-      "goal_patterns_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/goal_patterns/goal_patterns_2026_asof_20260509.csv",
+      "goal_patterns_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/goal_patterns/goal_patterns_2026_special_asof_20260509.csv",
       "goal_patterns_rows": 0,
-      "team_styles_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/team_styles/team_styles_2026_asof_20260509.csv",
+      "team_styles_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/football_lab/team_styles/team_styles_2026_special_asof_20260509.csv",
       "team_styles_rows": 0
     },
     "formations": {
       "warnings": [],
       "rows": 19,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/formations/formations_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/formations_2026_clean.csv"
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/formations/formations_2026_special.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/formations_2026_special_clean.csv"
     },
     "player_stats": {
       "warnings": [],
       "rows": 190,
-      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/player_stats/player_stats_2026.csv",
-      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/player_stats_2026_clean.csv"
+      "raw_path": "/Users/akihirookuyama/Soccer_Score_App/data/raw/player_stats/player_stats_2026_special.csv",
+      "processed_path": "/Users/akihirookuyama/Soccer_Score_App/data/processed/player_stats_2026_special_clean.csv"
     }
   }
 }

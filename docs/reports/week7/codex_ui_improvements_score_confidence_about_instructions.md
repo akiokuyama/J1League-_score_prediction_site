@@ -317,7 +317,7 @@ app/utils/load_predictions.py
 .github/workflows/
 scripts/run_prediction.py
 scripts/full_pipeline.py
-scripts/update_2026_data.py
+scripts/update_2026_special_data.py
 scripts/build_past_prediction_results.py
 src/predict/
 src/features/

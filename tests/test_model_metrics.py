@@ -6,7 +6,7 @@ from src.evaluation.model_metrics import build_model_metrics
 def test_build_model_metrics() -> None:
     metrics = build_model_metrics(
         {
-            "season": 2026,
+            "season": "2026_special",
             "league": "J1",
             "matches": [
                 {
@@ -34,7 +34,7 @@ def test_build_model_metrics() -> None:
 
 
 def test_model_metrics_output_schema() -> None:
-    data = build_model_metrics({"season": 2026, "league": "J1", "matches": []})
+    data = build_model_metrics({"season": "2026_special", "league": "J1", "matches": []})
 
     assert data["evaluated_matches"] >= 0
     assert data["sample_size"] >= 0

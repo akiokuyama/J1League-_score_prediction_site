@@ -43,7 +43,7 @@ Week7では、既存の手動実行は残したまま、定期運用を追加し
 - 試合結果データを最新化する
 - 予測履歴と試合結果を照合する
 - `outputs/past_prediction_results.json` を更新する
-- 必要に応じて `Data/processed/update_2026_report.json` を更新する
+- 必要に応じて `Data/processed/update_2026_special_report.json` を更新する
 
 月曜朝にやらないこと:
 
@@ -162,18 +162,18 @@ on:
 
 ### 4.5 試合結果のみ取得モード
 
-現状の `scripts/update_2026_data.py` に試合結果のみ取得するモードが存在しない場合は、追加してください。
+現状の `scripts/update_2026_special_data.py` に試合結果のみ取得するモードが存在しない場合は、追加してください。
 
 推奨引数:
 
 ```bash
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
 ```
 
 または既存設計に合わせて、以下のような名前でも構いません。
 
 ```bash
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --results-only
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --results-only
 ```
 
 重要:
@@ -189,7 +189,7 @@ python scripts/update_2026_data.py --season 2026 --category 100yj1 --results-onl
 ```bash
 python -m compileall app src scripts
 pytest
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
 python scripts/build_past_prediction_results.py
 ```
 
@@ -200,8 +200,8 @@ python scripts/build_past_prediction_results.py
 月曜朝にcommitしてよい対象は、原則として以下のみです。
 
 ```text
-Data/processed/matches_2026_clean.csv
-Data/processed/update_2026_report.json
+Data/processed/matches_2026_special_clean.csv
+Data/processed/update_2026_special_report.json
 outputs/past_prediction_results.json
 ```
 
@@ -289,7 +289,7 @@ on:
 ```bash
 python -m compileall app src scripts
 pytest
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
 python scripts/run_prediction.py --mode all_unplayed
 python scripts/build_past_prediction_results.py
 ```
@@ -305,7 +305,7 @@ python scripts/build_past_prediction_results.py
 Week6の手動実行では、安定性のために以下のように `--use-cache` を使っていました。
 
 ```bash
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --use-cache
 ```
 
 これは手動検証では有効ですが、定期実行で常に `--use-cache` を使うと、最新データを取得せず、古いキャッシュから再生成してしまう可能性があります。
@@ -317,7 +317,7 @@ python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_sect
 推奨:
 
 ```bash
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
 ```
 
 取得失敗時に既存データを使うfallbackを実装する場合でも、以下を守ってください。
@@ -334,7 +334,7 @@ python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope resul
 推奨:
 
 ```bash
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
 ```
 
 ただし、外部サイト取得が不安定な場合に備えて、以下のいずれかの対応を実装しても構いません。
@@ -342,7 +342,7 @@ python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_sect
 #### 案A：明示的なfallbackオプションを追加
 
 ```bash
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --fallback-to-cache
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --fallback-to-cache
 ```
 
 動作:
@@ -553,8 +553,8 @@ tests/test_scheduled_workflows.py
 - 実行タイミング: 月曜 07:00 JST
 - 目的: 週末試合の結果取得と過去予測との照合
 - 更新対象:
-  - `Data/processed/matches_2026_clean.csv`
-  - `Data/processed/update_2026_report.json`
+  - `Data/processed/matches_2026_special_clean.csv`
+  - `Data/processed/update_2026_special_report.json`
   - `outputs/past_prediction_results.json`
 - 更新しないもの:
   - `outputs/latest_predictions.json`
@@ -608,7 +608,7 @@ outputs/local/
 .github/workflows/update_results_after_matches.yml
 .github/workflows/update_predictions_scheduled.yml
 .github/workflows/update_predictions_manual.yml  # 必要に応じて最小修正
-scripts/update_2026_data.py                      # results-only/scope追加が必要な場合
+scripts/update_2026_special_data.py                      # results-only/scope追加が必要な場合
 scripts/validate_prediction_outputs.py            # 必要な場合
 scripts/validate_past_prediction_results.py       # 必要な場合
 tests/test_scheduled_workflows.py                 # または tests/test_actions_workflow.py の拡張
@@ -651,14 +651,14 @@ pytest
 月曜朝処理相当:
 
 ```bash
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
 python scripts/build_past_prediction_results.py
 ```
 
 木曜夜処理相当:
 
 ```bash
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
 python scripts/run_prediction.py --mode all_unplayed
 python scripts/build_past_prediction_results.py
 ```

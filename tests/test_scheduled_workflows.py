@@ -18,11 +18,11 @@ def test_results_after_matches_workflow_is_results_only() -> None:
     assert "git reset --hard origin/main" in text
     assert "git clean -fd" in text
     assert 'tmp_dir="$(mktemp -d)"' in text
-    assert "python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results" in text
+    assert "python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results" in text
     assert "python scripts/build_past_prediction_results.py" in text
     assert "python scripts/validate_past_prediction_results.py" in text
     assert "ln -s Data data" not in text
-    assert "full_pipeline.py --season 2026 --category 100yj1 --mode next_section" not in text
+    assert "full_pipeline.py --season 2026_special --category 100yj1 --mode next_section" not in text
     assert "run_prediction.py --mode all_unplayed" not in text
     assert "outputs/latest_predictions.json \\" not in text
     assert "outputs/all_unplayed_predictions.json \\" not in text
@@ -46,7 +46,7 @@ def test_scheduled_prediction_workflow_updates_predictions() -> None:
     assert "git reset --hard origin/main" in text
     assert "git clean -fd" in text
     assert 'tmp_dir="$(mktemp -d)"' in text
-    assert "python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section" in text
+    assert "python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section" in text
     assert "python scripts/run_prediction.py --mode all_unplayed" in text
     assert "python scripts/build_past_prediction_results.py" in text
     assert "python scripts/validate_prediction_outputs.py" in text

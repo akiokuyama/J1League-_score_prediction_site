@@ -12,8 +12,8 @@ from src.features.build_upcoming_features import build_upcoming_features
 
 
 def build_match_features(
-    matches_path: str | Path = "Data/processed/matches_2026_clean.csv",
-    output_path: str | Path = FEATURE_DATA_DIR / "match_features_2026.csv",
+    matches_path: str | Path = "Data/processed/matches_2026_special_clean.csv",
+    output_path: str | Path = FEATURE_DATA_DIR / "match_features_2026_special.csv",
 ) -> pd.DataFrame:
     df = build_upcoming_features(matches_path=matches_path, only_unplayed=False)
     safe_write_csv(df, output_path)

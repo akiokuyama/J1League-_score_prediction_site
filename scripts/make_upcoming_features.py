@@ -55,7 +55,7 @@ def write_source_report(path: Path, output_path: Path) -> dict[str, object]:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="未来試合用特徴量を生成します")
-    parser.add_argument("--season", type=int, default=2026)
+    parser.add_argument("--season", default="2026_special")
     parser.add_argument("--category", default="100yj1")
     parser.add_argument("--season-key", default="2026_special", help="保存用のシーズン識別子")
     return parser.parse_args()
@@ -68,10 +68,10 @@ def main() -> int:
     model_features = joblib.load(PROJECT_ROOT / "Models" / "model_features.pkl")
     validation = validate_feature_frame(upcoming_df, model_features)
     source_report = write_source_report(
-        PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_sources.csv",
-        PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_source_report.csv",
+        PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_special_sources.csv",
+        PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_special_source_report.csv",
     )
-    sources_path = PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_sources.csv"
+    sources_path = PROJECT_ROOT / "Data" / "features" / "upcoming_features_2026_special_sources.csv"
     sources_df = pd.read_csv(sources_path) if sources_path.exists() else None
     snapshot = save_upcoming_feature_snapshot(upcoming_df, sources=sources_df, season_key=args.season_key)
     print(

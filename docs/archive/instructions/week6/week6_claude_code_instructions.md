@@ -75,7 +75,7 @@ on:
 ```bash
 python -m compileall app src scripts
 pytest
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --use-cache
 python scripts/run_prediction.py --mode all_unplayed
 python scripts/build_past_prediction_results.py
 ```
@@ -210,7 +210,7 @@ READMEには、開発者が迷わない程度の短い説明で問題ありま�
 ```bash
 python -m compileall app src scripts
 pytest
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --use-cache
 python scripts/run_prediction.py --mode all_unplayed
 python scripts/build_past_prediction_results.py
 ```

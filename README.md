@@ -150,15 +150,15 @@ Week7以降は、手動実行に加えて月曜朝と木曜夜の定期実行を
 - 実行コマンド:
 
 ```bash
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
 python scripts/build_past_prediction_results.py
 ```
 
 更新対象:
 
 ```text
-Data/processed/matches_2026_clean.csv
-Data/processed/update_2026_report.json
+Data/processed/matches_2026_special_clean.csv
+Data/processed/update_2026_special_report.json
 outputs/past_prediction_results.json
 ```
 
@@ -181,7 +181,7 @@ outputs/prediction_history/
 - 実行コマンド:
 
 ```bash
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
 python scripts/run_prediction.py --mode all_unplayed
 python scripts/build_past_prediction_results.py
 ```

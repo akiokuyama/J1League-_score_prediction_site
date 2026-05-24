@@ -124,9 +124,9 @@ def _normalize_market_values(table: pd.DataFrame) -> pd.DataFrame:
 TRANSFERMARKT_URL = "https://www.transfermarkt.com/j1-100-year-vision-league/startseite/wettbewerb/J1YV"
 
 
-def scrape_market_values_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
+def scrape_market_values_2026_special(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
     url = TRANSFERMARKT_URL
-    manual_path = PROJECT_ROOT / "Data" / "manual" / "market_values_2026.csv"
+    manual_path = PROJECT_ROOT / "Data" / "manual" / "market_values_2026_special.csv"
     info: dict[str, Any] = {"url": url, "manual_path": str(manual_path), "warnings": []}
     if manual_path.exists():
         df = pd.read_csv(manual_path)
@@ -150,8 +150,8 @@ def scrape_market_values_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame,
             df = empty_frame(["team", "market_value"])
             info["source"] = "empty"
 
-    raw_path = RAW_DATA_DIR / "market_values" / "market_values_2026.csv"
-    processed_path = PROCESSED_DATA_DIR / "market_values_2026_clean.csv"
+    raw_path = RAW_DATA_DIR / "market_values" / "market_values_2026_special.csv"
+    processed_path = PROCESSED_DATA_DIR / "market_values_2026_special_clean.csv"
     safe_write_csv(df, raw_path)
     safe_write_csv(df, processed_path)
     info["rows"] = int(len(df))

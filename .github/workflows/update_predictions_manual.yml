@@ -39,7 +39,7 @@ jobs:
         run: python -m pytest
 
       - name: Run next section prediction pipeline
-        run: python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache
+        run: python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --use-cache
 
       - name: Update all unplayed predictions
         run: python scripts/run_prediction.py --mode all_unplayed

@@ -22,7 +22,7 @@
 3. `pip install -r requirements.txt`
 4. `python -m compileall app src scripts`
 5. `pytest`
-6. `python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache`
+6. `python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --use-cache`
 7. `python scripts/run_prediction.py --mode all_unplayed`
 8. `python scripts/build_past_prediction_results.py`
 9. `latest_predictions.json`、`all_unplayed_predictions.json`、`prediction_history` の存在確認
@@ -40,7 +40,7 @@
 
 - `python -m compileall app src scripts`: 成功
 - `pytest`: 19件成功
-- `python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache`: 成功
+- `python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --use-cache`: 成功
 - `python scripts/run_prediction.py --mode all_unplayed`: 成功
 - `python scripts/build_past_prediction_results.py`: 成功
 
@@ -61,9 +61,9 @@
 
 更新確認済みファイル:
 
-- `Data/processed/update_2026_report.json`
-- `Data/features/match_features_2026.csv`
-- `Data/features/upcoming_features_2026.csv`
+- `Data/processed/update_2026_special_report.json`
+- `Data/features/match_features_2026_special.csv`
+- `Data/features/upcoming_features_2026_special.csv`
 - `outputs/latest_predictions.json`
 - `outputs/latest_predictions.csv`
 - `outputs/all_unplayed_predictions.json`

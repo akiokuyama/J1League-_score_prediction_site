@@ -1,4 +1,4 @@
-"""Build a 2026 Special point-in-time training dataset from saved feature snapshots."""
+"""Build a 2026_special point-in-time training dataset from saved feature snapshots."""
 
 from __future__ import annotations
 
@@ -29,19 +29,19 @@ def parse_args() -> argparse.Namespace:
             "シーズン終了後の再学習用データセットを作成します。"
         )
     )
-    parser.add_argument("--season", type=int, default=2026)
+    parser.add_argument("--season", default="2026_special")
     parser.add_argument("--season-key", default="2026_special", help="保存用のシーズン識別子")
-    parser.add_argument("--season-label", default="2026 Special", help="レポート表示用のシーズン名")
-    parser.add_argument("--season-name", default="2026_Special", help="学習データのSeason列に保存する値")
+    parser.add_argument("--season-label", default="2026_special", help="レポート表示用のシーズン名")
+    parser.add_argument("--season-name", default="2026_special", help="学習データのSeason列に保存する値")
     parser.add_argument("--reference-dataset", default="Data/ML_dataset.csv")
-    parser.add_argument("--matches", default="Data/processed/matches_2026_clean.csv")
-    parser.add_argument("--fallback-features", default="Data/features/match_features_2026.csv")
+    parser.add_argument("--matches", default="Data/processed/matches_2026_special_clean.csv")
+    parser.add_argument("--fallback-features", default="Data/features/match_features_2026_special.csv")
     parser.add_argument("--snapshot-dir", default="Data/features/snapshots")
     parser.add_argument("--output", default="Data/features/training_dataset_2026_special_point_in_time.csv")
     parser.add_argument(
         "--combined-output",
         default="Data/features/training_dataset_with_2026_special_point_in_time.csv",
-        help="reference dataset に2026 Special point-in-time行を追加した再学習用CSV",
+        help="reference dataset に2026_special point-in-time行を追加した再学習用CSV",
     )
     parser.add_argument("--source-output", default="Data/features/training_dataset_2026_special_point_in_time_sources.csv")
     parser.add_argument("--report-output", default="Data/features/training_dataset_2026_special_point_in_time_report.json")
@@ -115,14 +115,14 @@ def _row_from_source(source: pd.Series, reference_columns: list[str], targets: d
 
 def build_point_in_time_training_dataset(
     *,
-    season: int,
+    season: str,
     reference_dataset: str | Path,
     matches_path: str | Path,
     fallback_features_path: str | Path,
     snapshot_dir: str | Path,
     season_key: str = "2026_special",
-    season_label: str = "2026 Special",
-    season_name: str = "2026_Special",
+    season_label: str = "2026_special",
+    season_name: str = "2026_special",
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, Any]]:
     reference = pd.read_csv(_resolve(reference_dataset))
     reference_columns = reference.columns.tolist()
@@ -131,7 +131,7 @@ def build_point_in_time_training_dataset(
     snapshots = load_feature_snapshots(_resolve(snapshot_dir), season_key=season_key)
 
     finished = matches[
-        (matches["season"].astype(int) == int(season))
+        (matches["season"].astype(str) == str(season))
         & (matches["status"].astype(str) == "finished")
         & matches["home_score"].notna()
         & matches["away_score"].notna()
@@ -194,7 +194,7 @@ def build_point_in_time_training_dataset(
     dataset = pd.DataFrame(rows, columns=reference_columns)
     source_frame = pd.DataFrame(source_rows)
     report = {
-        "season": int(season),
+        "season": str(season),
         "season_key": season_key,
         "season_label": season_label,
         "season_name": season_name,

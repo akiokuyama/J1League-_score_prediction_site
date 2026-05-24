@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-05-23T14:17:55+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "league": "J1",
   "competition": "明治安田J1百年構想リーグ",
   "category": "100yj1",
@@ -11,7 +11,7 @@
   },
   "matches": [
     {
-      "match_id": "2026-100yj1-18-kasm-vs-FCtk",
+      "match_id": "2026_special-100yj1-18-kasm-vs-FCtk",
       "date": "2026-05-23",
       "home_team": "kasm",
       "away_team": "FCtk",
@@ -238,7 +238,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-kasw-vs-chib",
+      "match_id": "2026_special-100yj1-18-kasw-vs-chib",
       "date": "2026-05-23",
       "home_team": "kasw",
       "away_team": "chib",
@@ -465,7 +465,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-hiro-vs-nago",
+      "match_id": "2026_special-100yj1-18-hiro-vs-nago",
       "date": "2026-05-23",
       "home_team": "hiro",
       "away_team": "nago",
@@ -692,7 +692,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-fuku-vs-kobe",
+      "match_id": "2026_special-100yj1-18-fuku-vs-kobe",
       "date": "2026-05-23",
       "home_team": "fuku",
       "away_team": "kobe",
@@ -919,7 +919,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-kyot-vs-ngsk",
+      "match_id": "2026_special-100yj1-18-kyot-vs-ngsk",
       "date": "2026-05-23",
       "home_team": "kyot",
       "away_team": "ngsk",
@@ -1146,7 +1146,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-mito-vs-ka-f",
+      "match_id": "2026_special-100yj1-18-mito-vs-ka-f",
       "date": "2026-05-24",
       "home_team": "mito",
       "away_team": "ka-f",
@@ -1373,7 +1373,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-tk-v-vs-y-fm",
+      "match_id": "2026_special-100yj1-18-tk-v-vs-y-fm",
       "date": "2026-05-24",
       "home_team": "tk-v",
       "away_team": "y-fm",
@@ -1600,7 +1600,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-okay-vs-c-os",
+      "match_id": "2026_special-100yj1-18-okay-vs-c-os",
       "date": "2026-05-24",
       "home_team": "okay",
       "away_team": "c-os",
@@ -1827,7 +1827,7 @@
       "section": 18
     },
     {
-      "match_id": "2026-100yj1-18-shim-vs-g-os",
+      "match_id": "2026_special-100yj1-18-shim-vs-g-os",
       "date": "2026-05-24",
       "home_team": "shim",
       "away_team": "g-os",
@@ -2057,6 +2057,6 @@
   "skipped_matches": [],
   "warnings": [],
   "data_sources": {
-    "features": "data/features/upcoming_features_2026.csv"
+    "features": "data/features/upcoming_features_2026_special.csv"
   }
 }

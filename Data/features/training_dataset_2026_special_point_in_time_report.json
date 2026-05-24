@@ -1,8 +1,8 @@
 {
-  "season": 2026,
+  "season": "2026_special",
   "season_key": "2026_special",
   "season_label": "2026 Special",
-  "season_name": "2026_Special",
+  "season_name": "2026_special",
   "finished_matches": 171,
   "training_rows": 171,
   "snapshot_rows": 0,

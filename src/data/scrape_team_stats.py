@@ -84,7 +84,7 @@ def _parse_ranking_cards(html: str, stat_type: str, label: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def scrape_team_stats_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
+def scrape_team_stats_2026_special(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
     frames: list[pd.DataFrame] = []
     info: dict[str, Any] = {"urls": [], "warnings": []}
     for stat_type, label in TEAM_STAT_TYPES.items():
@@ -101,8 +101,8 @@ def scrape_team_stats_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, di
             info["warnings"].append(f"{stat_type}: {exc}")
 
     df = pd.concat(frames, ignore_index=True) if frames else empty_frame(["stat_type", "stat_label"])
-    raw_path = RAW_DATA_DIR / "team_stats" / "team_stats_2026.csv"
-    processed_path = PROCESSED_DATA_DIR / "team_stats_2026_clean.csv"
+    raw_path = RAW_DATA_DIR / "team_stats" / "team_stats_2026_special.csv"
+    processed_path = PROCESSED_DATA_DIR / "team_stats_2026_special_clean.csv"
     safe_write_csv(df, raw_path)
     safe_write_csv(df, processed_path)
     info["rows"] = int(len(df))

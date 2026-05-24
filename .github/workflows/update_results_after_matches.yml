@@ -64,9 +64,9 @@ jobs:
         run: |
           echo "::group::Update match results"
           echo "mode=results-after-matches"
-          echo "season=2026"
+          echo "season=2026_special"
           echo "category=100yj1"
-          python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+          python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
           echo "::endgroup::"
 
       - name: Build past prediction results
@@ -110,8 +110,8 @@ jobs:
 
           tmp_dir="$(mktemp -d)"
           for target in \
-            Data/processed/matches_2026_clean.csv \
-            Data/processed/update_2026_report.json \
+            Data/processed/matches_2026_special_clean.csv \
+            Data/processed/update_2026_special_report.json \
             outputs/past_prediction_results.json
           do
             if [ -e "$target" ]; then
@@ -129,8 +129,8 @@ jobs:
           (cd "$tmp_dir" && tar -cf - .) | tar -xf -
 
           for target in \
-            Data/processed/matches_2026_clean.csv \
-            Data/processed/update_2026_report.json \
+            Data/processed/matches_2026_special_clean.csv \
+            Data/processed/update_2026_special_report.json \
             outputs/past_prediction_results.json
           do
             if [ -e "$target" ]; then

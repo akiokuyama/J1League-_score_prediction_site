@@ -161,7 +161,7 @@ HTTP 200
 詳細URLも確認済みです。
 
 ```text
-http://127.0.0.1:8501/?view=detail&match_id=2026-100yj1-12-mcd-vs-tk-v
+http://127.0.0.1:8501/?view=detail&match_id=2026_special-100yj1-12-mcd-vs-tk-v
 HTTP 200
 ```
 

@@ -18,8 +18,8 @@ HISTORY_TIMESTAMP_RE = re.compile(r"_(\d{8}_\d{6})\.json$")
 
 def build_past_prediction_results(
     history_dir: str | Path = OUTPUT_DIR / "prediction_history",
-    matches_path: str | Path = PROCESSED_DATA_DIR / "matches_2026_clean.csv",
-    season: int = SEASON,
+    matches_path: str | Path = PROCESSED_DATA_DIR / "matches_2026_special_clean.csv",
+    season: str = SEASON,
     league: str = LEAGUE,
 ) -> dict[str, Any]:
     """Return past prediction results joined with actual finished match scores."""

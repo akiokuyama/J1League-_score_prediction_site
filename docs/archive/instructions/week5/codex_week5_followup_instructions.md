@@ -24,7 +24,7 @@ Week5で追加した過去予測結果生成・モデル指標生成まわりに
 
 - `outputs/prediction_history/*.json` に含まれる予測件数
 - 代表的な `match_id`
-- `data/processed/matches_2026_clean.csv` または `Data/processed/matches_2026_clean.csv` の存在有無
+- `data/processed/matches_2026_special_clean.csv` または `Data/processed/matches_2026_special_clean.csv` の存在有無
 - 試合結果CSV側の同一 `match_id` の有無
 - 一致した試合の `status`
 - 一致した試合の `home_score` / `away_score`

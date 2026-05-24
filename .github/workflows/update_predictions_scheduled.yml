@@ -44,9 +44,9 @@ jobs:
         run: |
           echo "::group::Run scheduled prediction pipeline"
           echo "mode=scheduled-predictions"
-          echo "season=2026"
+          echo "season=2026_special"
           echo "category=100yj1"
-          python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+          python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
           echo "::endgroup::"
 
       - name: Update all unplayed predictions

@@ -86,7 +86,7 @@ def build_team_scorer_candidates(df: pd.DataFrame, top_n: int = 5) -> dict[str, 
     return candidates
 
 
-def load_team_scorer_candidates(path: str | Path = "Data/processed/player_stats_2026_clean.csv", top_n: int = 5) -> dict[str, list[dict[str, Any]]]:
+def load_team_scorer_candidates(path: str | Path = "Data/processed/player_stats_2026_special_clean.csv", top_n: int = 5) -> dict[str, list[dict[str, Any]]]:
     """Load player stats CSV and return top scorer candidates per team."""
     file = Path(path)
     if not file.is_absolute():

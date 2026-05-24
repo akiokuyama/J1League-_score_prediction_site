@@ -71,7 +71,7 @@ def _recompute_simple_diffs(row: dict[str, Any]) -> None:
                 pass
 
 
-def _load_market_values(path: str | Path = "Data/processed/market_values_2026_clean.csv") -> dict[str, float]:
+def _load_market_values(path: str | Path = "Data/processed/market_values_2026_special_clean.csv") -> dict[str, float]:
     file = Path(path)
     if not file.is_absolute():
         file = PROJECT_ROOT / file
@@ -89,7 +89,7 @@ def _load_football_lab_values() -> tuple[dict[str, float], dict[str, float], dic
     kagi: dict[str, float] = {}
     expected: dict[str, float] = {}
 
-    kagi_path = PROJECT_ROOT / "Data" / "raw" / "football_lab" / "kagi_2026.csv"
+    kagi_path = PROJECT_ROOT / "Data" / "raw" / "football_lab" / "kagi_2026_special.csv"
     if kagi_path.exists():
         df = pd.read_csv(kagi_path)
         if "team" in df.columns:
@@ -100,7 +100,7 @@ def _load_football_lab_values() -> tuple[dict[str, float], dict[str, float], dic
                 for _, row in df.dropna(subset=["team", "KAGI"]).iterrows():
                     kagi[str(row["team"])] = float(row["KAGI"])
 
-    expected_path = PROJECT_ROOT / "Data" / "raw" / "football_lab" / "expected_2026.csv"
+    expected_path = PROJECT_ROOT / "Data" / "raw" / "football_lab" / "expected_2026_special.csv"
     if expected_path.exists():
         df = pd.read_csv(expected_path)
         if "team" in df.columns and "期待値" in df.columns:
@@ -111,7 +111,7 @@ def _load_football_lab_values() -> tuple[dict[str, float], dict[str, float], dic
     return agi, kagi, expected
 
 
-def _load_formations(path: str | Path = "Data/processed/formations_2026_clean.csv") -> dict[str, str]:
+def _load_formations(path: str | Path = "Data/processed/formations_2026_special_clean.csv") -> dict[str, str]:
     file = Path(path)
     if not file.is_absolute():
         file = PROJECT_ROOT / file
@@ -125,7 +125,7 @@ def _load_formations(path: str | Path = "Data/processed/formations_2026_clean.cs
     return {str(row["team"]): str(row["formation"]) for _, row in values.iterrows()}
 
 
-def _apply_current_2026_values(row: dict[str, Any], home: str, away: str, market_values: dict[str, float], agi: dict[str, float], kagi: dict[str, float], expected: dict[str, float]) -> None:
+def _apply_current_2026_special_values(row: dict[str, Any], home: str, away: str, market_values: dict[str, float], agi: dict[str, float], kagi: dict[str, float], expected: dict[str, float]) -> None:
     if home in market_values and "Home_Market_Value" in row:
         row["Home_Market_Value"] = market_values[home]
     if away in market_values and "Away_Market_Value" in row:
@@ -153,11 +153,11 @@ def _apply_current_formations(row: dict[str, Any], home: str, away: str, formati
 
 def build_upcoming_features(
     *,
-    matches_path: str | Path = "Data/processed/matches_2026_clean.csv",
+    matches_path: str | Path = "Data/processed/matches_2026_special_clean.csv",
     history_path: str | Path = "Data/ML_dataset.csv",
     model_features_path: str | Path = "Models/model_features.pkl",
-    output_path: str | Path = FEATURE_DATA_DIR / "upcoming_features_2026.csv",
-    sources_output_path: str | Path = FEATURE_DATA_DIR / "upcoming_features_2026_sources.csv",
+    output_path: str | Path = FEATURE_DATA_DIR / "upcoming_features_2026_special.csv",
+    sources_output_path: str | Path = FEATURE_DATA_DIR / "upcoming_features_2026_special_sources.csv",
     only_unplayed: bool = True,
 ) -> pd.DataFrame:
     matches_file = Path(matches_path)
@@ -213,7 +213,7 @@ def build_upcoming_features(
             for col in history.columns:
                 if col.startswith("Away_"):
                     sources[col] = "fallback_team_median" if pd.api.types.is_numeric_dtype(history[col]) else "fallback_team_mode"
-        _apply_current_2026_values(row, home, away, market_values, agi, kagi, expected)
+        _apply_current_2026_special_values(row, home, away, market_values, agi, kagi, expected)
         for col in [
             "Home_Market_Value",
             "Away_Market_Value",
@@ -225,14 +225,14 @@ def build_upcoming_features(
             "Away_Rolling_xG",
         ]:
             if col in row:
-                sources[col] = "actual_2026"
+                sources[col] = "actual_2026_special"
         _apply_current_formations(row, home, away, formations)
         for col in ["Home_Formation", "Away_Formation"]:
             if col in row:
-                sources[col] = "actual_2026"
+                sources[col] = "actual_2026_special"
         row.update(
             {
-                "Season": int(match.get("season", 2026) or 2026),
+                "Season": str(match.get("season", "2026_special") or "2026_special"),
                 "Section": int(float(match.get("section", 0) or 0)),
                 "Date": match.get("match_date"),
                 "Home": home,
@@ -250,7 +250,7 @@ def build_upcoming_features(
         )
         for col in ["Season", "Section", "Date", "Home", "Away", "Score", "Home_Goals", "Away_Goals", "Goal_Diff", "Match_Result"]:
             sources[col] = "actual_schedule" if col in ["Season", "Section", "Date", "Home", "Away"] else "prediction_placeholder"
-        sources["Backline_Matchup"] = "actual_2026_derived"
+        sources["Backline_Matchup"] = "actual_2026_special_derived"
         _recompute_simple_diffs(row)
         for col in ["Rank_Diff", "Elo_Diff", "Market_Value_Diff"]:
             if col in row:

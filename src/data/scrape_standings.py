@@ -7,7 +7,7 @@ from io import StringIO
 
 import pandas as pd
 
-from src.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
+from src.config import PROCESSED_DATA_DIR, RAW_DATA_DIR, SEASON
 from src.data.scraping import empty_frame, fetch_html, safe_write_csv
 from src.data.team_master import to_dataset_code
 
@@ -30,7 +30,7 @@ STANDINGS_COLUMN_MAP = {
 }
 
 
-def scrape_standings_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
+def scrape_standings_2026_special(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
     url = "https://www.jleague.jp/standings/j1/"
     info: dict[str, Any] = {"url": url, "warnings": []}
     try:
@@ -53,8 +53,8 @@ def scrape_standings_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dic
         raw_df = empty_frame(STANDINGS_COLUMNS)
         df = empty_frame(STANDINGS_COLUMNS)
 
-    raw_path = RAW_DATA_DIR / "standings" / "standings_2026.csv"
-    processed_path = PROCESSED_DATA_DIR / "standings_2026_clean.csv"
+    raw_path = RAW_DATA_DIR / "standings" / "standings_2026_special.csv"
+    processed_path = PROCESSED_DATA_DIR / "standings_2026_special_clean.csv"
     safe_write_csv(raw_df, raw_path)
     safe_write_csv(df, processed_path)
     info["rows"] = int(len(df))
@@ -89,7 +89,7 @@ def normalize_standings(df: pd.DataFrame) -> pd.DataFrame:
     if "team_name" in normalized.columns:
         normalized["team_name"] = normalized["team_name"].astype(str).map(_dedupe_repeated_name)
         normalized["team"] = normalized["team_name"].map(to_dataset_code)
-    normalized.insert(0, "season", 2026)
+    normalized.insert(0, "season", SEASON)
 
     for col in ["rank", "points", "played", "wins", "pk_wins", "pk_losses", "losses", "goals_for", "goals_against", "goal_diff"]:
         if col in normalized.columns:

@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-05-17T18:17:05+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "league": "J1",
   "competition": "明治安田J1百年構想リーグ",
   "category": "100yj1",
@@ -11,7 +11,7 @@
   },
   "matches": [
     {
-      "match_id": "2026-100yj1-17-ka-f-vs-mcd",
+      "match_id": "2026_special-100yj1-17-ka-f-vs-mcd",
       "date": "2026-05-17",
       "home_team": "ka-f",
       "away_team": "mcd",
@@ -241,6 +241,6 @@
   "skipped_matches": [],
   "warnings": [],
   "data_sources": {
-    "features": "data/features/upcoming_features_2026.csv"
+    "features": "data/features/upcoming_features_2026_special.csv"
   }
 }

@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-05-10T14:40:24+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "league": "J1",
   "competition": "明治安田J1百年構想リーグ",
   "category": "100yj1",
@@ -11,7 +11,7 @@
   },
   "matches": [
     {
-      "match_id": "2026-100yj1-12-mcd-vs-tk-v",
+      "match_id": "2026_special-100yj1-12-mcd-vs-tk-v",
       "date": "2026-05-13",
       "home_team": "mcd",
       "away_team": "tk-v",
@@ -96,7 +96,7 @@
       "section": 12
     },
     {
-      "match_id": "2026-100yj1-12-kobe-vs-kyot",
+      "match_id": "2026_special-100yj1-12-kobe-vs-kyot",
       "date": "2026-05-13",
       "home_team": "kobe",
       "away_team": "kyot",
@@ -184,6 +184,6 @@
   "skipped_matches": [],
   "warnings": [],
   "data_sources": {
-    "features": "data/features/upcoming_features_2026.csv"
+    "features": "data/features/upcoming_features_2026_special.csv"
   }
 }

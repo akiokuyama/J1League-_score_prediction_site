@@ -23,7 +23,7 @@ def run_step(args: list[str]) -> int:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Week3フルパイプライン")
-    parser.add_argument("--season", type=int, default=2026)
+    parser.add_argument("--season", default="2026_special")
     parser.add_argument("--category", default="100yj1")
     parser.add_argument("--mode", default="next_section")
     parser.add_argument("--use-cache", action="store_true")
@@ -32,7 +32,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    update_cmd = [sys.executable, "scripts/update_2026_data.py"]
+    update_cmd = [sys.executable, "scripts/update_2026_special_data.py"]
     if args.use_cache:
         update_cmd.append("--use-cache")
     steps = [

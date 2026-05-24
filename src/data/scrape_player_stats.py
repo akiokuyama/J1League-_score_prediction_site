@@ -68,7 +68,7 @@ def normalize_player_stats(df: pd.DataFrame) -> pd.DataFrame:
     return normalized[[col for col in columns if col in normalized.columns]]
 
 
-def scrape_player_stats_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
+def scrape_player_stats_2026_special(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
     frames: list[pd.DataFrame] = []
     info: dict[str, Any] = {"warnings": []}
     for team_code, lab_code in FOOTBALL_LAB_CODES.items():
@@ -87,8 +87,8 @@ def scrape_player_stats_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, 
         except Exception as exc:  # noqa: BLE001
             info["warnings"].append(f"{team_code}: {exc}")
 
-    raw_path = RAW_DATA_DIR / "player_stats" / "player_stats_2026.csv"
-    processed_path = PROCESSED_DATA_DIR / "player_stats_2026_clean.csv"
+    raw_path = RAW_DATA_DIR / "player_stats" / "player_stats_2026_special.csv"
+    processed_path = PROCESSED_DATA_DIR / "player_stats_2026_special_clean.csv"
     if not frames:
         info["warnings"].append("全チームの選手スタッツ取得に失敗したため、既存CSVは上書きしません")
         existing = _read_existing_processed(processed_path)

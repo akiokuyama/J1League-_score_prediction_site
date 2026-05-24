@@ -1,10 +1,10 @@
 {
   "generated_at": "2026-05-24T07:52:07",
-  "season": 2026,
+  "season": "2026_special",
   "league": "J1",
   "source": {
     "prediction_history": "outputs/prediction_history",
-    "actual_matches": "Data/processed/matches_2026_clean.csv"
+    "actual_matches": "Data/processed/matches_2026_special_clean.csv"
   },
   "diagnostics": {
     "prediction_history_files": 88,
@@ -21,7 +21,7 @@
   },
   "matches": [
     {
-      "match_id": "2026-100yj1-16-FCtk-vs-tk-v",
+      "match_id": "2026_special-100yj1-16-FCtk-vs-tk-v",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "15:03",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-16-chib-vs-mcd",
+      "match_id": "2026_special-100yj1-16-chib-vs-mcd",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "17:03",
@@ -157,7 +157,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-16-g-os-vs-hiro",
+      "match_id": "2026_special-100yj1-16-g-os-vs-hiro",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "15:03",
@@ -225,7 +225,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-16-kasw-vs-ka-f",
+      "match_id": "2026_special-100yj1-16-kasw-vs-ka-f",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "16:03",
@@ -293,7 +293,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-16-kobe-vs-okay",
+      "match_id": "2026_special-100yj1-16-kobe-vs-okay",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "14:03",
@@ -361,7 +361,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-16-nago-vs-kyot",
+      "match_id": "2026_special-100yj1-16-nago-vs-kyot",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "16:03",
@@ -429,7 +429,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-16-shim-vs-fuku",
+      "match_id": "2026_special-100yj1-16-shim-vs-fuku",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "14:03",
@@ -497,7 +497,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-16-y-fm-vs-kasm",
+      "match_id": "2026_special-100yj1-16-y-fm-vs-kasm",
       "matchweek": 16,
       "date": "2026-05-10",
       "kickoff": "14:03",
@@ -565,7 +565,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-12-kobe-vs-kyot",
+      "match_id": "2026_special-100yj1-12-kobe-vs-kyot",
       "matchweek": 12,
       "date": "2026-05-13",
       "kickoff": "19:03",
@@ -633,7 +633,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-12-mcd-vs-tk-v",
+      "match_id": "2026_special-100yj1-12-mcd-vs-tk-v",
       "matchweek": 12,
       "date": "2026-05-13",
       "kickoff": "19:03",
@@ -701,7 +701,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-mito-vs-tk-v",
+      "match_id": "2026_special-100yj1-17-mito-vs-tk-v",
       "matchweek": 17,
       "date": "2026-05-16",
       "kickoff": "14:03",
@@ -769,7 +769,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-uraw-vs-FCtk",
+      "match_id": "2026_special-100yj1-17-uraw-vs-FCtk",
       "matchweek": 17,
       "date": "2026-05-16",
       "kickoff": "16:03",
@@ -837,7 +837,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-y-fm-vs-kasw",
+      "match_id": "2026_special-100yj1-17-y-fm-vs-kasw",
       "matchweek": 17,
       "date": "2026-05-16",
       "kickoff": "17:03",
@@ -905,7 +905,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-c-os-vs-nago",
+      "match_id": "2026_special-100yj1-17-c-os-vs-nago",
       "matchweek": 17,
       "date": "2026-05-17",
       "kickoff": "15:03",
@@ -973,7 +973,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-chib-vs-kasm",
+      "match_id": "2026_special-100yj1-17-chib-vs-kasm",
       "matchweek": 17,
       "date": "2026-05-17",
       "kickoff": "14:03",
@@ -1041,7 +1041,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-ka-f-vs-mcd",
+      "match_id": "2026_special-100yj1-17-ka-f-vs-mcd",
       "matchweek": 17,
       "date": "2026-05-17",
       "kickoff": "19:03",
@@ -1109,7 +1109,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-kyot-vs-hiro",
+      "match_id": "2026_special-100yj1-17-kyot-vs-hiro",
       "matchweek": 17,
       "date": "2026-05-17",
       "kickoff": "15:03",
@@ -1177,7 +1177,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-ngsk-vs-kobe",
+      "match_id": "2026_special-100yj1-17-ngsk-vs-kobe",
       "matchweek": 17,
       "date": "2026-05-17",
       "kickoff": "13:04",
@@ -1245,7 +1245,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-17-okay-vs-shim",
+      "match_id": "2026_special-100yj1-17-okay-vs-shim",
       "matchweek": 17,
       "date": "2026-05-17",
       "kickoff": "14:03",
@@ -1313,7 +1313,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-mcd-vs-uraw",
+      "match_id": "2026_special-100yj1-18-mcd-vs-uraw",
       "matchweek": 18,
       "date": "2026-05-22",
       "kickoff": "19:33",
@@ -1381,7 +1381,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-fuku-vs-kobe",
+      "match_id": "2026_special-100yj1-18-fuku-vs-kobe",
       "matchweek": 18,
       "date": "2026-05-23",
       "kickoff": "14:04",
@@ -1449,7 +1449,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-hiro-vs-nago",
+      "match_id": "2026_special-100yj1-18-hiro-vs-nago",
       "matchweek": 18,
       "date": "2026-05-23",
       "kickoff": "14:03",
@@ -1517,7 +1517,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-kasm-vs-FCtk",
+      "match_id": "2026_special-100yj1-18-kasm-vs-FCtk",
       "matchweek": 18,
       "date": "2026-05-23",
       "kickoff": "17:33",
@@ -1585,7 +1585,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-kasw-vs-chib",
+      "match_id": "2026_special-100yj1-18-kasw-vs-chib",
       "matchweek": 18,
       "date": "2026-05-23",
       "kickoff": "18:05",
@@ -1653,7 +1653,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-kyot-vs-ngsk",
+      "match_id": "2026_special-100yj1-18-kyot-vs-ngsk",
       "matchweek": 18,
       "date": "2026-05-23",
       "kickoff": "19:03",
@@ -1721,7 +1721,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-mito-vs-ka-f",
+      "match_id": "2026_special-100yj1-18-mito-vs-ka-f",
       "matchweek": 18,
       "date": "2026-05-24",
       "kickoff": "14:03",
@@ -1789,7 +1789,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-okay-vs-c-os",
+      "match_id": "2026_special-100yj1-18-okay-vs-c-os",
       "matchweek": 18,
       "date": "2026-05-24",
       "kickoff": "13:01",
@@ -1857,7 +1857,7 @@
       ]
     },
     {
-      "match_id": "2026-100yj1-18-tk-v-vs-y-fm",
+      "match_id": "2026_special-100yj1-18-tk-v-vs-y-fm",
       "matchweek": 18,
       "date": "2026-05-24",
       "kickoff": "14:03",

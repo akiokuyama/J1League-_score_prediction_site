@@ -6,7 +6,8 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SEASON = 2026
+SEASON = "2026_special"
+SEASON_YEAR = 2026
 LEAGUE = "J1"
 COMPETITION = "明治安田J1百年構想リーグ"
 CATEGORY = "100yj1"

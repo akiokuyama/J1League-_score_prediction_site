@@ -94,8 +94,8 @@ https://www.jleague.jp/match/search/?category%5B%5D=100yj1&year=2026&section=
 保存先例:
 
 ```text
-data/raw/football_lab/goal_patterns/goal_patterns_2026_asof_YYYYMMDD.csv
-data/raw/football_lab/team_styles/team_styles_2026_asof_YYYYMMDD.csv
+data/raw/football_lab/goal_patterns/goal_patterns_2026_special_asof_YYYYMMDD.csv
+data/raw/football_lab/team_styles/team_styles_2026_special_asof_YYYYMMDD.csv
 ```
 
 ---
@@ -132,8 +132,8 @@ src/data/scrape_market_values.py
 src/data/scrape_football_lab_team.py
 src/data/scrape_formations.py
 src/data/scrape_player_stats.py
-scripts/update_2026_data.py
-docs/data_source_report_2026.md
+scripts/update_2026_special_data.py
+docs/data_source_report_2026_special.md
 ```
 
 ### 3.3 特徴量生成
@@ -388,8 +388,8 @@ match_id
 ### 保存先
 
 ```text
-data/raw/matches/schedule_2026_100yj1.csv
-data/processed/matches_2026_clean.csv
+data/raw/matches/schedule_2026_special_100yj1.csv
+data/processed/matches_2026_special_clean.csv
 ```
 
 ### 注意
@@ -419,8 +419,8 @@ src/data/scrape_standings.py
 ### 保存先
 
 ```text
-data/raw/standings/standings_2026.csv
-data/processed/standings_2026_clean.csv
+data/raw/standings/standings_2026_special.csv
+data/processed/standings_2026_special_clean.csv
 ```
 
 ### 注意
@@ -485,8 +485,8 @@ TEAM_STAT_TYPES = {
 ### 保存先
 
 ```text
-data/raw/team_stats/team_stats_2026.csv
-data/processed/team_stats_2026_clean.csv
+data/raw/team_stats/team_stats_2026_special.csv
+data/processed/team_stats_2026_special_clean.csv
 ```
 
 ### 注意
@@ -516,7 +516,7 @@ https://www.transfermarkt.com/j1-league/startseite/wettbewerb/JAP1/plus/?saison_
 ### 方針
 
 - 自動取得を試みる
-- 取得できない場合は `data/manual/market_values_2026.csv` を読み込む
+- 取得できない場合は `data/manual/market_values_2026_special.csv` を読み込む
 - 金額表記を数値化する
 - 通貨・単位を統一する
 - チーム名を標準名へ変換する
@@ -524,9 +524,9 @@ https://www.transfermarkt.com/j1-league/startseite/wettbewerb/JAP1/plus/?saison_
 ### 保存先
 
 ```text
-data/raw/market_values/market_values_2026.csv
-data/processed/market_values_2026_clean.csv
-data/manual/market_values_2026.csv
+data/raw/market_values/market_values_2026_special.csv
+data/processed/market_values_2026_special_clean.csv
+data/manual/market_values_2026_special.csv
 ```
 
 ---
@@ -651,8 +651,8 @@ Prev_My Area Possession
 保存先:
 
 ```text
-data/raw/football_lab/goal_patterns/goal_patterns_2026_asof_YYYYMMDD.csv
-data/raw/football_lab/team_styles/team_styles_2026_asof_YYYYMMDD.csv
+data/raw/football_lab/goal_patterns/goal_patterns_2026_special_asof_YYYYMMDD.csv
+data/raw/football_lab/team_styles/team_styles_2026_special_asof_YYYYMMDD.csv
 ```
 
 このデータは、今回の正式予測特徴量には入れないでください。
@@ -703,10 +703,10 @@ Goal_Point_90
 ### 6.1 入力
 
 ```text
-data/processed/matches_2026_clean.csv
-data/processed/standings_2026_clean.csv
-data/processed/team_stats_2026_clean.csv
-data/processed/market_values_2026_clean.csv
+data/processed/matches_2026_special_clean.csv
+data/processed/standings_2026_special_clean.csv
+data/processed/team_stats_2026_special_clean.csv
+data/processed/market_values_2026_special_clean.csv
 Data/ML_dataset.csv
 Models/model_features.pkl
 Models/feature_policy.json
@@ -715,8 +715,8 @@ Models/feature_policy.json
 ### 6.2 出力
 
 ```text
-data/features/match_features_2026.csv
-data/features/upcoming_features_2026.csv
+data/features/match_features_2026_special.csv
+data/features/upcoming_features_2026_special.csv
 ```
 
 ### 6.3 生成する特徴量
@@ -815,7 +815,7 @@ def select_prediction_targets(df, mode="next_section"):
 def predict_upcoming_matches(
     features_df,
     model_dir=None,
-    season=2026,
+    season=2026_special,
     league="J1",
     competition="明治安田J1百年構想リーグ",
     category="100yj1",
@@ -845,7 +845,7 @@ JSON形式:
 ```json
 {
   "last_updated": "2026-05-09T21:00:00+09:00",
-  "season": 2026,
+  "season": "2026_special",
   "league": "J1",
   "competition": "明治安田J1百年構想リーグ",
   "category": "100yj1",
@@ -903,8 +903,8 @@ model_featuresとの差分チェック
 ### 9.1 データ更新
 
 ```bash
-python scripts/update_2026_data.py
-python scripts/update_2026_data.py --use-cache
+python scripts/update_2026_special_data.py
+python scripts/update_2026_special_data.py --use-cache
 ```
 
 ### 9.2 天候なしモデル再学習
@@ -918,7 +918,7 @@ python scripts/retrain_models_no_weather.py --dataset Data/ML_dataset.csv --outp
 ### 9.3 特徴量生成
 
 ```bash
-python scripts/make_upcoming_features.py --season 2026 --category 100yj1
+python scripts/make_upcoming_features.py --season 2026_special --category 100yj1
 ```
 
 ### 9.4 一括予測
@@ -931,8 +931,8 @@ python scripts/run_prediction.py --mode all_unplayed
 ### 9.5 フルパイプライン
 
 ```bash
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode all_unplayed --use-cache
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode all_unplayed --use-cache
 ```
 
 ---
@@ -944,7 +944,7 @@ python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode all_unpla
 ```text
 docs/weather_feature_decision.md
 docs/model_retraining_report.md
-docs/data_source_report_2026.md
+docs/data_source_report_2026_special.md
 docs/week3_completion_report.md
 ```
 
@@ -992,10 +992,10 @@ python scripts/smoke_test_load_models.py
 python scripts/smoke_test_predict_match.py
 python scripts/evaluate_weather_feature.py
 python scripts/retrain_models_no_weather.py --dataset Data/ML_dataset.csv --output-dir Models/weather_removed_v1
-python scripts/update_2026_data.py --use-cache
-python scripts/make_upcoming_features.py --season 2026 --category 100yj1
+python scripts/update_2026_special_data.py --use-cache
+python scripts/make_upcoming_features.py --season 2026_special --category 100yj1
 python scripts/run_prediction.py --mode next_section
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section --use-cache
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section --use-cache
 ```
 
 pytestが利用できる場合:
@@ -1020,7 +1020,7 @@ pytest
 - [ ] 2026年市場価値が取得または手動CSVから読み込まれている
 - [ ] ゴールパターン・チームスタイルは正式特徴量では前年 `Prev_*` のみ使用されている
 - [ ] 当年ゴールパターン・チームスタイルは将来改善用rawとして保存されている
-- [ ] `data/features/upcoming_features_2026.csv` が生成されている
+- [ ] `data/features/upcoming_features_2026_special.csv` が生成されている
 - [ ] `outputs/latest_predictions.json` が生成されている
 - [ ] JSONバリデーションが成功している
 - [ ] 失敗時に既存latestを壊さない

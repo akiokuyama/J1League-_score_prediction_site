@@ -99,7 +99,7 @@ def _parse_tables(html: str, key: str) -> pd.DataFrame:
     return pd.concat(frames, ignore_index=True) if frames else empty_frame(["team"])
 
 
-def scrape_football_lab_team_2026(*, use_cache: bool = False) -> tuple[dict[str, pd.DataFrame], dict[str, Any]]:
+def scrape_football_lab_team_2026_special(*, use_cache: bool = False) -> tuple[dict[str, pd.DataFrame], dict[str, Any]]:
     today = datetime.now(ZoneInfo("Asia/Tokyo")).strftime("%Y%m%d")
     frames: dict[str, pd.DataFrame] = {}
     info: dict[str, Any] = {"urls": FOOTBALL_LAB_URLS, "warnings": []}
@@ -114,9 +114,9 @@ def scrape_football_lab_team_2026(*, use_cache: bool = False) -> tuple[dict[str,
 
         frames[key] = df
         if key == "goal_patterns":
-            path = RAW_DATA_DIR / "football_lab" / "goal_patterns" / f"goal_patterns_2026_asof_{today}.csv"
+            path = RAW_DATA_DIR / "football_lab" / "goal_patterns" / f"goal_patterns_2026_special_asof_{today}.csv"
         elif key == "team_styles":
-            path = RAW_DATA_DIR / "football_lab" / "team_styles" / f"team_styles_2026_asof_{today}.csv"
+            path = RAW_DATA_DIR / "football_lab" / "team_styles" / f"team_styles_2026_special_asof_{today}.csv"
         else:
             path = RAW_DATA_DIR / "football_lab" / f"{key}_2026.csv"
         safe_write_csv(df, path)

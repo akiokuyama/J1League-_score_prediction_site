@@ -8,7 +8,7 @@ Week6で作成した手動実行ワークフローを残したまま、月曜朝
 
 ## 実施内容
 
-- `scripts/update_2026_data.py` に `--scope results` / `--results-only` を追加しました。
+- `scripts/update_2026_special_data.py` に `--scope results` / `--results-only` を追加しました。
 - 月曜朝用の `Update Results After Matches` ワークフローを追加しました。
 - 木曜夜用の `Update Predictions Scheduled` ワークフローを追加しました。
 - 手動実行ワークフローの生成物検証を共通スクリプト利用に寄せました。
@@ -21,7 +21,7 @@ Week6で作成した手動実行ワークフローを残したまま、月曜朝
 - `.github/workflows/update_results_after_matches.yml`
 - `.github/workflows/update_predictions_scheduled.yml`
 - `.github/workflows/update_predictions_manual.yml`
-- `scripts/update_2026_data.py`
+- `scripts/update_2026_special_data.py`
 - `scripts/validate_prediction_outputs.py`
 - `scripts/validate_past_prediction_results.py`
 - `tests/test_scheduled_workflows.py`
@@ -40,7 +40,7 @@ Week6で作成した手動実行ワークフローを残したまま、月曜朝
 ```bash
 python -m compileall app src scripts
 python -m pytest
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
 python scripts/build_past_prediction_results.py
 python scripts/validate_past_prediction_results.py
 ```
@@ -48,8 +48,8 @@ python scripts/validate_past_prediction_results.py
 更新対象:
 
 ```text
-Data/processed/matches_2026_clean.csv
-Data/processed/update_2026_report.json
+Data/processed/matches_2026_special_clean.csv
+Data/processed/update_2026_special_report.json
 outputs/past_prediction_results.json
 ```
 
@@ -80,7 +80,7 @@ outputs/local/
 ```bash
 python -m compileall app src scripts
 python -m pytest
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
 python scripts/run_prediction.py --mode all_unplayed
 python scripts/build_past_prediction_results.py
 python scripts/validate_prediction_outputs.py
@@ -128,14 +128,14 @@ outputs/last_updated.txt
 月曜朝相当:
 
 ```bash
-python scripts/update_2026_data.py --season 2026 --category 100yj1 --scope results
+python scripts/update_2026_special_data.py --season 2026_special --category 100yj1 --scope results
 python scripts/build_past_prediction_results.py
 ```
 
 木曜夜相当:
 
 ```bash
-python scripts/full_pipeline.py --season 2026 --category 100yj1 --mode next_section
+python scripts/full_pipeline.py --season 2026_special --category 100yj1 --mode next_section
 python scripts/run_prediction.py --mode all_unplayed
 python scripts/build_past_prediction_results.py
 ```

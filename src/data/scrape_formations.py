@@ -32,7 +32,7 @@ def _parse_primary_formation(html: str) -> tuple[str, int | None]:
     return "Unknown", None
 
 
-def scrape_formations_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
+def scrape_formations_2026_special(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     info: dict[str, Any] = {"warnings": []}
     for team_code, lab_code in FOOTBALL_LAB_CODES.items():
@@ -53,8 +53,8 @@ def scrape_formations_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, di
             info["warnings"].append(f"{team_code}: {exc}")
 
     df = pd.DataFrame(rows) if rows else empty_frame(["team", "formation", "formation_starts", "source_url", "html_length"])
-    raw_path = RAW_DATA_DIR / "formations" / "formations_2026.csv"
-    processed_path = PROCESSED_DATA_DIR / "formations_2026_clean.csv"
+    raw_path = RAW_DATA_DIR / "formations" / "formations_2026_special.csv"
+    processed_path = PROCESSED_DATA_DIR / "formations_2026_special_clean.csv"
     safe_write_csv(df, raw_path)
     safe_write_csv(df, processed_path)
     info["rows"] = int(len(df))

@@ -28,7 +28,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="天候なしモデルを再学習します")
     parser.add_argument("--dataset", default="Data/ML_dataset.csv")
     parser.add_argument("--output-dir", default="Models/weather_removed_v1")
-    parser.add_argument("--test-season", default="2025", help="評価用に取り分けるシーズン。例: 2025, 2026_Special")
+    parser.add_argument("--test-season", default="2025", help="評価用に取り分けるシーズン。例: 2025, 2026_special")
     parser.add_argument("--activate", action="store_true", help="既存モデルをバックアップ後に正式反映する")
     return parser.parse_args()
 

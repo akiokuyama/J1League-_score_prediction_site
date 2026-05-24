@@ -1,4 +1,4 @@
-"""Scrape 2026 J.League match schedule/results."""
+"""Scrape 2026_special J.League match schedule/results."""
 
 from __future__ import annotations
 
@@ -287,7 +287,7 @@ def _parse_matchlist_sections(html: str) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def scrape_matches_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
+def scrape_matches_2026_special(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[str, Any]]:
     info: dict[str, Any] = {"url": DATA_SITE_URL, "fallback_url": MATCH_SEARCH_URL, "warnings": []}
     try:
         fetched = fetch_html(DATA_SITE_URL, use_cache=use_cache)
@@ -327,8 +327,8 @@ def scrape_matches_2026(*, use_cache: bool = False) -> tuple[pd.DataFrame, dict[
     else:
         df = empty_frame(MATCH_COLUMNS)
 
-    raw_path = RAW_DATA_DIR / "matches" / "schedule_2026_100yj1.csv"
-    processed_path = PROCESSED_DATA_DIR / "matches_2026_clean.csv"
+    raw_path = RAW_DATA_DIR / "matches" / "schedule_2026_special_100yj1.csv"
+    processed_path = PROCESSED_DATA_DIR / "matches_2026_special_clean.csv"
     safe_write_csv(df, raw_path)
     safe_write_csv(df, processed_path)
     info["rows"] = int(len(df))
