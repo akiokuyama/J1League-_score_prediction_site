@@ -63,6 +63,30 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          tmp_dir="$(mktemp -d)"
+          for target in \
+            Data/processed \
+            Data/features \
+            outputs/latest_predictions.json \
+            outputs/latest_predictions.csv \
+            outputs/all_unplayed_predictions.json \
+            outputs/all_unplayed_predictions.csv \
+            outputs/prediction_history \
+            outputs/past_prediction_results.json \
+            outputs/last_updated.txt
+          do
+            if [ -e "$target" ]; then
+              mkdir -p "$tmp_dir/$(dirname "$target")"
+              cp -a "$target" "$tmp_dir/$target"
+              echo "Preserved $target"
+            fi
+          done
+
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd
+          (cd "$tmp_dir" && tar -cf - .) | tar -xf -
+
           for target in \
             Data/processed \
             Data/features \
@@ -76,6 +100,7 @@ jobs:
           do
             if [ -e "$target" ]; then
               git add "$target"
+              echo "Added $target"
             fi
           done
 
@@ -83,9 +108,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update prediction outputs"
-            git status --short
-            git restore --worktree .
-            git clean -fd
-            git pull --rebase origin main
             git push
           fi

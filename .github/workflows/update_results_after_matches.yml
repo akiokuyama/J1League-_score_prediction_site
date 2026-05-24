@@ -108,6 +108,26 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          tmp_dir="$(mktemp -d)"
+          for target in \
+            Data/processed/matches_2026_clean.csv \
+            Data/processed/update_2026_report.json \
+            outputs/past_prediction_results.json
+          do
+            if [ -e "$target" ]; then
+              mkdir -p "$tmp_dir/$(dirname "$target")"
+              cp -a "$target" "$tmp_dir/$target"
+              echo "Preserved $target"
+            else
+              echo "Skipped missing $target"
+            fi
+          done
+
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fd
+          (cd "$tmp_dir" && tar -cf - .) | tar -xf -
+
           for target in \
             Data/processed/matches_2026_clean.csv \
             Data/processed/update_2026_report.json \
@@ -116,8 +136,6 @@ jobs:
             if [ -e "$target" ]; then
               git add "$target"
               echo "Added $target"
-            else
-              echo "Skipped missing $target"
             fi
           done
 
@@ -125,9 +143,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update past prediction results"
-            git status --short
-            git restore --worktree .
-            git clean -fd
-            git pull --rebase origin main
             git push
           fi
