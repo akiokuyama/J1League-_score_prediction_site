@@ -56,7 +56,7 @@ def main() -> None:
     past = load_past_prediction_results()
 
     initialize_state()
-    render_header(latest, past)
+    render_header(latest, past, all_unplayed)
 
     tab = "これからの試合"
     if st.session_state.view != "detail":
@@ -382,15 +382,26 @@ def _latest_update_value(*values: Any) -> Any:
     return max(valid, key=lambda item: item[0])[1]
 
 
-def render_header(data: dict[str, Any], past_data: dict[str, Any] | None = None) -> None:
-    season = data.get("season", "-")
+def _target_matchweek_text(data: dict[str, Any], all_unplayed: dict[str, Any] | None = None) -> str:
+    matches = safe_matches(all_unplayed or {})
+    sections = sorted({safe_int(match_section(match)) for match in matches if safe_int(match_section(match)) is not None})
+    if sections:
+        if len(sections) <= 3:
+            return "・".join(f"第{section}節" for section in sections)
+        return f"第{sections[0]}節〜第{sections[-1]}節"
     matchweek = data.get("matchweek", "-")
+    return f"第{matchweek}節" if matchweek not in (None, "-") else "-"
+
+
+def render_header(data: dict[str, Any], past_data: dict[str, Any] | None = None, all_unplayed: dict[str, Any] | None = None) -> None:
+    season = data.get("season", "-")
     updated_value = _latest_update_value(
         data.get("last_updated"),
+        (all_unplayed or {}).get("last_updated"),
         (past_data or {}).get("generated_at"),
     )
     updated = format_datetime_jp(updated_value)
-    matchweek_text = f"第{matchweek}節" if matchweek not in (None, "-") else "-"
+    matchweek_text = _target_matchweek_text(data, all_unplayed)
     st.markdown(
         f"""
         <div class="app-header">
@@ -408,7 +419,7 @@ def render_header(data: dict[str, Any], past_data: dict[str, Any] | None = None)
 
 
 def render_future_matches(latest: dict[str, Any], all_unplayed: dict[str, Any]) -> None:
-    matches = safe_matches(latest)
+    matches = safe_matches(all_unplayed) or safe_matches(latest)
     if st.session_state.view == "detail":
         selected = find_match(matches, st.session_state.selected_match_id)
         if selected:
@@ -418,8 +429,6 @@ def render_future_matches(latest: dict[str, Any], all_unplayed: dict[str, Any]) 
         st.session_state.selected_match_id = None
 
     st.markdown('<div class="section-title">試合一覧</div>', unsafe_allow_html=True)
-    if all_unplayed.get("matches"):
-        st.caption(f"管理用の未消化試合全件データ: {len(all_unplayed['matches'])}試合")
     if not matches:
         st.info("予測データが見つかりません。")
         return
