@@ -8,6 +8,7 @@ from html import escape
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode
+from zoneinfo import ZoneInfo
 
 import streamlit as st
 
@@ -55,7 +56,7 @@ def main() -> None:
     past = load_past_prediction_results()
 
     initialize_state()
-    render_header(latest)
+    render_header(latest, past)
 
     tab = "これからの試合"
     if st.session_state.view != "detail":
@@ -361,10 +362,34 @@ def render_prediction_logic_summary(data: dict[str, Any]) -> None:
     )
 
 
-def render_header(data: dict[str, Any]) -> None:
+def _parse_update_datetime(value: Any) -> datetime | None:
+    if not value:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=ZoneInfo("Asia/Tokyo"))
+    return dt.astimezone(ZoneInfo("Asia/Tokyo"))
+
+
+def _latest_update_value(*values: Any) -> Any:
+    parsed = [(_parse_update_datetime(value), value) for value in values if value]
+    valid = [(dt, value) for dt, value in parsed if dt is not None]
+    if not valid:
+        return next((value for value in values if value), None)
+    return max(valid, key=lambda item: item[0])[1]
+
+
+def render_header(data: dict[str, Any], past_data: dict[str, Any] | None = None) -> None:
     season = data.get("season", "-")
     matchweek = data.get("matchweek", "-")
-    updated = format_datetime_jp(data.get("last_updated"))
+    updated_value = _latest_update_value(
+        data.get("last_updated"),
+        (past_data or {}).get("generated_at"),
+    )
+    updated = format_datetime_jp(updated_value)
     matchweek_text = f"第{matchweek}節" if matchweek not in (None, "-") else "-"
     st.markdown(
         f"""

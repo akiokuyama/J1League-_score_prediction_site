@@ -7,6 +7,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
@@ -39,7 +40,7 @@ def build_past_prediction_results(
 
     matches.sort(key=lambda item: (str(item.get("date") or ""), int(item.get("matchweek") or 0), str(item.get("match_id") or "")))
     return {
-        "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "generated_at": datetime.now(ZoneInfo("Asia/Tokyo")).isoformat(timespec="seconds"),
         "season": season,
         "league": league,
         "source": {

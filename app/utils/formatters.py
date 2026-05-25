@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import Any
+from zoneinfo import ZoneInfo
 
 
 def format_datetime_jp(value: str | None) -> str:
@@ -15,6 +16,8 @@ def format_datetime_jp(value: str | None) -> str:
         dt = datetime.fromisoformat(normalized)
     except ValueError:
         return str(value)
+    if dt.tzinfo is not None:
+        dt = dt.astimezone(ZoneInfo("Asia/Tokyo"))
     return f"{dt.year}年{dt.month}月{dt.day}日 {dt.hour}時{dt.minute:02d}分"
 
 
