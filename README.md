@@ -60,6 +60,22 @@ http://localhost:8501
 
 スマートフォンで確認する場合は、PCとスマートフォンを同じWi-Fiに接続し、Streamlit起動時に表示される `Network URL` をスマートフォンのブラウザで開きます。
 
+## 公開ページとSEO
+
+検索流入用の静的ページとして `docs/index.html` を用意しています。GitHub Pagesでは、リポジトリ設定から `docs/` ディレクトリを公開元にすると、以下のようなURLで公開できます。
+
+```text
+https://akiokuyama.github.io/J1League_score_prediction_site/
+```
+
+静的ページからは、Streamlit Community Cloudで公開している以下のアプリへ遷移します。
+
+```text
+https://j1league-score-prediction.streamlit.app/
+```
+
+Streamlitアプリ側では、ブラウザタブ用の `page_title` と画面見出しに「J1試合予想」「Jリーグスコア予測」「勝敗予想」「得点者候補」を自然に含めています。
+
 ## 検証コマンド
 
 変更後やデプロイ前は、以下を実行します。

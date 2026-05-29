@@ -4,6 +4,7 @@
 
 ```text
 docs/
+├── index.html               # GitHub Pages公開用の検索流入ページ
 ├── reports/                 # 完了レポート、判断メモ、チェックリスト
 │   ├── week1/
 │   ├── week2/

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>J1試合予想AI｜Jリーグスコア予測・勝敗予想・得点者候補</title>
+    <meta
+      name="description"
+      content="J1試合予想AIは、Jリーグの試合スコア、勝敗確率、得点者候補をAIで予測するWebアプリです。今後行われるJ1百年構想リーグの予測結果を確認できます。"
+    >
+    <meta name="keywords" content="J1 試合予想,Jリーグ スコア予測,J1 勝敗予想,得点者候補,Jリーグ AI予測">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="J1試合予想AI｜Jリーグスコア予測・勝敗予想・得点者候補">
+    <meta
+      property="og:description"
+      content="Jリーグの試合スコア、勝敗確率、得点者候補をAIで予測するWebアプリです。"
+    >
+    <meta property="og:site_name" content="J1試合予想AI">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://akiokuyama.github.io/J1League_score_prediction_site/">
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f9fc;
+        --surface: #ffffff;
+        --text: #172033;
+        --muted: #5b6578;
+        --line: #dbe3ef;
+        --blue: #1d4ed8;
+        --blue-dark: #123a9f;
+        --green: #15803d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(29, 78, 216, 0.96), rgba(21, 128, 61, 0.92));
+        color: #fff;
+      }
+
+      .hero-inner,
+      main {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero-inner {
+        padding: 64px 0 56px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        font-size: 0.9rem;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.6rem);
+        line-height: 1.15;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 720px;
+        margin: 18px 0 28px;
+        font-size: 1.08rem;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 0 20px;
+        border-radius: 8px;
+        background: #fff;
+        color: var(--blue-dark);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      main {
+        padding: 34px 0 56px;
+      }
+
+      section {
+        margin: 0 0 24px;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.35rem;
+        line-height: 1.35;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .notice {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .app-url-placeholder {
+        word-break: break-all;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">J1百年構想リーグ対応</p>
+        <h1>J1試合予想AI</h1>
+        <p class="lead">
+          Jリーグの試合スコア、勝敗確率、得点者候補をAIで予測するWebアプリです。
+          今後行われるJ1の試合予想を、チームや節で絞り込みながら確認できます。
+        </p>
+        <a class="cta" href="https://j1league-score-prediction.streamlit.app/">最新のJ1試合予想を見る</a>
+        <p class="app-url-placeholder">Streamlitアプリ: https://j1league-score-prediction.streamlit.app/</p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>このアプリで確認できること</h2>
+        <ul>
+          <li>J1の予測スコアとスコア候補Top5</li>
+          <li>ホーム勝利、引き分け、アウェイ勝利の勝敗予想</li>
+          <li>得点者候補とゴール期待値</li>
+          <li>過去予測結果と実際の試合結果の照合</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>予測ロジック</h2>
+        <p>
+          過去の試合結果、チーム成績、選手スタッツ、フォーメーション、移動距離、Eloなどの特徴量を使い、
+          機械学習モデルでJリーグのスコア予測と勝敗予想を行います。
+        </p>
+      </section>
+
+      <section>
+        <h2>注意事項</h2>
+        <p class="notice">
+          本アプリの予測結果は参考情報です。実際の試合結果、出場選手、得点者、勝敗を保証するものではありません。
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

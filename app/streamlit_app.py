@@ -42,8 +42,8 @@ from src.data.team_master import to_display_name  # noqa: E402
 
 
 st.set_page_config(
-    page_title="J1 AI試合結果予測",
-    page_icon="",
+    page_title="J1試合予想AI｜Jリーグスコア予測・得点者候補",
+    page_icon="⚽",
     layout="centered",
     initial_sidebar_state="collapsed",
 )
@@ -405,8 +405,8 @@ def render_header(data: dict[str, Any], past_data: dict[str, Any] | None = None,
     st.markdown(
         f"""
         <div class="app-header">
-          <h1 class="app-title">J1 試合結果予測アプリ</h1>
-          <div class="muted">次節の試合予測と過去の予測結果を確認できます。</div>
+          <h1 class="app-title">J1試合予想AI｜Jリーグのスコア予測・勝敗予想・得点者候補</h1>
+          <div class="muted">J1百年構想リーグの試合予想、予測スコア、勝敗確率、得点者候補をAIモデルで確認できます。</div>
           <div class="header-meta">
             <div class="meta-chip">シーズン：{escape(str(season))}</div>
             <div class="meta-chip">対象節：{escape(str(matchweek_text))}</div>
