@@ -38,7 +38,7 @@ def test_scheduled_prediction_workflow_updates_predictions() -> None:
 
     assert "name: Update Predictions Scheduled" in text
     assert "workflow_dispatch:" in text
-    assert 'cron: "0 12 * * 4"' in text
+    assert 'cron: "0 22 * * 2"' in text
     assert "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true" in text
     assert "python -m compileall app src scripts" in text
     assert "python -m pytest" in text

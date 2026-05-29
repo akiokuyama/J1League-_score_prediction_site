@@ -3,7 +3,7 @@ name: Update Predictions Scheduled
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 12 * * 4"  # Thu 21:00 JST
+    - cron: "0 22 * * 2"  # Wed 07:00 JST
 
 permissions:
   contents: write
